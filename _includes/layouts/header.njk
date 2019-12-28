@@ -1,0 +1,51 @@
+<header class="flex-basis-0 flex-grow-0">
+
+    <nav>
+      <div class="nav-wrapper col s12">
+
+        <!-- logo -->
+        <a href="{{ '/' | url }}" class="h-100 brand-logo">
+          <div class="h-100 valign-wrapper ">
+            <img class="h-100 p-1" src="{{ '/img/logo.svg' | url }}">
+            <span>
+              {{ metadata.title }}
+            </span>
+          </div>
+        </a>
+
+        <a href="#" data-target="mobile-menu" class="sidenav-trigger">
+          <i class="fas fa-bars"></i>
+        </a>
+
+        {{ collections.all | eleventyNavigation | eleventyNavigationToHtml({
+          listElement: "ul",
+          listClass: "right hide-on-med-and-down",
+
+          listItemElement: "li",
+          listItemClass: "nav-item",
+          activeListItemClass: "active",
+          activeKey: eleventyNavigation.key
+        }) | safe }}
+      </div>
+    </nav>
+
+  <!-- mobile sidenav -->
+  <ul class="sidenav" id="mobile-menu">
+  {% for nav in collections.all | eleventyNavigation %}
+  {% if eleventyNavigation.key == nav.key %}
+    <li class="nav-item active">
+      <a href="{{ nav.url | url }}">
+        {{ nav.key }}
+      </a>
+    </li>
+  {% else %}
+    <li class="nav-item">
+      <a href="{{ nav.url | url }}">
+        {{ nav.key }}
+      </a>
+    </li>
+  {% endif %}
+  {% endfor %}
+  </ul>
+
+</header>

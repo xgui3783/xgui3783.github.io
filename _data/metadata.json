@@ -1,16 +1,16 @@
 {
-  "title": "Pandamakes",
+  "title": "pandamakes",
   "url": "https://pandamakes.com.au/",
-  "description": "I am writing about my experiences as a naval navel-gazer.",
+  "description": "web developer, photographer, panda",
   "feed": {
-    "subtitle": "I am writing about my experiences as a naval navel-gazer.",
+    "subtitle": "web developer, photographer, panda",
     "filename": "feed.xml",
     "path": "/feed/feed.xml",
     "url": "https://pandamakes.com.au/feed/feed.xml",
     "id": "https://pandamakes.com.au/"
   },
   "author": {
-    "name": "Panda",
+    "name": "panda",
     "email": "panda@pandamakes.com.au"
   }
 }

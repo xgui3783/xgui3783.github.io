@@ -1,0 +1,17 @@
+{% if tags %}
+<div class="col s12">
+  <div class="d-flex flex-wrap">
+
+    {% if not hide_tag_label %}
+    <span class="mt-a mb-a"> tags: </span>
+    {% endif %}
+
+    {% for tag in tags %}
+    {%- if tag != "posts" -%}
+    {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+    <span data-href="{{ tagUrl | url }}" class="waves-effect chip m-1">{{ tag }}</span>
+    {%- endif -%}
+    {% endfor %}
+  </div>
+</div>
+{% endif %}

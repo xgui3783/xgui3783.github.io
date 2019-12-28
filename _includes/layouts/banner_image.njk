@@ -1,0 +1,21 @@
+<div data-bgimgsrc="{{ '/img/cover.jpg' | url }}" class="banner-image-wrapper w-100 h-100vh overflow-hidden d-flex align-items-center justify-content-center">
+  <div>
+    <h1 class="center-align">
+      {{ title or renderData.title or metadata.title }}
+    </h1>
+
+    {% if description or not (title or renderData.title) %}
+    <h2 class="center-align">
+      <small>
+        {% if description %}
+        {{ description }}
+        {% else %}
+        {{ metadata.description }}
+        {% endif %}
+      </small>
+    </h2>
+    {% endif %}
+  </div>
+</div>
+
+<div class="row"></div>

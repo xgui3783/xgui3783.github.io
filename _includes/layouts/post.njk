@@ -2,8 +2,23 @@
 layout: layouts/base.njk
 templateClass: tmpl-post
 ---
-<h1>{{ title }}</h1>
 
-{{ content | safe }}
+{% if date or tags %}
+<div class="row">
 
-<p><a href="{{ '/' | url }}">← Home</a></p>
+  {% if date %}
+  <div class="col s12">
+    <time class="postlist-date" datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time>
+  </div>
+  {% endif %}
+
+  {% include './partial_tags.njk' %}
+</div>
+{% endif %}
+
+<div class="row">
+  <div class="col s12 markdown-body">
+  {{ content | safe }}
+  </div>
+</div>
+

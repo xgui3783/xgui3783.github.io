@@ -1,12 +1,14 @@
 ---
 layout: layouts/home.njk
 permalink: /posts/
+title: Blog
+description: All the wild ideas
 eleventyNavigation:
-  key: Archive
+  key: Blog
   order: 3
 ---
 
-<h1>Archive</h1>
-
+<div class="row">
 {% set postslist = collections.posts %}
 {% include "postslist.njk" %}
+</div>
