@@ -29,4 +29,4 @@ I have abstracted away the selenium webdriver API, so in principle, implementing
 
 In e2e tests, one of the test conditions is given the navigation to a URL, the application should make a HTTP GET request. For puppeteer, there is [page.setRequestInterception(value)](https://github.com/puppeteer/puppeteer/blob/master/docs/api.md#pagesetrequestinterceptionvalue) . For selenium ... nothing?
 
-At the end, I had to resort to proxy'ing `XMLHttpRequest.prototype.open`. Even then, it was not straight forward. `webdriver.get` instantiate a new window for me, and thus overwrites any previous proxying of `XMLHttpRequest.prototype.open`. So I had to hack it by synchronously patching the method, after `webdriver.get` call was made. 
+At the end, I had to resort to proxy'ing `XMLHttpRequest.prototype.open`. (edit: the idea came from [this gist](https://gist.github.com/chmanie/e616ef3b9d20321943e8)) Even then, it was not straight forward. `webdriver.get` instantiate a new window for me, and thus overwrites any previous proxying of `XMLHttpRequest.prototype.open`. So I had to hack it by synchronously patching the method, after `webdriver.get` call was made. 
