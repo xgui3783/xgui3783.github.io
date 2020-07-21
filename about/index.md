@@ -9,7 +9,7 @@ eleventyNavigation:
 
 ![](/img/logo.svg)
 
-Hi, my name is Xiao Gui. I am a web developer, web designer, programmer and a hobbyist photographer.
+Hi, I am Xiao. I am a web developer, web designer, programmer and a hobbyist photographer.
 
 For frontend development, in addition to HTML, CSS and JS, I use frameworks such as Angular, React, Vue and so on to help with building complex applications. I have also dabbled in Preact, Svelte, Stenciljs and AngularJS.
 
