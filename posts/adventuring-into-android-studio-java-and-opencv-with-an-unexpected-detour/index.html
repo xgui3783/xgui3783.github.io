@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adventuring into Android studio, Java and OpenCV (with an unexpected detour)</title>
     <meta name="Description" content="web developer, photographer, panda">
-    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/index.css">
-    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/prism-base16-monokai.dark.css">
-    <link rel="alternate" href="/eleventy-base-blog/eleventy-base-blog/feed/feed.xml" type="application/atom+xml" title="pandamakes">
-    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/materialize.css">
-    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/github-markdown.css">
-    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/coverimage.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/prism-base16-monokai.dark.css">
+    <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="pandamakes">
+    <link rel="stylesheet" href="/css/materialize.css">
+    <link rel="stylesheet" href="/css/github-markdown.css">
+    <link rel="stylesheet" href="/css/coverimage.css">
 	  <link rel="me" href="https://fosstodon.org/@pandamakes">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -22,9 +22,9 @@
       <div class="nav-wrapper col s12">
 
         <!-- logo -->
-        <a href="/eleventy-base-blog/" class="h-100 brand-logo">
+        <a href="/" class="h-100 brand-logo">
           <div class="h-100 valign-wrapper ">
-            <img class="h-100 p-1" src="/eleventy-base-blog/eleventy-base-blog/img/logo.svg">
+            <img class="h-100 p-1" src="/img/logo.svg">
             <span>
               pandamakes
             </span>
@@ -35,9 +35,9 @@
           <i class="fas fa-bars"></i>
         </a>
 
-        <ul class="right hide-on-med-and-down"><li class="nav-item"><a href="/eleventy-base-blog/">Home</a></li>
-<li class="nav-item"><a href="/eleventy-base-blog/blog/">Blog</a></li>
-<li class="nav-item"><a href="/eleventy-base-blog/about/">About</a></li></ul>
+        <ul class="right hide-on-med-and-down"><li class="nav-item"><a href="/">Home</a></li>
+<li class="nav-item"><a href="/blog/">Blog</a></li>
+<li class="nav-item"><a href="/about/">About</a></li></ul>
       </div>
     </nav>
 
@@ -46,7 +46,7 @@
   
   
     <li class="nav-item">
-      <a href="/eleventy-base-blog/">
+      <a href="/">
         Home
       </a>
     </li>
@@ -54,7 +54,7 @@
   
   
     <li class="nav-item">
-      <a href="/eleventy-base-blog/eleventy-base-blog/blog/">
+      <a href="/blog/">
         Blog
       </a>
     </li>
@@ -62,7 +62,7 @@
   
   
     <li class="nav-item">
-      <a href="/eleventy-base-blog/eleventy-base-blog/about/">
+      <a href="/about/">
         About
       </a>
     </li>
@@ -72,9 +72,9 @@
 
 </header>
 
-    <main class="flex-basis-0 flex-grow-1">
+    <main class="flex-basis-0 flex-grow-1" >
 
-      <div data-bgimgsrc="/eleventy-base-blog/img/cover.jpg" class="banner-image-wrapper w-100 h-100vh overflow-hidden d-flex align-items-center justify-content-center">
+      <div data-bgimgsrc="/img/cover.jpg" class="banner-image-wrapper w-100 h-100vh overflow-hidden d-flex align-items-center justify-content-center">
   <div>
     <h1 class="center-align">
       Adventuring into Android studio, Java and OpenCV (with an unexpected detour)
@@ -89,7 +89,8 @@
         
 
 <div class="row">
-	<div class="col s12" <time="" datetime="2016-03-07">07 March 2016
+	<div class="col s12"
+		<time datetime="2016-03-07">07 March 2016</time>
 	</div>
 	
   	
@@ -101,16 +102,16 @@
     
 
     
-    <span data-href="/eleventy-base-blog/tags/android programming/" class="waves-effect chip m-1">android programming</span>
-    <span data-href="/eleventy-base-blog/tags/css/" class="waves-effect chip m-1">css</span>
-    <span data-href="/eleventy-base-blog/tags/html/" class="waves-effect chip m-1">html</span>
-    <span data-href="/eleventy-base-blog/tags/java/" class="waves-effect chip m-1">java</span>
-    <span data-href="/eleventy-base-blog/tags/javascript/" class="waves-effect chip m-1">javascript</span>
-    <span data-href="/eleventy-base-blog/tags/jquery/" class="waves-effect chip m-1">jquery</span>
-    <span data-href="/eleventy-base-blog/tags/lessons learnt the hard way/" class="waves-effect chip m-1">lessons learnt the hard way</span>
-    <span data-href="/eleventy-base-blog/tags/mysql/" class="waves-effect chip m-1">mysql</span>
-    <span data-href="/eleventy-base-blog/tags/opencv/" class="waves-effect chip m-1">opencv</span>
-    <span data-href="/eleventy-base-blog/tags/php/" class="waves-effect chip m-1">php</span>
+    <span data-href="/tags/android programming/" class="waves-effect chip m-1">android programming</span>
+    <span data-href="/tags/css/" class="waves-effect chip m-1">css</span>
+    <span data-href="/tags/html/" class="waves-effect chip m-1">html</span>
+    <span data-href="/tags/java/" class="waves-effect chip m-1">java</span>
+    <span data-href="/tags/javascript/" class="waves-effect chip m-1">javascript</span>
+    <span data-href="/tags/jquery/" class="waves-effect chip m-1">jquery</span>
+    <span data-href="/tags/lessons learnt the hard way/" class="waves-effect chip m-1">lessons learnt the hard way</span>
+    <span data-href="/tags/mysql/" class="waves-effect chip m-1">mysql</span>
+    <span data-href="/tags/opencv/" class="waves-effect chip m-1">opencv</span>
+    <span data-href="/tags/php/" class="waves-effect chip m-1">php</span>
   </div>
 </div>
 
@@ -124,11 +125,11 @@
   <p>Following on from the previous week’s progress, this week, we are trying to make progress towards OpenCV to be used on an android platform. I have encountered problem of course.</p>
 <p>Firstly, there was the issue of Android Studio not recognising hardware.camera, and threw me a number of errors. Turns out, I needed to update the target SDK across different build.gradle files.</p>
 <p>More significantly, I was thrown the error that the app could not have access to the camera.</p>
-<p><img src="/eleventy-base-blog/web/20190303112856im_/https:/pandamakes.com.au/content/images/2018/01/notworkingss.png" alt="notworkingss"></p>
+<p><img src="/web/20190303112856im_/https://pandamakes.com.au/content/images/2018/01/notworkingss.png" alt="notworkingss"></p>
 <p>Digging for an answer online, they seem to suggest that I needed to declare the permission to use camera in android manifest (which I did), and check if other apps are using the camera (they are not, since the native camera app works fine). And very coincidentally, when the emulator told me that I had not enough (virtual) space, and when I am trying to uninstall some early iterations of the app, did I notice that I had to manually give the app permission to use the camera.</p>
-<p><img src="/eleventy-base-blog/web/20190303112856im_/https:/pandamakes.com.au/content/images/2018/01/workaround.png" alt="workaround"></p>
+<p><img src="/web/20190303112856im_/https://pandamakes.com.au/content/images/2018/01/workaround.png" alt="workaround"></p>
 <p>And suddenly, it works!</p>
-<p><img src="/eleventy-base-blog/web/20190303112856im_/https:/pandamakes.com.au/content/images/2018/01/workingss.png" alt="workingss"></p>
+<p><img src="/web/20190303112856im_/https://pandamakes.com.au/content/images/2018/01/workingss.png" alt="workingss"></p>
 <p>Next step, messing with the Mat variables so that it can recognise border symbol.</p>
 <p>Next next step, free transform the image and integrate osra + openbabel and output mol file</p>
 <p>final step, 3d rendering of the mol file in opengl.</p>
@@ -137,7 +138,7 @@
 
   </div>
 </div>
-<ul class="links-nextprev"><li>Previous: <a href="/eleventy-base-blog/posts/full-force-on-android-development-and-opencv/">Full force on Android development and openCV</a></li><li>Next: <a href="/eleventy-base-blog/posts/fixing-timetable-php-and-a-little-bit-more-opencv/">Fixing timetable.php and (a little bit) more openCV</a></li>
+<ul class="links-nextprev"><li>Previous: <a href="/posts/full-force-on-android-development-and-opencv/">Full force on Android development and openCV</a></li><li>Next: <a href="/posts/fixing-timetable-php-and-a-little-bit-more-opencv/">Fixing timetable.php and (a little bit) more openCV</a></li>
 </ul>
 
       </div>
@@ -191,6 +192,6 @@
   </script>
 
 </footer>
-    <!-- Current page: /eleventy-base-blog/posts/adventuring-into-android-studio-java-and-opencv-with-an-unexpected-detour/ -->
+    <!-- Current page: /posts/adventuring-into-android-studio-java-and-opencv-with-an-unexpected-detour/ -->
   </body>
 </html>

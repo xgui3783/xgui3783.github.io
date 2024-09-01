@@ -2,8 +2,8 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:base="">
 	<title>pandamakes</title>
 	<subtitle>web developer, photographer, panda</subtitle>
-	<link href="https://pandamakes.me/eleventy-base-blog/feed/feed.xml" rel="self"/>
-	<link href="https://pandamakes.me/eleventy-base-blog/"/>
+	<link href="https://pandamakes.me/feed/feed.xml" rel="self"/>
+	<link href="https://pandamakes.me/"/>
 	<updated>2024-08-14T00:00:00Z</updated>
 	<id>https://pandamakes.me/</id>
 	<author>
@@ -13,9 +13,9 @@
 	
 	<entry>
 		<title>Browser cache is... weird</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/20240814-browser-cache/"/>
+		<link href="https://pandamakes.me/posts/20240814-browser-cache/"/>
 		<updated>2024-08-14T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/20240814-browser-cache/</id>
+		<id>https://pandamakes.me/posts/20240814-browser-cache/</id>
 		<content type="html">&lt;p&gt;Recently, I wanted to introduce &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/ETag&quot;&gt;ETag&lt;/a&gt; as an identifer if new version of a web service is deployed properly. I could use a custom header, but I thought I would be a good boy and use a standard header.&lt;/p&gt;
 &lt;p&gt;But of course, in my infinite wisdom, I did not include a &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control&quot;&gt;cache-control&lt;/a&gt; header, and since the resource is fetched with &lt;code&gt;WebWorker&lt;/code&gt;, hard refresh (&lt;code&gt;Shift + F5&lt;/code&gt;) did not work, &lt;code&gt;Disable Cache&lt;/code&gt; in developer tool did not work. What worked was right clicking the specific request in developer panel, and manually click &amp;quot;clear browser cache&amp;quot;.&lt;/p&gt;
 &lt;p&gt;Chromium seems to use &lt;code&gt;(current_time - last_modified) / 10&lt;/code&gt; &lt;a href=&quot;https://chromium.googlesource.com/chromium/src/+/refs/tags/127.0.6533.101/net/http/http_response_headers.cc#1250&quot;&gt;ref&lt;/a&gt;&lt;/p&gt;
@@ -25,37 +25,37 @@
 	
 	<entry>
 		<title>FOSDEM2024 day 2</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/20240407-fosdem-day2/"/>
+		<link href="https://pandamakes.me/posts/20240407-fosdem-day2/"/>
 		<updated>2024-04-07T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/20240407-fosdem-day2/</id>
+		<id>https://pandamakes.me/posts/20240407-fosdem-day2/</id>
 		<content type="html">&lt;p&gt;As the previous day, all talks I attended are in chronological order. The only difference is, I tried to attend everything remotely... in my hotel room... about 1km away from the venue.&lt;/p&gt;
 &lt;p&gt;Also, the event happened on 2024-02-04, so this post is a latergram.&lt;/p&gt;
 &lt;p&gt;There will be a third post in this series, in which I will talk about my experience.&lt;/p&gt;
-&lt;h2 id=&quot;testing-and-cd-streamline-dx&quot; tabindex=&quot;-1&quot;&gt;Testing &amp;amp; CD: Streamline DX &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/eleventy-base-blog/posts/20240407-fosdem-day2/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;testing-and-cd-streamline-dx&quot; tabindex=&quot;-1&quot;&gt;Testing &amp;amp; CD: Streamline DX &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/posts/20240407-fosdem-day2/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://fosdem.org/2024/schedule/event/fosdem-2024-2964-streamlining-developer-experience-the-power-of-ci-cd-standardization-and-interoperability/&quot;&gt;abstract&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;It might seem obvious, but standardization of CI/CD and docs improves onboarding.&lt;/p&gt;
-&lt;h2 id=&quot;doc-maintenance&quot; tabindex=&quot;-1&quot;&gt;Doc maintenance &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/eleventy-base-blog/posts/20240407-fosdem-day2/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;doc-maintenance&quot; tabindex=&quot;-1&quot;&gt;Doc maintenance &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/posts/20240407-fosdem-day2/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://fosdem.org/2024/schedule/event/fosdem-2024-2523-mind-the-gap-building-a-cultural-commitment-to-documentation-maintenance/&quot;&gt;abstract&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Linting the doc. Check when the code is updated, to ensure that the doc is also updated.&lt;/p&gt;
 &lt;p&gt;Being responsive to first time contributors.&lt;/p&gt;
 &lt;p&gt;Veil Lint (???)&lt;/p&gt;
-&lt;h2 id=&quot;lazy-developer&quot; tabindex=&quot;-1&quot;&gt;Lazy developer &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/eleventy-base-blog/posts/20240407-fosdem-day2/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;lazy-developer&quot; tabindex=&quot;-1&quot;&gt;Lazy developer &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/posts/20240407-fosdem-day2/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://fosdem.org/2024/schedule/event/fosdem-2024-2231-a-lazy-developer-s-approach-to-building-real-time-web-applications/&quot;&gt;abstract&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Interesting demo of public karaoke. Also learnt about &lt;a href=&quot;https://www.cncf.io/projects/nats/&quot;&gt;CNCF: NATS&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&quot;phabricator&quot; tabindex=&quot;-1&quot;&gt;Phabricator &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/eleventy-base-blog/posts/20240407-fosdem-day2/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;phabricator&quot; tabindex=&quot;-1&quot;&gt;Phabricator &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/posts/20240407-fosdem-day2/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://fosdem.org/2024/schedule/event/fosdem-2024-3610-unpack-phabricator-welcome-phorge-forking-the-opinionated-open-source-project-manager/&quot;&gt;abstract&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;An interesting approach to source code version management. Issues are not bound to projects, but all pooled together. They are categorised by labels. This is something I can get behind, honestly.&lt;/p&gt;
 &lt;p&gt;It also supports mercurial, svn, in addition to git.&lt;/p&gt;
 &lt;p&gt;It&#39;s php based, and he&#39;s not joking about &lt;a href=&quot;https://about.gitlab.com/blog/2021/08/13/five-great-phabricator-features-inspired-gitlab/&quot;&gt;gitlab taking inspiration from phabricator&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;observability-common-schema&quot; tabindex=&quot;-1&quot;&gt;Observability common schema &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/eleventy-base-blog/posts/20240407-fosdem-day2/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;observability-common-schema&quot; tabindex=&quot;-1&quot;&gt;Observability common schema &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/posts/20240407-fosdem-day2/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://fosdem.org/2024/schedule/event/fosdem-2024-1734-unifying-observability-the-power-of-a-common-schema/&quot;&gt;abstract&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Since I am quite new to the whole observability, metrics, monitoring world, I was only briefly aware of the competing standards. My understanding is that, opentelemetry is the effort to create a common standard. To accomplish this goal, it is likely that some conventions may need to be deprecated.&lt;/p&gt;
 &lt;p&gt;Another remark, OTLP (open telemetry language protocol ?), describes &lt;code&gt;resource&lt;/code&gt; and &lt;code&gt;LogRecord&lt;/code&gt; (or as I understand, payload), is very reminiscent on how k8s organise resources.&lt;/p&gt;
-&lt;h2 id=&quot;owncloud-infinite-scale&quot; tabindex=&quot;-1&quot;&gt;Owncloud infinite scale &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/eleventy-base-blog/posts/20240407-fosdem-day2/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;owncloud-infinite-scale&quot; tabindex=&quot;-1&quot;&gt;Owncloud infinite scale &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/posts/20240407-fosdem-day2/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://fosdem.org/2024/schedule/event/fosdem-2024-2415-how-to-build-an-open-source-school-cloud-for-5-million-users/&quot;&gt;abstract&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Provide cloud storage &amp;amp; cloud office solution to all secondary students in Germany. Uneven load is definiitely going to be an issue (e.g. at 8am CET, server load will spike, but overnight, load will be little/none)&lt;/p&gt;
 &lt;p&gt;I have also learnt the difference between owncloud 10 (single installation) and owncloud infinite scale (cloud native) (I think?)&lt;/p&gt;
-&lt;h2 id=&quot;so-you-think-you-know-git&quot; tabindex=&quot;-1&quot;&gt;So you think you know git &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/eleventy-base-blog/posts/20240407-fosdem-day2/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;so-you-think-you-know-git&quot; tabindex=&quot;-1&quot;&gt;So you think you know git &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/posts/20240407-fosdem-day2/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://fosdem.org/2024/schedule/event/fosdem-2024-3611-so-you-think-you-know-git/&quot;&gt;abstract&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Easily the most entertaining, and most educational talk of the day (or the entire event). A list of thing I learnt:&lt;/p&gt;
 &lt;pre class=&quot;language-sh&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;- &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; blame/git log &lt;span class=&quot;token punctuation&quot;&gt;&#92;&lt;/span&gt;
@@ -70,7 +70,7 @@
 - &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; maintenance start
 - &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; sparse-checkout
 - &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;github&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; ls-remote, PRs are refs&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&quot;closing-session&quot; tabindex=&quot;-1&quot;&gt;Closing session &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/eleventy-base-blog/posts/20240407-fosdem-day2/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;closing-session&quot; tabindex=&quot;-1&quot;&gt;Closing session &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/posts/20240407-fosdem-day2/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://fosdem.org/2024/schedule/event/fosdem-2024-3024-closing-fosdem-2024/&quot;&gt;abstract&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Also learnt a lot in this session regarding the technical challenges associated with running a conference with multiple tracks, all need their own video streaming, in particular:&lt;/p&gt;
 &lt;ul&gt;
@@ -85,31 +85,31 @@
 	
 	<entry>
 		<title>FOSDEM2024 day 1</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/20240207-fosdem-day1/"/>
+		<link href="https://pandamakes.me/posts/20240207-fosdem-day1/"/>
 		<updated>2024-02-07T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/20240207-fosdem-day1/</id>
+		<id>https://pandamakes.me/posts/20240207-fosdem-day1/</id>
 		<content type="html">&lt;p&gt;On 2024, I went to &lt;a href=&quot;https://fosdem.org/&quot;&gt;fosdem&lt;/a&gt; for the first time.&lt;/p&gt;
 &lt;p&gt;This post and next post will be an objective recount (or as much as possible), of the sessions I visited, and my take aways from each of the sessions. I also intend to make a &amp;quot;after thought&amp;quot; post, discussing the meta issues.&lt;/p&gt;
 &lt;p&gt;Entries are arranged in chronological order.&lt;/p&gt;
-&lt;h2 id=&quot;open-research-bridging-research-and-open-source-the-genesis-of-gephi-lite&quot; tabindex=&quot;-1&quot;&gt;Open Research: Bridging Research and Open Source: the genesis of Gephi Lite &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/eleventy-base-blog/posts/20240207-fosdem-day1/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;open-research-bridging-research-and-open-source-the-genesis-of-gephi-lite&quot; tabindex=&quot;-1&quot;&gt;Open Research: Bridging Research and Open Source: the genesis of Gephi Lite &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/posts/20240207-fosdem-day1/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://fosdem.org/2024/schedule/event/fosdem-2024-3253-bridging-research-and-open-source-the-genesis-of-gephi-lite/&quot;&gt;abstract&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;I had initially hoped this session would discuss or push for open standards for plotting/graphing. I was disappointed to find that this was more for porting graphing functionality of &lt;a href=&quot;https://gephi.org/&quot;&gt;Gephi (desktop application)&lt;/a&gt; to the web.&lt;/p&gt;
-&lt;h2 id=&quot;javascript-your-web-app-is-taking-up-too-much-ram-let-s-fix-it&quot; tabindex=&quot;-1&quot;&gt;Javascript: Your web app is taking up too much RAM. Let&#39;s fix it! &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/eleventy-base-blog/posts/20240207-fosdem-day1/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;javascript-your-web-app-is-taking-up-too-much-ram-let-s-fix-it&quot; tabindex=&quot;-1&quot;&gt;Javascript: Your web app is taking up too much RAM. Let&#39;s fix it! &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/posts/20240207-fosdem-day1/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://fosdem.org/2024/schedule/event/fosdem-2024-2722-your-web-app-is-taking-up-too-much-ram-let-s-fix-it-/&quot;&gt;abstract&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;I had moderate expectation to learn something from this session, to learn something new about profiling web applications. It did not disappoint.&lt;/p&gt;
 &lt;p&gt;I was already aware of the memory profiler in chrome dev tool, which allow snapshot of heap to be captured and profiled. I was not aware that the memory profiler can be used to profile on a temporal axis (i.e., start recording, do action, stop recording, see all calls to allocate memory).&lt;/p&gt;
 &lt;p&gt;I also learnt about &lt;a href=&quot;https://github.com/facebook/memlab&quot;&gt;facebook/memlab&lt;/a&gt; and &lt;a href=&quot;https://clinicjs.org/flame/&quot;&gt;clinicjs&lt;/a&gt;. They may be for nodejs applications only, but since chrome devtool allow exporting of the profile result, they can potentially be used to visualize and debug frontend.&lt;/p&gt;
-&lt;h2 id=&quot;javascript-recycle-reuse-rebuild-transformative-tactics-for-turning-your-brownfields-green&quot; tabindex=&quot;-1&quot;&gt;Javascript: Recycle, Reuse, Rebuild: Transformative Tactics for Turning your Brownfields Green &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/eleventy-base-blog/posts/20240207-fosdem-day1/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;javascript-recycle-reuse-rebuild-transformative-tactics-for-turning-your-brownfields-green&quot; tabindex=&quot;-1&quot;&gt;Javascript: Recycle, Reuse, Rebuild: Transformative Tactics for Turning your Brownfields Green &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/posts/20240207-fosdem-day1/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://fosdem.org/2024/schedule/event/fosdem-2024-3289-recycle-reuse-rebuild-transformative-tactics-for-turning-your-brownfields-green/&quot;&gt;abstract&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Frankly, I stayed because I wanted to see the next session. I had zero expectation.&lt;/p&gt;
 &lt;p&gt;Convert strongly coupled to loosely coupled. But otherwise, I ... don&#39;t know if I learnt anything else?&lt;/p&gt;
-&lt;h2 id=&quot;javascript-unraveling-javascript-s-heart-mastering-the-event-loop-for-peak-performance&quot; tabindex=&quot;-1&quot;&gt;Javascript: Unraveling JavaScript&#39;s Heart: Mastering the Event Loop for Peak Performance &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/eleventy-base-blog/posts/20240207-fosdem-day1/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;javascript-unraveling-javascript-s-heart-mastering-the-event-loop-for-peak-performance&quot; tabindex=&quot;-1&quot;&gt;Javascript: Unraveling JavaScript&#39;s Heart: Mastering the Event Loop for Peak Performance &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/posts/20240207-fosdem-day1/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://fosdem.org/2024/schedule/event/fosdem-2024-2890-unraveling-javascript-s-heart-mastering-the-event-loop-for-peak-performance/&quot;&gt;abstract&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;I thought I had learnt a lot from Jake Archibald&#39;s &lt;a href=&quot;https://www.youtube.com/watch?v=cCOL7MC4Pl0&amp;amp;vl=en&quot;&gt;talk&lt;/a&gt; on event loop, and was curious as to what else I can learn. I was pleasant surprised to find that, there is &lt;em&gt;always&lt;/em&gt; more to learn.&lt;/p&gt;
 &lt;p&gt;The talk focused mainly on async operations (e.g. Promise, async-await, callback), and how they could still block the main thread, if you are not careful. Since I exclusively used async ops for io-bound task (file read/write, network, etc), I was ready to believe that async tasks would not block the main thread. The speaker used bcrypt to illustrate that CPU bound tasks, even if they are delegated to async operation, could still block the main thread.&lt;/p&gt;
 &lt;p&gt;Takeaway: For CPU-bound tasks, use workers.&lt;/p&gt;
 &lt;p&gt;(extra: I wonder how/if this also affects EventLoop implementation in python)&lt;/p&gt;
-&lt;h2 id=&quot;open-research-the-french-open-science-monitor-steering-the-science-based-on-open-bibliographic-databases&quot; tabindex=&quot;-1&quot;&gt;Open Research: The French Open Science Monitor: steering the science based on open bibliographic databases &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/eleventy-base-blog/posts/20240207-fosdem-day1/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;open-research-the-french-open-science-monitor-steering-the-science-based-on-open-bibliographic-databases&quot; tabindex=&quot;-1&quot;&gt;Open Research: The French Open Science Monitor: steering the science based on open bibliographic databases &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/posts/20240207-fosdem-day1/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://fosdem.org/2024/schedule/event/fosdem-2024-3185-the-french-open-science-monitor-steering-the-science-based-on-open-bibliographic-databases/&quot;&gt;abstract&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;I wanted to join the next session, and I had some time to kill, so I decided to join this session, too. I did not expect to learn anything. But of course, there is &lt;em&gt;always&lt;/em&gt; something to be learnt.&lt;/p&gt;
 &lt;ul&gt;
@@ -119,16 +119,16 @@
 &lt;li&gt;&lt;a href=&quot;https://openalex.org/&quot;&gt;https://openalex.org/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://hal.science/&quot;&gt;https://hal.science/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&quot;open-research-infra-finder-increasing-visibility-of-open-technologies-for-open-science&quot; tabindex=&quot;-1&quot;&gt;Open Research: Infra Finder: Increasing visibility of open technologies for open science &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/eleventy-base-blog/posts/20240207-fosdem-day1/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;open-research-infra-finder-increasing-visibility-of-open-technologies-for-open-science&quot; tabindex=&quot;-1&quot;&gt;Open Research: Infra Finder: Increasing visibility of open technologies for open science &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/posts/20240207-fosdem-day1/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://fosdem.org/2024/schedule/event/fosdem-2024-3436-infra-finder-increasing-visibility-of-open-technologies-for-open-science/&quot;&gt;abstract&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;I guess a similar initiative to &lt;a href=&quot;https://helmholtz.software/&quot;&gt;https://helmholtz.software/&lt;/a&gt;, but for infrastructure? I am not sure. There was nothing I could test etc.&lt;/p&gt;
 &lt;p&gt;One of the takeaways from this talk, is that, people who makes the decision regarding infrastructure has different concern/technical know how. It might be necessary to have a different set of criteria when speak to such steakholders&lt;/p&gt;
-&lt;h2 id=&quot;open-research-best-practices-for-research-in-open-source-ecosystems&quot; tabindex=&quot;-1&quot;&gt;Open Research: Best practices for research in open source ecosystems &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/eleventy-base-blog/posts/20240207-fosdem-day1/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;open-research-best-practices-for-research-in-open-source-ecosystems&quot; tabindex=&quot;-1&quot;&gt;Open Research: Best practices for research in open source ecosystems &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/posts/20240207-fosdem-day1/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://fosdem.org/2024/schedule/event/fosdem-2024-2405-best-practices-for-research-in-open-source-ecosystems/&quot;&gt;abstract&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;open-research-phaidra-a-repository-where-research-data-goes-to-live-not-to-die&quot; tabindex=&quot;-1&quot;&gt;Open Research: PHAIDRA - A Repository Where Research Data Goes to Live (Not to Die). &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/eleventy-base-blog/posts/20240207-fosdem-day1/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;open-research-phaidra-a-repository-where-research-data-goes-to-live-not-to-die&quot; tabindex=&quot;-1&quot;&gt;Open Research: PHAIDRA - A Repository Where Research Data Goes to Live (Not to Die). &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/posts/20240207-fosdem-day1/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://fosdem.org/2024/schedule/event/fosdem-2024-3447-phaidra-a-repository-where-research-data-goes-to-live-not-to-die-/&quot;&gt;abstract&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;I have some interest in RDM. We learnt a little about the history of PHAIDRA, but little to no technical detail. The presenter also mentioned that large data (multi GB/TB) is not currently covered.&lt;/p&gt;
-&lt;h2 id=&quot;open-research-updating-open-data-standards&quot; tabindex=&quot;-1&quot;&gt;Open Research: Updating open data standards &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/eleventy-base-blog/posts/20240207-fosdem-day1/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;open-research-updating-open-data-standards&quot; tabindex=&quot;-1&quot;&gt;Open Research: Updating open data standards &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/posts/20240207-fosdem-day1/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://fosdem.org/2024/schedule/event/fosdem-2024-3109-updating-open-data-standards/&quot;&gt;abstract&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The main reason why I was in open research dev room to begin with. I wanted to learn about open data standards. This talk gave me some idea on in jobby job.&lt;/p&gt;
 </content>
@@ -136,9 +136,9 @@
 	
 	<entry>
 		<title>k8s secret shinanigans</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/20231225-k8s-secret-shinanigans/"/>
+		<link href="https://pandamakes.me/posts/20231225-k8s-secret-shinanigans/"/>
 		<updated>2023-12-25T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/20231225-k8s-secret-shinanigans/</id>
+		<id>https://pandamakes.me/posts/20231225-k8s-secret-shinanigans/</id>
 		<content type="html">&lt;blockquote&gt;
 &lt;p&gt;*checks dates* So... took a while to write this one? I am going to chalk it to being busy at my jobby job.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -180,9 +180,9 @@
 	
 	<entry>
 		<title>Bitshift chaos in JS &amp; Python</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/20220730-bit-shift-js-python/"/>
+		<link href="https://pandamakes.me/posts/20220730-bit-shift-js-python/"/>
 		<updated>2022-07-30T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/20220730-bit-shift-js-python/</id>
+		<id>https://pandamakes.me/posts/20220730-bit-shift-js-python/</id>
 		<content type="html">&lt;p&gt;Preface: work&#39;s been rather busy lately. Even though I constantly add blog ideas, I have not had the chance to properly materialise them into blogs proper. This post originated late last year.&lt;/p&gt;
 &lt;p&gt;I needed to do do some quick hashing of string into hex characters, with the following requirements/limitations:&lt;/p&gt;
 &lt;ul&gt;
@@ -224,9 +224,9 @@ int32&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span clas
 	
 	<entry>
 		<title>Disabling (some) zonejs in Angular app</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/20211026-disabling-zonejs-angular/"/>
+		<link href="https://pandamakes.me/posts/20211026-disabling-zonejs-angular/"/>
 		<updated>2021-10-26T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/20211026-disabling-zonejs-angular/</id>
+		<id>https://pandamakes.me/posts/20211026-disabling-zonejs-angular/</id>
 		<content type="html">&lt;p&gt;Profiling is so fun.&lt;/p&gt;
 &lt;p&gt;I noticed that a component is running significantly slower in angular than in vanilla JS. I had some spare time, and did some profiling.&lt;/p&gt;
 &lt;p&gt;The component did have a lot of interactivity (via &lt;code&gt;Element.addEventListener&lt;/code&gt; and &lt;code&gt;requestAnimationFrame&lt;/code&gt;). I noticed that there were a lot of calls to &lt;code&gt;globalZone&lt;/code&gt;, and alot of unnecessary &lt;code&gt;delegate&lt;/code&gt; calls. (each raf call. )&lt;/p&gt;
@@ -267,9 +267,9 @@ window&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span cla
 	
 	<entry>
 		<title>Python ABC WTF</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/20211022-python-abc-wtf/"/>
+		<link href="https://pandamakes.me/posts/20211022-python-abc-wtf/"/>
 		<updated>2021-10-22T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/20211022-python-abc-wtf/</id>
+		<id>https://pandamakes.me/posts/20211022-python-abc-wtf/</id>
 		<content type="html">&lt;p&gt;I was playing with some python code recently, and something... kind of caught me offguard. (Well, more like I misunderstood how the API works). Consider the following:&lt;/p&gt;
 &lt;pre class=&quot;language-python&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; abc &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; ABC
 &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;MyAbCls&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;ABC&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;pass&lt;/span&gt;
@@ -292,9 +292,9 @@ another_real_in&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;Anothe
 	
 	<entry>
 		<title>Updating openssl certificates</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/2021-09-28-openssl/"/>
+		<link href="https://pandamakes.me/posts/2021-09-28-openssl/"/>
 		<updated>2021-09-28T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/2021-09-28-openssl/</id>
+		<id>https://pandamakes.me/posts/2021-09-28-openssl/</id>
 		<content type="html">&lt;p&gt;Awhile ago, my &lt;code&gt;curl&lt;/code&gt; suddenly stopped working, citing:&lt;/p&gt;
 &lt;pre class=&quot;language-bash&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;unable to get &lt;span class=&quot;token builtin class-name&quot;&gt;local&lt;/span&gt; issuer certificate&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;After a bit of digging, it seems that &lt;code&gt;openssl&lt;/code&gt; cannot accurately resolve some ssl certificates (especially, perhaps exclusively let&#39;s encrypt certs).&lt;/p&gt;
@@ -305,9 +305,9 @@ another_real_in&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;Anothe
 	
 	<entry>
 		<title>Array.prototype.sort reversed for Chrome vs FF</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/2021-08-04-js-array-sort/"/>
+		<link href="https://pandamakes.me/posts/2021-08-04-js-array-sort/"/>
 		<updated>2021-08-04T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/2021-08-04-js-array-sort/</id>
+		<id>https://pandamakes.me/posts/2021-08-04-js-array-sort/</id>
 		<content type="html">&lt;p&gt;Erm, so this certainly has been a long time.&lt;/p&gt;
 &lt;p&gt;Anyway, I was working with &lt;code&gt;Array.prototype.sort&lt;/code&gt; function, and produced the following code:&lt;/p&gt;
 &lt;pre class=&quot;language-js&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;array&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;sort&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;a&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; b&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;a&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;order &lt;span class=&quot;token operator&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;b&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;order &lt;span class=&quot;token operator&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
@@ -326,9 +326,9 @@ another_real_in&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;Anothe
 	
 	<entry>
 		<title>Persisting (nodejs) express process</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/2020-10-06-persisting-node-express-process/"/>
+		<link href="https://pandamakes.me/posts/2020-10-06-persisting-node-express-process/"/>
 		<updated>2020-10-06T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/2020-10-06-persisting-node-express-process/</id>
+		<id>https://pandamakes.me/posts/2020-10-06-persisting-node-express-process/</id>
 		<content type="html">&lt;p&gt;I was running a test just today, and&lt;/p&gt;
 &lt;p&gt;I should be no stranger to builds breaking all of a sudden.&lt;/p&gt;
 &lt;pre class=&quot;language-bash&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;ERROR &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; node_modules/@types/node/ts3.4/globals.global.d.ts:1:13 - error TS2403: Subsequent variable declarations must have the same type.  Variable &lt;span class=&quot;token string&quot;&gt;&#39;global&#39;&lt;/span&gt; must be of &lt;span class=&quot;token builtin class-name&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;Global&#39;&lt;/span&gt;, but here has &lt;span class=&quot;token builtin class-name&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;Global &amp;amp; typeof globalThis&#39;&lt;/span&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;.&lt;/span&gt;
@@ -350,9 +350,9 @@ another_real_in&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;Anothe
 	
 	<entry>
 		<title>CSS priorities</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/20200708-css-rules/"/>
+		<link href="https://pandamakes.me/posts/20200708-css-rules/"/>
 		<updated>2020-07-08T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/20200708-css-rules/</id>
+		<id>https://pandamakes.me/posts/20200708-css-rules/</id>
 		<content type="html">&lt;p&gt;I had an interesting scenario today where I had to apply a local modified theme, in addition to a global theme. By scss setup looks like:&lt;/p&gt;
 &lt;pre class=&quot;language-scss&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-scss&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;@import&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;~@angular/material/theming&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 
@@ -421,9 +421,9 @@ another_real_in&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;Anothe
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;... and the top level &lt;code&gt;darktheme&lt;/code&gt; attribute is used to control the global theming.&lt;/p&gt;
-&lt;h2 id=&quot;use-important&quot; tabindex=&quot;-1&quot;&gt;Use &lt;code&gt;!important&lt;/code&gt; &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/eleventy-base-blog/posts/20200708-css-rules/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;use-important&quot; tabindex=&quot;-1&quot;&gt;Use &lt;code&gt;!important&lt;/code&gt; &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/posts/20200708-css-rules/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;I did not want to use &lt;code&gt;!important&lt;/code&gt; unless absolutely necessary (also, I couldn&#39;t get the syntax to work in the 10 minutes I was trying it).&lt;/p&gt;
-&lt;h2 id=&quot;use-class&quot; tabindex=&quot;-1&quot;&gt;Use class &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/eleventy-base-blog/posts/20200708-css-rules/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;use-class&quot; tabindex=&quot;-1&quot;&gt;Use class &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/posts/20200708-css-rules/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;My next attempt was to add higher level css priority to the local component. &lt;a href=&quot;https://stackoverflow.com/a/22214407/6059235&quot;&gt;This SO post&lt;/a&gt; seems to suggest that the css priority goes by:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;ID &amp;gt; class &amp;gt; attribute
 &lt;/code&gt;&lt;/pre&gt;
@@ -444,7 +444,7 @@ another_real_in&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;Anothe
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;It did not seem to work. Later parsed CSS attributes were taking precedent, suggesting class and attribute have the same priority (at least in Chrome Version 83.0.4103.116 (Official Build) (64-bit))&lt;/p&gt;
-&lt;h2 id=&quot;further-increase-css-priority&quot; tabindex=&quot;-1&quot;&gt;Further increase CSS priority &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/eleventy-base-blog/posts/20200708-css-rules/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;further-increase-css-priority&quot; tabindex=&quot;-1&quot;&gt;Further increase CSS priority &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/posts/20200708-css-rules/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Then, I remembered a trick to artificially boost the priority&lt;/p&gt;
 &lt;pre class=&quot;language-scss&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-scss&quot;&gt;
 &lt;span class=&quot;token selector&quot;&gt;[darktheme=true],
@@ -467,9 +467,9 @@ another_real_in&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;Anothe
 	
 	<entry>
 		<title>Angular 9 AOT build suddenly breaks</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/2020-05-27-angular-aot-build-suddenly-breaks/"/>
+		<link href="https://pandamakes.me/posts/2020-05-27-angular-aot-build-suddenly-breaks/"/>
 		<updated>2020-05-27T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/2020-05-27-angular-aot-build-suddenly-breaks/</id>
+		<id>https://pandamakes.me/posts/2020-05-27-angular-aot-build-suddenly-breaks/</id>
 		<content type="html">&lt;p&gt;I should be no stranger to builds breaking all of a sudden.&lt;/p&gt;
 &lt;pre class=&quot;language-bash&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;ERROR &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; node_modules/@types/node/ts3.4/globals.global.d.ts:1:13 - error TS2403: Subsequent variable declarations must have the same type.  Variable &lt;span class=&quot;token string&quot;&gt;&#39;global&#39;&lt;/span&gt; must be of &lt;span class=&quot;token builtin class-name&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;Global&#39;&lt;/span&gt;, but here has &lt;span class=&quot;token builtin class-name&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;Global &amp;amp; typeof globalThis&#39;&lt;/span&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;.&lt;/span&gt;
 
@@ -490,9 +490,9 @@ another_real_in&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;Anothe
 	
 	<entry>
 		<title>Angular 9 - webpack AOT build - CSP woes</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/2020-05-07-angular-9-aot-build-csp-woes/"/>
+		<link href="https://pandamakes.me/posts/2020-05-07-angular-9-aot-build-csp-woes/"/>
 		<updated>2020-05-07T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/2020-05-07-angular-9-aot-build-csp-woes/</id>
+		<id>https://pandamakes.me/posts/2020-05-07-angular-9-aot-build-csp-woes/</id>
 		<content type="html">&lt;p&gt;We are actively developing an &lt;a href=&quot;http://angular.io/&quot;&gt;angular.io&lt;/a&gt; application, which, for historical reason, does not use &lt;code&gt;angular-cli&lt;/code&gt;. Instead, builds were done via &lt;code&gt;webpack&lt;/code&gt; and &lt;a href=&quot;https://www.npmjs.com/package/@ngtools/webpack&quot;&gt;@ngtools/webpack&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;We also enabled CSP on production server to disallow unsafe eval.&lt;/p&gt;
 &lt;p&gt;However, AOT build violates unsafe eval, by invoking &lt;a href=&quot;https://github.com/angular/angular/blob/c25503b/packages/core/src/util/named_array_type.ts#L26-L41&quot;&gt;createNamedArrayType&lt;/a&gt; method. What is more infuriating is the comment in the file clearly states&lt;/p&gt;
@@ -507,9 +507,9 @@ another_real_in&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;Anothe
 	
 	<entry>
 		<title>Protractor Strangies</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/2020-03-02-protractor-strangies/"/>
+		<link href="https://pandamakes.me/posts/2020-03-02-protractor-strangies/"/>
 		<updated>2020-03-02T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/2020-03-02-protractor-strangies/</id>
+		<id>https://pandamakes.me/posts/2020-03-02-protractor-strangies/</id>
 		<content type="html">&lt;p&gt;In a previous post, I mentioned that I have decided to work with protractor, selenium, and webdriver (though webdriver/protractor API are abstracted via OOP).&lt;/p&gt;
 &lt;p&gt;When porting our e2e tests, we noticed the need to move the cursor to a specific position on the viewport, and observe the UI change. It just so happens that selenium v1 and v2 had &lt;a href=&quot;https://stackoverflow.com/a/53108677/6059235&quot;&gt;very different API of moving mouse&lt;/a&gt;.&lt;/p&gt;
 </content>
@@ -517,12 +517,12 @@ another_real_in&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;Anothe
 	
 	<entry>
 		<title>Selenium vs Puppeteer</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/2020-02-14-selenium-vs-puppeteer/"/>
+		<link href="https://pandamakes.me/posts/2020-02-14-selenium-vs-puppeteer/"/>
 		<updated>2020-02-14T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/2020-02-14-selenium-vs-puppeteer/</id>
+		<id>https://pandamakes.me/posts/2020-02-14-selenium-vs-puppeteer/</id>
 		<content type="html">&lt;p&gt;Lately, I have been working on e2e test of an angular application.&lt;/p&gt;
 &lt;p&gt;Natively, angular CLI appears to use protractor, selenium and jasmine. However, I am been more familiar with mocha, chai and puppeteer. Thus began the debugging cycle.&lt;/p&gt;
-&lt;h2 id=&quot;issue-1-lacking-visual-feedback&quot; tabindex=&quot;-1&quot;&gt;Issue 1: Lacking visual feedback &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/eleventy-base-blog/posts/2020-02-14-selenium-vs-puppeteer/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;issue-1-lacking-visual-feedback&quot; tabindex=&quot;-1&quot;&gt;Issue 1: Lacking visual feedback &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/posts/2020-02-14-selenium-vs-puppeteer/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;After much research, I came to the conclusion that whilst it &lt;a href=&quot;https://stackoverflow.com/a/52765728/6059235&quot;&gt;certainly appears&lt;/a&gt; that you can write puppeteer tests, in non-headless mode, the chrome window simply does not navigate to the page(s) you instruct it to. My guess is that protractor internally uses selenium. By specifying the binary executable path, protractor opens a Chrome window. But &lt;code&gt;puppeteer.launch&lt;/code&gt; will launch a separate chrome instance. Puppeteer API interacts with the latter and webdriver API interacts with the former. Whilst your tests will still pass/fail as you would expect, debugging them becomes a much more difficult task.&lt;/p&gt;
 &lt;p&gt;So I could:&lt;/p&gt;
 &lt;ul&gt;
@@ -532,7 +532,7 @@ another_real_in&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;Anothe
 &lt;/ul&gt;
 &lt;p&gt;After much back and forth, I have decided to use jasmine and selenium. Hopefully, in the future, it should be easier to distribute e2e tests via selenium grid. It should also allow tests to be written in other languages.&lt;/p&gt;
 &lt;p&gt;I have abstracted away the selenium webdriver API, so in principle, implementing puppeteer should be relatively simple.&lt;/p&gt;
-&lt;h2 id=&quot;issue-2-debugging-http-requests&quot; tabindex=&quot;-1&quot;&gt;Issue 2: Debugging HTTP requests &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/eleventy-base-blog/posts/2020-02-14-selenium-vs-puppeteer/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;issue-2-debugging-http-requests&quot; tabindex=&quot;-1&quot;&gt;Issue 2: Debugging HTTP requests &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/posts/2020-02-14-selenium-vs-puppeteer/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;In e2e tests, one of the test conditions is given the navigation to a URL, the application should make a HTTP GET request. For puppeteer, there is &lt;a href=&quot;https://github.com/puppeteer/puppeteer/blob/master/docs/api.md#pagesetrequestinterceptionvalue&quot;&gt;page.setRequestInterception(value)&lt;/a&gt; . For selenium ... nothing?&lt;/p&gt;
 &lt;p&gt;At the end, I had to resort to proxy&#39;ing &lt;code&gt;XMLHttpRequest.prototype.open&lt;/code&gt;. (edit: the idea came from &lt;a href=&quot;https://gist.github.com/chmanie/e616ef3b9d20321943e8&quot;&gt;this gist&lt;/a&gt;) Even then, it was not straight forward. &lt;code&gt;webdriver.get&lt;/code&gt; instantiate a new window for me, and thus overwrites any previous proxying of &lt;code&gt;XMLHttpRequest.prototype.open&lt;/code&gt;. So I had to hack it by synchronously patching the method, after &lt;code&gt;webdriver.get&lt;/code&gt; call was made.&lt;/p&gt;
 </content>
@@ -540,9 +540,9 @@ another_real_in&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;Anothe
 	
 	<entry>
 		<title>glMatrix bug - mat4.getRotation when matrix has scaling component</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/2020-02-01-gl-matrix-bug/"/>
+		<link href="https://pandamakes.me/posts/2020-02-01-gl-matrix-bug/"/>
 		<updated>2020-02-01T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/2020-02-01-gl-matrix-bug/</id>
+		<id>https://pandamakes.me/posts/2020-02-01-gl-matrix-bug/</id>
 		<content type="html">&lt;p&gt;I have been working on a project that extensively make uses of &lt;a href=&quot;http://glmatrix.net/&quot;&gt;glMatrix&lt;/a&gt;, a javascript library which implements a number of extremely handy methods for manipulating vectors, quaternions and affine matrices.&lt;/p&gt;
 &lt;p&gt;To set the scene:&lt;/p&gt;
 &lt;ul&gt;
@@ -571,18 +571,18 @@ another_real_in&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;Anothe
 	
 	<entry>
 		<title>Hello world (again).</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/firstpost/"/>
+		<link href="https://pandamakes.me/posts/firstpost/"/>
 		<updated>2019-12-10T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/firstpost/</id>
+		<id>https://pandamakes.me/posts/firstpost/</id>
 		<content type="html">&lt;p&gt;Last time last time&lt;/p&gt;
 </content>
 	</entry>
 	
 	<entry>
 		<title>Dockerfile: multistage build does not persist ENV</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/dockerfile-multi/"/>
+		<link href="https://pandamakes.me/posts/dockerfile-multi/"/>
 		<updated>2019-02-27T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/dockerfile-multi/</id>
+		<id>https://pandamakes.me/posts/dockerfile-multi/</id>
 		<content type="html">&lt;p&gt;Learnt it the hard way, but somewhat makes sense. Everytime &lt;code&gt;FROM&lt;/code&gt; keyword is used, the &lt;code&gt;ENV&lt;/code&gt; declared before will no longer be accessible. Simple reproduction:&lt;/p&gt;
 &lt;p&gt;FROM node:8 as builder
 ENV test=helloworld
@@ -597,9 +597,9 @@ RUN echo $test
 	
 	<entry>
 		<title>drag and drop adventures</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/drag-and-drop-adventures/"/>
+		<link href="https://pandamakes.me/posts/drag-and-drop-adventures/"/>
 		<updated>2019-02-20T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/drag-and-drop-adventures/</id>
+		<id>https://pandamakes.me/posts/drag-and-drop-adventures/</id>
 		<content type="html">&lt;p&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API&quot;&gt;HTML5 drag and drop API&lt;/a&gt; They are useful in creating an intuitive UI. But there are some pitfalls&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;event.dataTransfer&lt;/code&gt; can only be set &lt;code&gt;ondragstart&lt;/code&gt;, and cannot be read until &lt;code&gt;ondrop&lt;/code&gt; (&lt;a href=&quot;https://stackoverflow.com/questions/11927309/html5-dnd-datatransfer-setdata-or-getdata-not-working-in-every-browser-except-fi&quot;&gt;SO post&lt;/a&gt;). This is a security minded feature, as drag n drop is a feature that can potentially be cross browser/cross application (think drop file interface on browsers). Allowing &lt;code&gt;ondragenter&lt;/code&gt; etc handlers sniff transferData is a bad idea.&lt;/li&gt;
@@ -610,14 +610,14 @@ RUN echo $test
 	
 	<entry>
 		<title>nginx, proxy pass, cors and preflight</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/nginx-proxy-pass-cors-and-preflight/"/>
+		<link href="https://pandamakes.me/posts/nginx-proxy-pass-cors-and-preflight/"/>
 		<updated>2018-10-10T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/nginx-proxy-pass-cors-and-preflight/</id>
+		<id>https://pandamakes.me/posts/nginx-proxy-pass-cors-and-preflight/</id>
 		<content type="html">&lt;p&gt;Lately, I wanted to setup an nginx gate way that proxy pass the requests in the following manner:&lt;/p&gt;
 &lt;p&gt;http://hostname.com : 301 -&amp;gt; https://hostname.com
 https://hostname.com/{CONTAINER_NAME}/{PORT_NUMBER}/ -&amp;gt; add CORS header, proxy pass to http://{CONTAINER_NAME}:{PORT_NUMBER}/&lt;/p&gt;
 &lt;p&gt;This would be especially useful in a &lt;code&gt;docker-compose.yml&lt;/code&gt; script, where, in the same &lt;code&gt;docker network&lt;/code&gt; containers can communicate with each other via docker network dns. TLDR: &lt;a href=&quot;https://github.com/xgui3783/dockerNginxProxyPass&quot;&gt;github repo&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;redirect-to-https-connection&quot; tabindex=&quot;-1&quot;&gt;redirect to https connection &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/eleventy-base-blog/posts/nginx-proxy-pass-cors-and-preflight/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;redirect-to-https-connection&quot; tabindex=&quot;-1&quot;&gt;redirect to https connection &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/posts/nginx-proxy-pass-cors-and-preflight/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;this bit is easy&lt;/p&gt;
 &lt;p&gt;server {
 listen 80;
@@ -631,7 +631,7 @@ return 301 https://$host$request_uri;
 }
 }&lt;/p&gt;
 &lt;p&gt;But to configure ssl connection it is slightly tricky. Because one does not have the files necessary. I ran the test without the ssl directive. Once acquired, I then added the ssl directive and referenced the files.&lt;/p&gt;
-&lt;h2 id=&quot;proxy-pass-based-on-path&quot; tabindex=&quot;-1&quot;&gt;proxy pass based on path &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/eleventy-base-blog/posts/nginx-proxy-pass-cors-and-preflight/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;proxy-pass-based-on-path&quot; tabindex=&quot;-1&quot;&gt;proxy pass based on path &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/posts/nginx-proxy-pass-cors-and-preflight/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;This took a while, but:&lt;/p&gt;
 &lt;p&gt;location ~ ^/(.&lt;em&gt;)/([0-9]&lt;/em&gt;)/ {&lt;/p&gt;
 &lt;p&gt;# docker dns resolver
@@ -642,11 +642,11 @@ rewrite ^/.&lt;em&gt;/[0-9]&lt;/em&gt;/(.*) /$1 break;&lt;/p&gt;
 proxy_pass $proxy_pass_full;
 }&lt;/p&gt;
 &lt;p&gt;Setting the &lt;code&gt;resolver&lt;/code&gt; directive is essential, as if any part of the &lt;code&gt;proxy_pass&lt;/code&gt; was replaced with a variable, nginx needs the resolver to be defined.&lt;/p&gt;
-&lt;h2 id=&quot;double-cors-header&quot; tabindex=&quot;-1&quot;&gt;double cors header(?) &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/eleventy-base-blog/posts/nginx-proxy-pass-cors-and-preflight/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;double-cors-header&quot; tabindex=&quot;-1&quot;&gt;double cors header(?) &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/posts/nginx-proxy-pass-cors-and-preflight/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;one of the forwarded service has already been configured to add the cors header. By adding another &lt;code&gt;Access-Control-Allow-Origin&lt;/code&gt; header, the browser freaks out and makes the response opaque. So easy, right, disable the CORS capability of the forwarded service. which bring us to ...&lt;/p&gt;
-&lt;h2 id=&quot;preflight-option&quot; tabindex=&quot;-1&quot;&gt;preflight (OPTION) &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/eleventy-base-blog/posts/nginx-proxy-pass-cors-and-preflight/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;preflight-option&quot; tabindex=&quot;-1&quot;&gt;preflight (OPTION) &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/posts/nginx-proxy-pass-cors-and-preflight/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;I never quite understood the preflight (OPTION) request, because I only ever see it rarely. But I now see more clearly the anatomy of a CORS request. A GET CORS request from the browser does not trigger preflight OPTION request, but a POST CORS request (and any other methods, it seems) does. (nb this could be unique to the &lt;code&gt;fetch&lt;/code&gt; api, lower level &lt;code&gt;XMLHttpRequest&lt;/code&gt; may be unaffected). preflight OPTION request is forwarded, but without CORS configuration, the preflight request was responded with a 405, and the POST CORS request was never sent.&lt;/p&gt;
-&lt;h2 id=&quot;the-solution&quot; tabindex=&quot;-1&quot;&gt;the solution &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/eleventy-base-blog/posts/nginx-proxy-pass-cors-and-preflight/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;the-solution&quot; tabindex=&quot;-1&quot;&gt;the solution &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/posts/nginx-proxy-pass-cors-and-preflight/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;the nginx proxy server will respond preflight request:&lt;/p&gt;
 &lt;p&gt;if ($request_method = &#39;OPTIONS&#39;){
 add_header &#39;Access-Control-Allow-Origin&#39; &#39;*&#39;;
@@ -669,9 +669,9 @@ return 204;
 	
 	<entry>
 		<title>Rendering a very, very large nested tree in Angular</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/rendering-a-very-very-large-nested-tree-in-angular/"/>
+		<link href="https://pandamakes.me/posts/rendering-a-very-very-large-nested-tree-in-angular/"/>
 		<updated>2018-10-02T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/rendering-a-very-very-large-nested-tree-in-angular/</id>
+		<id>https://pandamakes.me/posts/rendering-a-very-very-large-nested-tree-in-angular/</id>
 		<content type="html">&lt;p&gt;And cherry on top, needs filtering by text functionality, support single/double click + hierarchy guiding lines.&lt;/p&gt;
 &lt;p&gt;Lessons learnt:&lt;br&gt;
 1/ &lt;strong&gt;do not use a nested structure.&lt;/strong&gt; Whilst it initially makes sense, and everything are structured sematically, rendering and changing the parent will case a cascade of changes, and render it extremely non performant. &lt;strong&gt;Solution&lt;/strong&gt;: use a flattened list instead. Any changes to the local node stays local.&lt;/p&gt;
@@ -682,10 +682,10 @@ return 204;
 	
 	<entry>
 		<title>more js quirks</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/more-js-quirks/"/>
+		<link href="https://pandamakes.me/posts/more-js-quirks/"/>
 		<updated>2018-09-28T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/more-js-quirks/</id>
-		<content type="html">&lt;p&gt;following on from &lt;a href=&quot;https://pandamakes.me/eleventy-base-blog/posts/more-js-quirks/www.pandamakes.com.au/js-quirks/&quot;&gt;last js quirks post&lt;/a&gt;&lt;/p&gt;
+		<id>https://pandamakes.me/posts/more-js-quirks/</id>
+		<content type="html">&lt;p&gt;following on from &lt;a href=&quot;https://pandamakes.me/posts/more-js-quirks/www.pandamakes.com.au/js-quirks/&quot;&gt;last js quirks post&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;isNaN([1,2,3])
 //prints true&lt;/p&gt;
 &lt;p&gt;good. and array is not a number&lt;/p&gt;
@@ -702,9 +702,9 @@ isNaN(false)
 	
 	<entry>
 		<title>using `null` as a key for Map in JS</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/using-null-as-a-key-for-map-in-js/"/>
+		<link href="https://pandamakes.me/posts/using-null-as-a-key-for-map-in-js/"/>
 		<updated>2018-08-06T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/using-null-as-a-key-for-map-in-js/</id>
+		<id>https://pandamakes.me/posts/using-null-as-a-key-for-map-in-js/</id>
 		<content type="html">&lt;p&gt;Totally works... for e.g.&lt;/p&gt;
 &lt;p&gt;const map = new Map()
 map.set(1,2)
@@ -716,9 +716,9 @@ map.get(null)
 	
 	<entry>
 		<title>Typescript + Webpack + Alias</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/typescript-webpack-alias/"/>
+		<link href="https://pandamakes.me/posts/typescript-webpack-alias/"/>
 		<updated>2018-07-25T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/typescript-webpack-alias/</id>
+		<id>https://pandamakes.me/posts/typescript-webpack-alias/</id>
 		<content type="html">&lt;p&gt;Ran into a small problem today regarding the using of &lt;code&gt;alias&lt;/code&gt; in a typescript webpack project.&lt;/p&gt;
 &lt;p&gt;The project structure looks like so:&lt;/p&gt;
 &lt;p&gt;- root
@@ -757,9 +757,9 @@ alias : {
 	
 	<entry>
 		<title>Webpack HTML plugin pitfall</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/webpack-html-plugin-pitfall/"/>
+		<link href="https://pandamakes.me/posts/webpack-html-plugin-pitfall/"/>
 		<updated>2018-07-23T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/webpack-html-plugin-pitfall/</id>
+		<id>https://pandamakes.me/posts/webpack-html-plugin-pitfall/</id>
 		<content type="html">&lt;p&gt;Singular, a quick one.&lt;/p&gt;
 &lt;p&gt;If one mix javascript in html pages loaded by HTML plugin, such as:&lt;/p&gt;
 &lt;p&gt;&amp;lt;!doctype html&amp;gt;
@@ -781,9 +781,9 @@ console.log(&lt;code&gt;${message}&lt;/code&gt;)
 	
 	<entry>
 		<title>JS Quirks</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/js-quirks/"/>
+		<link href="https://pandamakes.me/posts/js-quirks/"/>
 		<updated>2018-07-13T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/js-quirks/</id>
+		<id>https://pandamakes.me/posts/js-quirks/</id>
 		<content type="html">&lt;p&gt;isNaN(&#39;&#39;) /* prints false &lt;em&gt;/
 /&lt;/em&gt; you are telling me an empty string is a number? */&lt;/p&gt;
 &lt;p&gt;javascript, you so silly&lt;/p&gt;
@@ -796,9 +796,9 @@ bonus:&lt;/p&gt;
 	
 	<entry>
 		<title>Angular Elements Gotcha</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/angular-elements-gotcha/"/>
+		<link href="https://pandamakes.me/posts/angular-elements-gotcha/"/>
 		<updated>2018-07-10T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/angular-elements-gotcha/</id>
+		<id>https://pandamakes.me/posts/angular-elements-gotcha/</id>
 		<content type="html">&lt;p&gt;binding &lt;em&gt;inputs&lt;/em&gt; to angular elements gave me a surprise.&lt;/p&gt;
 &lt;p&gt;for example, the below component:&lt;/p&gt;
 &lt;p&gt;/* import statements */&lt;/p&gt;
@@ -822,9 +822,9 @@ styles : []
 	
 	<entry>
 		<title>Angular 6 changeDetection lesson</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/angular-6-changedetection-lesson/"/>
+		<link href="https://pandamakes.me/posts/angular-6-changedetection-lesson/"/>
 		<updated>2018-06-09T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/angular-6-changedetection-lesson/</id>
+		<id>https://pandamakes.me/posts/angular-6-changedetection-lesson/</id>
 		<content type="html">&lt;p&gt;I learnt an important lesson today.&lt;/p&gt;
 &lt;p&gt;@Component({
 template :
@@ -844,9 +844,9 @@ return [&#39;hello&#39;,&#39;world&#39;]
 	
 	<entry>
 		<title>Angular &amp;gt;2 DI Can&#39;t resolve all parameters</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/angular-2-di-cant-resolve-all-parameters/"/>
+		<link href="https://pandamakes.me/posts/angular-2-di-cant-resolve-all-parameters/"/>
 		<updated>2018-05-30T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/angular-2-di-cant-resolve-all-parameters/</id>
+		<id>https://pandamakes.me/posts/angular-2-di-cant-resolve-all-parameters/</id>
 		<content type="html">&lt;p&gt;Couldn&#39;t work out for the life of me. Could not inject Factory components such as &lt;code&gt;ComponentFactoryResolver&lt;/code&gt; or &lt;code&gt;DOMSanitizer&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Then it dawned on me. I needed to install and include &lt;code&gt;reflect-metadata&lt;/code&gt;&lt;/p&gt;
 </content>
@@ -854,24 +854,24 @@ return [&#39;hello&#39;,&#39;world&#39;]
 	
 	<entry>
 		<title>more foray web-dev: Angular 6 &amp;amp; Webpack</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/more-foray-web-dev-angular-6-webpack/"/>
+		<link href="https://pandamakes.me/posts/more-foray-web-dev-angular-6-webpack/"/>
 		<updated>2018-05-25T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/more-foray-web-dev-angular-6-webpack/</id>
+		<id>https://pandamakes.me/posts/more-foray-web-dev-angular-6-webpack/</id>
 		<content type="html">&lt;p&gt;Recently, I have been motivated to upgrade the currently application I am writing from Angular 5 to Angular 6. Since there was going to be a rewrite of the application any way, I thought this is a good opportunity to upgrade.&lt;/p&gt;
-&lt;h2 id=&quot;first-error&quot; tabindex=&quot;-1&quot;&gt;First error: &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/eleventy-base-blog/posts/more-foray-web-dev-angular-6-webpack/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;first-error&quot; tabindex=&quot;-1&quot;&gt;First error: &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/posts/more-foray-web-dev-angular-6-webpack/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;in &lt;code&gt;tsconfig.json&lt;/code&gt;, only include &lt;code&gt;&#39;.ts&#39;&lt;/code&gt; as &lt;code&gt;resolve.extension&lt;/code&gt;. as a result, &lt;code&gt;rxjs&lt;/code&gt; kept on throwing error during bundling&lt;/p&gt;
 &lt;p&gt;ERROR in ./node_modules/rxjs/_esm5/index.js
 Module not found: Error: Can&#39;t resolve &#39;./internal/util/pipe&#39; in &#39;/PATH-TO-PROJECT/node_modules/rxjs/_esm5&#39;&lt;/p&gt;
-&lt;h2 id=&quot;second-error&quot; tabindex=&quot;-1&quot;&gt;Second error: &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/eleventy-base-blog/posts/more-foray-web-dev-angular-6-webpack/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;second-error&quot; tabindex=&quot;-1&quot;&gt;Second error: &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/posts/more-foray-web-dev-angular-6-webpack/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;I changed the &lt;code&gt;target&lt;/code&gt; from &lt;code&gt;es5&lt;/code&gt; to &lt;code&gt;es2015&lt;/code&gt; in lieu for supporting &lt;a href=&quot;https://angular.io/guide/elements#browser-support-for-custom-elements&quot;&gt;angular elements&lt;/a&gt;. But the bundler throws error on failing to find module &lt;code&gt;@angular/core&lt;/code&gt;. changing &lt;code&gt;target&lt;/code&gt; back to &lt;code&gt;es5&lt;/code&gt; circumvents the problem. Turns out, with the increased support for dynamic import, one will need to specify &lt;code&gt;moduleResolution&lt;/code&gt; as &lt;code&gt;node&lt;/code&gt; in &lt;code&gt;tsconfig.json&lt;/code&gt; to explicitly tell the typescript compiler that imports are node modules.&lt;/p&gt;
 </content>
 	</entry>
 	
 	<entry>
 		<title>finally sorted out the weird EACCES issue re: npm, npm link and node gyp</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/finally-sorted-out-the-weird-eacces-issue-re-npm-npm-link-and-node-gyp/"/>
+		<link href="https://pandamakes.me/posts/finally-sorted-out-the-weird-eacces-issue-re-npm-npm-link-and-node-gyp/"/>
 		<updated>2018-05-24T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/finally-sorted-out-the-weird-eacces-issue-re-npm-npm-link-and-node-gyp/</id>
+		<id>https://pandamakes.me/posts/finally-sorted-out-the-weird-eacces-issue-re-npm-npm-link-and-node-gyp/</id>
 		<content type="html">&lt;p&gt;For the longest time, I was plagued by the issue of constantly have EACCES issue with regard to EACCES issue.&lt;/p&gt;
 &lt;p&gt;To set the scene, I do not have &lt;code&gt;nvm&lt;/code&gt; installed. So &lt;code&gt;npm link&lt;/code&gt; actually required &lt;code&gt;sudo&lt;/code&gt; access. Crazy. I know. (Guess who&#39;s setting up &lt;code&gt;nvm&lt;/code&gt; next time?). &lt;code&gt;package.json&lt;/code&gt; has dependency on packages set up by &lt;code&gt;npm link&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;to reproduce the issue:&lt;/p&gt;
@@ -884,9 +884,9 @@ now, &lt;code&gt;npm i&lt;/code&gt; results in error, as the packages set up by 
 	
 	<entry>
 		<title>on cross browser (chrome vs FF) compatibility of webcomponents</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/on-cross-browser-compatibility-of-webcomponents/"/>
+		<link href="https://pandamakes.me/posts/on-cross-browser-compatibility-of-webcomponents/"/>
 		<updated>2018-05-16T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/on-cross-browser-compatibility-of-webcomponents/</id>
+		<id>https://pandamakes.me/posts/on-cross-browser-compatibility-of-webcomponents/</id>
 		<content type="html">&lt;p&gt;I ran into an interesting problem yesterday. Support for webcomponents.&lt;/p&gt;
 &lt;p&gt;AFAIK, chrome natively support webcomponents. FF however, require a polyfill. It did not take long for me to realise that the polyfill breaks chrome&#39;s native support for webcomponents (probably overwrites the &lt;code&gt;customElements(...arg)&lt;/code&gt; function and &lt;code&gt;customElementRegistry&lt;/code&gt; property of &lt;code&gt;window&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Then I remembered learning about testing for browser capability using codes such as&lt;/p&gt;
@@ -901,9 +901,9 @@ now, &lt;code&gt;npm i&lt;/code&gt; results in error, as the packages set up by 
 	
 	<entry>
 		<title>webpack-closure-compiler throws cryptic error (and solution)</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/webpack-closurecompiler/"/>
+		<link href="https://pandamakes.me/posts/webpack-closurecompiler/"/>
 		<updated>2018-01-26T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/webpack-closurecompiler/</id>
+		<id>https://pandamakes.me/posts/webpack-closurecompiler/</id>
 		<content type="html">&lt;p&gt;&lt;a href=&quot;https://www.npmjs.com/package/webpack-closure-compiler&quot;&gt;webpack-closure-compiler&lt;/a&gt; was used to convert compiled js from ecma6 to ecma5 by &lt;a href=&quot;https://github.com/google/neuroglancer&quot;&gt;neuroglancer&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;How I found out&lt;/strong&gt;&lt;br&gt;
 &lt;code&gt;npm run build&lt;/code&gt; works, &lt;code&gt;npm run build-min&lt;/code&gt; does not. Commenting out the &lt;a href=&quot;https://github.com/google/neuroglancer/blob/de7ca35dd4d9fa4e6c3166d636ee430af6da0fa0/config/webpack_helpers.js#L294&quot;&gt;&lt;code&gt;ClosureCompiler&lt;/code&gt;&lt;/a&gt; worked.&lt;/p&gt;
@@ -918,9 +918,9 @@ New machine, did not install java runtime. Concurrency (default) only works with
 	
 	<entry>
 		<title>weird development issues</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/weird-development-issues/"/>
+		<link href="https://pandamakes.me/posts/weird-development-issues/"/>
 		<updated>2017-05-15T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/weird-development-issues/</id>
+		<id>https://pandamakes.me/posts/weird-development-issues/</id>
 		<content type="html">&lt;p&gt;this post was supposed to be published last week week monday. There happens to be a mix-up unfortunately.&lt;/p&gt;
 &lt;p&gt;I may or may not have mentioned this, the environment of my work PC is all kinds of screwed up. Chrome 64 bit never seem to support webgl completely (even though on other windows machine, it runs fine). At least I have Firefox that runs everything smoothly.&lt;/p&gt;
 &lt;p&gt;This one is definitely a new one: attempting to run a dev-server &lt;code&gt;npm run dev-server&lt;/code&gt; on &lt;a href=&quot;https://github.com/google/neuroglancer&quot;&gt;neuroglancer&lt;/a&gt;. The initial compilation error was:&lt;/p&gt;
@@ -936,9 +936,9 @@ ts2304 cannot find name &#39;object&#39;&lt;/p&gt;
 	
 	<entry>
 		<title>A tectonic change in my life</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/a-tectonic-change-in-my-life/"/>
+		<link href="https://pandamakes.me/posts/a-tectonic-change-in-my-life/"/>
 		<updated>2017-05-01T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/a-tectonic-change-in-my-life/</id>
+		<id>https://pandamakes.me/posts/a-tectonic-change-in-my-life/</id>
 		<content type="html">&lt;p&gt;&lt;strong&gt;Background:&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;I started this blog as a way for me to record my transition from my previous day-job, to one that is more intimately related to web development and programming. I believed (and I still do believe) that these records will be the testament that can attest for my conviction can experience. If I am lucky enough, I may even use the contents of this blog as a proof of character, showing potential clients and/or employers what I am capable of. As a result, I have been trying to ensure that the blog is as free of personal entries as possible.&lt;/p&gt;
 &lt;p&gt;However, it may no longer be possible, as I will explain.&lt;/p&gt;
@@ -953,9 +953,9 @@ ts2304 cannot find name &#39;object&#39;&lt;/p&gt;
 	
 	<entry>
 		<title>Terrible jokes (Probably only I understand)</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/terrible-jokes-probably-only-i-understand/"/>
+		<link href="https://pandamakes.me/posts/terrible-jokes-probably-only-i-understand/"/>
 		<updated>2017-04-24T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/terrible-jokes-probably-only-i-understand/</id>
+		<id>https://pandamakes.me/posts/terrible-jokes-probably-only-i-understand/</id>
 		<content type="html">&lt;p&gt;Here’s an easy one:&lt;/p&gt;
 &lt;p&gt;NaCl = Native Client.&lt;br&gt;
 so salty.&lt;/p&gt;
@@ -971,9 +971,9 @@ similarly, looking at the directory, it is becoming more natural to use &lt;code
 	
 	<entry>
 		<title>threejs tips and tricks</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/threejs-tips-and-tricks/"/>
+		<link href="https://pandamakes.me/posts/threejs-tips-and-tricks/"/>
 		<updated>2017-04-17T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/threejs-tips-and-tricks/</id>
+		<id>https://pandamakes.me/posts/threejs-tips-and-tricks/</id>
 		<content type="html">&lt;p&gt;re: &lt;code&gt;OrbitControl&lt;/code&gt;(same can be said for &lt;code&gt;TrackballControl&lt;/code&gt;, I would assume), upon initialisation, reset camera rotation to 0,0,0. One will have to redefine the rotation of the camera, or invoke&lt;br&gt;
 &lt;code&gt;camera.lookAt( target )&lt;/code&gt;&lt;br&gt;
 method.&lt;/p&gt;
@@ -984,9 +984,9 @@ method.&lt;/p&gt;
 	
 	<entry>
 		<title>JS lessons</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/js-lessons/"/>
+		<link href="https://pandamakes.me/posts/js-lessons/"/>
 		<updated>2017-04-10T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/js-lessons/</id>
+		<id>https://pandamakes.me/posts/js-lessons/</id>
 		<content type="html">&lt;p&gt;lesson 1:&lt;/p&gt;
 &lt;p&gt;let code = &#39;console.log(&amp;quot;hello world&amp;quot;)&#39;
 eval(eval(&#39;code&#39;)) // console logs hello world&lt;/p&gt;
@@ -1002,9 +1002,9 @@ JS runs on a single thread: not exactly true. Just very recently, I learnt about
 	
 	<entry>
 		<title>WEBGL performance abnormalities (chrome vs firefox)</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/webgl-performance-abnormalities-chrome-vs-firefox/"/>
+		<link href="https://pandamakes.me/posts/webgl-performance-abnormalities-chrome-vs-firefox/"/>
 		<updated>2017-04-03T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/webgl-performance-abnormalities-chrome-vs-firefox/</id>
+		<id>https://pandamakes.me/posts/webgl-performance-abnormalities-chrome-vs-firefox/</id>
 		<content type="html">&lt;p&gt;Preface: I have had the chance to play around with a very specific webgl library (the name of which I may be able to reveal in the future. This is not for any NDA reasons – the library is opensource on github). I feel obliged to present my findings here, hopefully in a legible fashion.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;Problem 1: the app runs particularly slowly on a chrome browser on my laptop.&lt;/p&gt;
@@ -1014,19 +1014,19 @@ JS runs on a single thread: not exactly true. Just very recently, I learnt about
 &lt;p&gt;Solution: I could override the misidentification by going to &lt;code&gt;chrome://flags&lt;/code&gt; and enable &lt;code&gt;Override software rendering list&lt;/code&gt;. But a simple reinstallation cleared the problem altogether.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;Problem 3: The updated chrome (57.0.2987.110 64bit) no longer supports &lt;code&gt;webgl.getExtension(‘WEBGL_draw_buffers’)&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://pandamakes.me/eleventy-base-blog/web/20190303111435im_/https:/pandamakes.com.au/content/images/2018/01/chrome_getExtension_webgl_draw_buffers.PNG&quot; alt=&quot;chrome_getExtension_webgl_draw_buffers&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://pandamakes.me/web/20190303111435im_/https:/pandamakes.com.au/content/images/2018/01/chrome_getExtension_webgl_draw_buffers.PNG&quot; alt=&quot;chrome_getExtension_webgl_draw_buffers&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Above is the &lt;code&gt;console.log&lt;/code&gt; of the method &lt;code&gt;webgl.getExtension(‘WEBGL_draw_buffers’)&lt;/code&gt;. Notice how the chrome developer console outputted null.&lt;/p&gt;
 &lt;p&gt;Solution: Use firefox I guess. In addition to 57.0.2987.110 64bit, I have also tried their canary build 59.0.3054.0 64bit, which does not support the extension either.&lt;/p&gt;
 &lt;p&gt;Addendum: according to &lt;a href=&quot;https://www.khronos.org/registry/webgl/sdk/tests/conformance/extensions/webgl-draw-buffers.html&quot;&gt;the extension conformance&lt;/a&gt;, not supporting &lt;code&gt;WEBGL_draw_buffers&lt;/code&gt; is legal.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://pandamakes.me/eleventy-base-blog/web/20190303111435im_/https:/pandamakes.com.au/content/images/2018/01/notSupportingDrawBuffer_legal.PNG&quot; alt=&quot;notSupportingDrawBuffer_legal&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://pandamakes.me/web/20190303111435im_/https:/pandamakes.com.au/content/images/2018/01/notSupportingDrawBuffer_legal.PNG&quot; alt=&quot;notSupportingDrawBuffer_legal&quot;&gt;&lt;/p&gt;
 </content>
 	</entry>
 	
 	<entry>
 		<title>Some other quirks, not related to three.js</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/some-other-quirks-not-related-to-three-js/"/>
+		<link href="https://pandamakes.me/posts/some-other-quirks-not-related-to-three-js/"/>
 		<updated>2017-03-28T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/some-other-quirks-not-related-to-three-js/</id>
+		<id>https://pandamakes.me/posts/some-other-quirks-not-related-to-three-js/</id>
 		<content type="html">&lt;p&gt;For the previous two weeks, I have talked about the quirks I encountered while meddling with three.js. I have also encountered some issues that are not three.js specific. I would like to go through them this week.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;I got a Logitech MX Anywhere 2 recently. In the not so distant past, I had to work with my old mouse on glassy surfaces on a few occasions, often with hacks such as using a few sheets of A4 paper as a mouse pad, producing mixed results.Having a mouse that works on most glassy surface can be helpful. However, Logitech MX series does not seem to want to play ball with Notepad++. Horizontal scroll started off being really slow (approx 3 characters at a time). After numerous attempt at “fixing” the horizontal scroll issue, horizontal scroll stopped working altogether.&lt;/p&gt;
@@ -1046,9 +1046,9 @@ x.document.close();&lt;p&gt;&lt;/p&gt;
 	
 	<entry>
 		<title>Some additional quirks associated with three.js</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/some-additional-quirks-associated-with-three-js/"/>
+		<link href="https://pandamakes.me/posts/some-additional-quirks-associated-with-three-js/"/>
 		<updated>2017-03-21T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/some-additional-quirks-associated-with-three-js/</id>
+		<id>https://pandamakes.me/posts/some-additional-quirks-associated-with-three-js/</id>
 		<content type="html">&lt;p&gt;Last week, I talked a bit about my initial adventure into three.js. This week, I will continue to share some quirks that I found interesting regarding three.js&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;When both dat.gui.min.js and TrackballControl are implemented, altering the dat.gui panel causes the perspective of TrackballControl to change. After all, clicking and dragging in dat.gui panel constitute as a click + drag event. Surely, &lt;a href=&quot;https://github.com/mrdoob/three.js/issues/828&quot;&gt;there is a way to circumvent this&lt;/a&gt;. The short answer (by meetar @ github):&lt;/p&gt;
@@ -1070,9 +1070,9 @@ x.document.close();&lt;p&gt;&lt;/p&gt;
 	
 	<entry>
 		<title>Lessons learnt learning three.js</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/lessons-learnt-learning-three-js/"/>
+		<link href="https://pandamakes.me/posts/lessons-learnt-learning-three-js/"/>
 		<updated>2017-03-14T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/lessons-learnt-learning-three-js/</id>
+		<id>https://pandamakes.me/posts/lessons-learnt-learning-three-js/</id>
 		<content type="html">&lt;p&gt;Background: I have been wanting to dabble in something new for sometime. I was pondering between &lt;em&gt;three.js&lt;/em&gt;, &lt;em&gt;d3.js&lt;/em&gt; or machine learning (python). I decided to give &lt;em&gt;three.js&lt;/em&gt; a shot.&lt;/p&gt;
 &lt;p&gt;three.js is an abstraction layer on top of WebGL. It provides methods that are easy to understand and implement to those familiar with javascript. Here is a list of things about three.js that I learnt.&lt;/p&gt;
 &lt;hr&gt;
@@ -1093,13 +1093,13 @@ modifier.modify(threeGeometry)&lt;/p&gt;
 	
 	<entry>
 		<title>First steps in threejs</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/first-steps-in-threejs/"/>
+		<link href="https://pandamakes.me/posts/first-steps-in-threejs/"/>
 		<updated>2017-03-06T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/first-steps-in-threejs/</id>
+		<id>https://pandamakes.me/posts/first-steps-in-threejs/</id>
 		<content type="html">&lt;p&gt;So I had my first stride into three.js recently. I had wanted to try a graphic library of javascript for sometime, and I had in my mind to try either d3.js or three.js. It was not until I listened to &lt;a href=&quot;http://hanselminutes.com/565/discovering-webvr-with-ada-rose-edwards&quot;&gt;Scott Hanselman’s discussion with Ada Rose Edwards with regard to WebVR&lt;/a&gt; where I took that interest seriously.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;a href=&quot;https://threejs.org/&quot;&gt;three.js&lt;/a&gt; is a javascript library that uses WebGL to display 3D graphics. If one has done any work in the field of 3D modelling, picking up three.js should be only a gentle incline. There are familiar concepts such as geometry (cube, cylinder, sphere, etc), material (basic, lambert, phong, etc), texture (to be applied to materials) and a mesh (combining a geometry and a material)&lt;/p&gt;
-&lt;p&gt;Over the next few weeks, I will write about the quirks I have learnt from three.js. But here is what I have learnt and made in two weeks &lt;a href=&quot;https://pandamakes.me/eleventy-base-blog/posts/first-steps-in-threejs/www.pandamakes.com.au/examples/tangerine/index.html&quot;&gt;link&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Over the next few weeks, I will write about the quirks I have learnt from three.js. But here is what I have learnt and made in two weeks &lt;a href=&quot;https://pandamakes.me/posts/first-steps-in-threejs/www.pandamakes.com.au/examples/tangerine/index.html&quot;&gt;link&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;There is no tutorial, because it takes time to write + code the logic for tutorial. WASD to move around, &lt;code&gt;W|A|S|D + L&lt;/code&gt; for dodge roll. &lt;code&gt;J + J&lt;/code&gt; etc … for attack.&lt;/p&gt;
 &lt;p&gt;Currently, &lt;code&gt;W|A|S|D + J&lt;/code&gt; freezes the game, for reasons I might explore in the future.&lt;/p&gt;
 </content>
@@ -1107,9 +1107,9 @@ modifier.modify(threeGeometry)&lt;/p&gt;
 	
 	<entry>
 		<title>Stream of consciousness - generic command line quirks</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/stream-of-consciousness-generic-cli/"/>
+		<link href="https://pandamakes.me/posts/stream-of-consciousness-generic-cli/"/>
 		<updated>2017-02-27T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/stream-of-consciousness-generic-cli/</id>
+		<id>https://pandamakes.me/posts/stream-of-consciousness-generic-cli/</id>
 		<content type="html">&lt;p&gt;Using imagemagick,&lt;/p&gt;
 &lt;p&gt;convert pdf.pdf -density 400 png.png&lt;/p&gt;
 &lt;p&gt;is different to&lt;/p&gt;
@@ -1126,9 +1126,9 @@ modifier.modify(threeGeometry)&lt;/p&gt;
 	
 	<entry>
 		<title>Stream of consciousness - Android/Java version</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/stream-of-consciousness-androidjava-version/"/>
+		<link href="https://pandamakes.me/posts/stream-of-consciousness-androidjava-version/"/>
 		<updated>2017-02-20T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/stream-of-consciousness-androidjava-version/</id>
+		<id>https://pandamakes.me/posts/stream-of-consciousness-androidjava-version/</id>
 		<content type="html">&lt;p&gt;AsyncTask: update UI Thread:&lt;br&gt;
 &lt;code&gt;doInBackground()&lt;/code&gt; does not interact with UI thread, even if you invoke&lt;br&gt;
 &lt;code&gt;runOnUIThread()&lt;/code&gt;&lt;br&gt;
@@ -1143,9 +1143,9 @@ runnable. It will just throw an error.&lt;/p&gt;
 	
 	<entry>
 		<title>Stream of consciousness - HTML quirks</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/stream-of-consciousness-html-quirks/"/>
+		<link href="https://pandamakes.me/posts/stream-of-consciousness-html-quirks/"/>
 		<updated>2017-02-13T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/stream-of-consciousness-html-quirks/</id>
+		<id>https://pandamakes.me/posts/stream-of-consciousness-html-quirks/</id>
 		<content type="html">&lt;p&gt;I believe I had known this quirk for a while, but &lt;code&gt;iframe&lt;/code&gt; cannot have its source point to a webpage not in the same domain as the host. Security feature. So that malicious codes cannot load an invisible iframe somewhere and run codes/capture info.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;there is a difference between&lt;/p&gt;
@@ -1158,13 +1158,13 @@ runnable. It will just throw an error.&lt;/p&gt;
 	
 	<entry>
 		<title>How I built a python executable and ran it on Openshift (V2)</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/how-i-built-a-python-executable-and-ran-it-on-openshift-v2/"/>
+		<link href="https://pandamakes.me/posts/how-i-built-a-python-executable-and-ran-it-on-openshift-v2/"/>
 		<updated>2017-02-06T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/how-i-built-a-python-executable-and-ran-it-on-openshift-v2/</id>
-		<content type="html">&lt;h2 id=&quot;background&quot; tabindex=&quot;-1&quot;&gt;Background &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/eleventy-base-blog/posts/how-i-built-a-python-executable-and-ran-it-on-openshift-v2/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+		<id>https://pandamakes.me/posts/how-i-built-a-python-executable-and-ran-it-on-openshift-v2/</id>
+		<content type="html">&lt;h2 id=&quot;background&quot; tabindex=&quot;-1&quot;&gt;Background &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/posts/how-i-built-a-python-executable-and-ran-it-on-openshift-v2/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;The request was build something that can &lt;strong&gt;process PDFs&lt;/strong&gt;, &lt;strong&gt;crunch the data&lt;/strong&gt;, and &lt;strong&gt;post it&lt;/strong&gt; to another webhook.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&quot;plan&quot; tabindex=&quot;-1&quot;&gt;Plan &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/eleventy-base-blog/posts/how-i-built-a-python-executable-and-ran-it-on-openshift-v2/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;plan&quot; tabindex=&quot;-1&quot;&gt;Plan &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/posts/how-i-built-a-python-executable-and-ran-it-on-openshift-v2/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Process PDF:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;JQuery (visual overlay + visual feedback) on front end, check format (pdf), ajax post&lt;/li&gt;
@@ -1180,7 +1180,7 @@ runnable. It will just throw an error.&lt;/p&gt;
 &lt;li&gt;request post to required url&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2 id=&quot;details-re-png-processing&quot; tabindex=&quot;-1&quot;&gt;Details Re: PNG processing &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/eleventy-base-blog/posts/how-i-built-a-python-executable-and-ran-it-on-openshift-v2/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;details-re-png-processing&quot; tabindex=&quot;-1&quot;&gt;Details Re: PNG processing &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/posts/how-i-built-a-python-executable-and-ran-it-on-openshift-v2/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;I have already written &lt;a href=&quot;http://wp.me/p7Zk8t-b5&quot;&gt;a post&lt;/a&gt; regarding trying to compile a linux executable. The said post was more of a stream of consciousness and less organised thoughts. I will attempt to summarise what was done correctly in this post.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Download &lt;a href=&quot;https://www.virtualbox.org/&quot;&gt;Virtual Box&lt;/a&gt; and install it on your host OS&lt;/li&gt;
@@ -1233,7 +1233,7 @@ print cv2.&lt;strong&gt;version&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;cp /usr/local/lib/python2.?/site-packages/cv2.so /usr/lib/python2.?/site-packages&lt;/p&gt;
 &lt;p&gt;(change ? accordingly)&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&quot;pyinstaller-on-python2-6&quot; tabindex=&quot;-1&quot;&gt;PyInstaller on Python2.6 &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/eleventy-base-blog/posts/how-i-built-a-python-executable-and-ran-it-on-openshift-v2/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;pyinstaller-on-python2-6&quot; tabindex=&quot;-1&quot;&gt;PyInstaller on Python2.6 &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/posts/how-i-built-a-python-executable-and-ran-it-on-openshift-v2/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Nuitka failed to freeze my python script into an ELF, so I decided to give PyInstaller another shot. The problem is&lt;/p&gt;
 &lt;p&gt;pip install pyinstaller&lt;/p&gt;
 &lt;p&gt;produces an error, presumably because pyinstaller (latest version) is compatible with python 2.7+. I failed to realise that I could upgrade python to 2.7 without touching the glibc, but this turns out to be a blessing in its own way, as I side stepped the problem, by downloading &lt;a href=&quot;https://pypi.python.org/pypi/PyInstaller/2.1&quot;&gt;v2.1&lt;/a&gt;, which support python2.6. Unzip, and&lt;/p&gt;
@@ -1246,7 +1246,7 @@ print cv2.&lt;strong&gt;version&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;did the trick.&lt;/p&gt;
 &lt;p&gt;At the end, I compiled the binary without the &lt;code&gt;-F&lt;/code&gt; flag. In a server environment, being a little unsightly is not the great sin.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&quot;p-s-another-quirk-with-pyinstaller&quot; tabindex=&quot;-1&quot;&gt;P.S., another quirk with PyInstaller &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/eleventy-base-blog/posts/how-i-built-a-python-executable-and-ran-it-on-openshift-v2/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;p-s-another-quirk-with-pyinstaller&quot; tabindex=&quot;-1&quot;&gt;P.S., another quirk with PyInstaller &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/posts/how-i-built-a-python-executable-and-ran-it-on-openshift-v2/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;This probably does not grant a whole post by itself.&lt;/p&gt;
 &lt;p&gt;pyinstaller script.v.1.2.py&lt;/p&gt;
 &lt;p&gt;crashes with a cryptic error about an AssertionError. &lt;strong&gt;Remove all full stops&lt;/strong&gt; from the filename, except the one defining the extension fixes the problem.&lt;/p&gt;
@@ -1255,9 +1255,9 @@ print cv2.&lt;strong&gt;version&lt;/strong&gt;&lt;/p&gt;
 	
 	<entry>
 		<title>cross compiling a linux executable to be run on OpenShift</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/cross-compiling-a-linux-executable-to-be-run-on-openshift/"/>
+		<link href="https://pandamakes.me/posts/cross-compiling-a-linux-executable-to-be-run-on-openshift/"/>
 		<updated>2017-01-30T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/cross-compiling-a-linux-executable-to-be-run-on-openshift/</id>
+		<id>https://pandamakes.me/posts/cross-compiling-a-linux-executable-to-be-run-on-openshift/</id>
 		<content type="html">&lt;p&gt;I was asked to do something about the inefficient process of marking MCQ exam papers. This is my adventure trying to get it to work.&lt;/p&gt;
 &lt;p&gt;I have written previously about a project where, multiple choice exam papers were marked by an Android app, and the result was sent to the server, where reports can be printed, and marks are tallied. I chose Android to do the bulk of heavy lifting, because I have gotten openCV to work on Android before, and there was not a lot of time to explore other options. However, after a term, the inefficiency of using an Android device is becoming apparent.&lt;/p&gt;
 &lt;ol&gt;
@@ -1303,9 +1303,9 @@ Now this is not so easy. I thought, I could just use PyInstaller, freeze the pyt
 	
 	<entry>
 		<title>Android Studio quriks: C is not a valid resource + image resources failing to be recognised by Gradle</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/android-studio-quriks-c-is-not-a-valid-resource-image-resources-failing-to-be-recognised-by-gradle/"/>
+		<link href="https://pandamakes.me/posts/android-studio-quriks-c-is-not-a-valid-resource-image-resources-failing-to-be-recognised-by-gradle/"/>
 		<updated>2017-01-23T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/android-studio-quriks-c-is-not-a-valid-resource-image-resources-failing-to-be-recognised-by-gradle/</id>
+		<id>https://pandamakes.me/posts/android-studio-quriks-c-is-not-a-valid-resource-image-resources-failing-to-be-recognised-by-gradle/</id>
 		<content type="html">&lt;p&gt;So I was playing with Android Studio a bit more, and two weird quirks:&lt;/p&gt;
 &lt;hr&gt;
 &lt;ol&gt;
@@ -1326,23 +1326,23 @@ Now this is not so easy. I thought, I could just use PyInstaller, freeze the pyt
 	
 	<entry>
 		<title>MongoDB occupying excessive space (on openshift or otherwise)</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/mongodb-occupying-excessive-space-on-openshift-or-otherwise/"/>
+		<link href="https://pandamakes.me/posts/mongodb-occupying-excessive-space-on-openshift-or-otherwise/"/>
 		<updated>2017-01-16T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/mongodb-occupying-excessive-space-on-openshift-or-otherwise/</id>
+		<id>https://pandamakes.me/posts/mongodb-occupying-excessive-space-on-openshift-or-otherwise/</id>
 		<content type="html">&lt;p&gt;I was doing some daily maintenance on one of the client’s web service. the site was incredibly slow. Everything else is as fast as money vanishing in my bank account, what could be the cause? I decided to investigate. I thought I would first investigate the amount of space left on the app (which is deployed on Openshift).&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://pandamakes.me/eleventy-base-blog/web/20190303113321im_/https:/pandamakes.com.au/content/images/2018/01/mongomaintainence1.PNG&quot; alt=&quot;mongomaintainence1&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://pandamakes.me/web/20190303113321im_/https:/pandamakes.com.au/content/images/2018/01/mongomaintainence1.PNG&quot; alt=&quot;mongomaintainence1&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Goodness gracious. After 65 mb. The culprit must be elsewhere. So I delved into world wide web, hoping to find an answer. And an answer I found.&lt;/p&gt;
 &lt;p&gt;According to the author of &lt;a href=&quot;http://www.overtakenbyevents.com/openshift-mongodb-out-of-diskspace/&quot;&gt;this blog post&lt;/a&gt;, mongodb allocates some space for journaling, in the event that write to DB fails. Doing what he did, I found:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://pandamakes.me/eleventy-base-blog/web/20190303113321im_/https:/pandamakes.com.au/content/images/2018/01/mongomaintainence2.PNG&quot; alt=&quot;mongomaintainence2&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://pandamakes.me/web/20190303113321im_/https:/pandamakes.com.au/content/images/2018/01/mongomaintainence2.PNG&quot; alt=&quot;mongomaintainence2&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Bingo. If I can help it, I would like to keep the journaling of mongodb. Meanwhile, I will monitor the usage weekly. If the space runs out too quickly, I will do what is necessary.&lt;/p&gt;
 </content>
 	</entry>
 	
 	<entry>
 		<title>Attempt to improve OpenCV performance on Android</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/attempt-to-improve-opencv-performance-on-android/"/>
+		<link href="https://pandamakes.me/posts/attempt-to-improve-opencv-performance-on-android/"/>
 		<updated>2017-01-09T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/attempt-to-improve-opencv-performance-on-android/</id>
+		<id>https://pandamakes.me/posts/attempt-to-improve-opencv-performance-on-android/</id>
 		<content type="html">&lt;p&gt;OpenCV is an open sourced computer vision software developed for a number of popular OS such as windows, mac, linux, android and iOS. My main interest in OpenCV is application in mobile platforms such as android and iOS, where it can be used in AR applications.&lt;/p&gt;
 &lt;p&gt;However, one of the most severe limitations is that mobile CPU is woefully slow comparing to desktop PCs. As a result, doing computer vision is incredibly taxing on mobile platforms.&lt;/p&gt;
 &lt;p&gt;Framerate&lt;/p&gt;
@@ -1384,9 +1384,9 @@ When you replace a .png file in res/drawable folder, gradle will fail to sync, w
 	
 	<entry>
 		<title>How to fix parent div ignoring child div height</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/how-to-fix-parent-div-ignoring-child-div-height/"/>
+		<link href="https://pandamakes.me/posts/how-to-fix-parent-div-ignoring-child-div-height/"/>
 		<updated>2017-01-02T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/how-to-fix-parent-div-ignoring-child-div-height/</id>
+		<id>https://pandamakes.me/posts/how-to-fix-parent-div-ignoring-child-div-height/</id>
 		<content type="html">&lt;p&gt;A new year!&lt;/p&gt;
 &lt;p&gt;But of course, this post is written well ahead as a backlog for the weeks that I will be away (First to Melbourne, in order to attend a friend’s wedding, then go Sichuan, China, to see real pandas.) At the time of writing, I am not even sure who is the 45th President of the United S of A. So who knows. By the time this post is scheduled to be published, the world could be a smouldering ruin.&lt;/p&gt;
 &lt;p&gt;Disregarding current affairs, we are here to talk about HTML and CSS. I was updating my personal website. Modifying the PHP code to my liking, when I found this bug:&lt;/p&gt;
@@ -1398,9 +1398,9 @@ When you replace a .png file in res/drawable folder, gradle will fail to sync, w
 	
 	<entry>
 		<title>Unable to drag files from File Explorer to Notepad++</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/unable-to-drag-files-from-file-explorer-to-notepad/"/>
+		<link href="https://pandamakes.me/posts/unable-to-drag-files-from-file-explorer-to-notepad/"/>
 		<updated>2016-12-26T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/unable-to-drag-files-from-file-explorer-to-notepad/</id>
+		<id>https://pandamakes.me/posts/unable-to-drag-files-from-file-explorer-to-notepad/</id>
 		<content type="html">&lt;p&gt;So I recently updated Notepad++ to the latest version. I was asked to launch the program at the conclusion of the update, and I hit yes.&lt;/p&gt;
 &lt;p&gt;However, I was not able to drag and drop files onto notepad++. Searching online for a possible cause of this phenomenon led me to &lt;a href=&quot;http://superuser.com/questions/507096/cant-drag-files-from-explorer-into-notepad-running-as-administrator-on-window&quot;&gt;this post&lt;/a&gt; on super user.&lt;/p&gt;
 &lt;p&gt;I noticed notepad++ was opened as an administrator, as the title bar contains (Administrator). Closing and reopening notepad++, ensuring notepad++ was not run as an admin solve the problem. I am able to drag and drop the files onto Notepad++ again.&lt;/p&gt;
@@ -1409,9 +1409,9 @@ When you replace a .png file in res/drawable folder, gradle will fail to sync, w
 	
 	<entry>
 		<title>sign in &amp;amp; outs – a perspective from a panda (conclusion)</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/sign-in-outs-a-perspective-from-a-panda-conclusion/"/>
+		<link href="https://pandamakes.me/posts/sign-in-outs-a-perspective-from-a-panda-conclusion/"/>
 		<updated>2016-12-19T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/sign-in-outs-a-perspective-from-a-panda-conclusion/</id>
+		<id>https://pandamakes.me/posts/sign-in-outs-a-perspective-from-a-panda-conclusion/</id>
 		<content type="html">&lt;p&gt;TL,DR&lt;/p&gt;
 &lt;p&gt;Go with &lt;a href=&quot;http://www.pandamakes.com.au/webdesign/sign-in-outs-a-perspective-from-a-panda-part-4-open-authorisation-oauth/&quot;&gt;OAuth&lt;/a&gt; if you can.&lt;/p&gt;
 &lt;p&gt;Alternatively, go with &lt;a href=&quot;http://www.pandamakes.com.au/webdesign/sign-in-outs-a-perspective-from-a-panda-part-3/&quot;&gt;salted and hashed passwords&lt;/a&gt;.&lt;/p&gt;
@@ -1424,14 +1424,14 @@ When you replace a .png file in res/drawable folder, gradle will fail to sync, w
 	
 	<entry>
 		<title>sign in &amp;amp; outs – a perspective from a panda (part 4: open authorisation- OAuth)</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/sign-in-outs-a-perspective-from-a-panda-part-4-open-authorisation-oauth/"/>
+		<link href="https://pandamakes.me/posts/sign-in-outs-a-perspective-from-a-panda-part-4-open-authorisation-oauth/"/>
 		<updated>2016-12-12T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/sign-in-outs-a-perspective-from-a-panda-part-4-open-authorisation-oauth/</id>
+		<id>https://pandamakes.me/posts/sign-in-outs-a-perspective-from-a-panda-part-4-open-authorisation-oauth/</id>
 		<content type="html">&lt;p&gt;I have developed webapps for quite sometime now, and I have worked on three major projects that require the user to authenticate in one way or another.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;ITT: I will talk about the approaches I use to handle local signups and why I prefer clients use third party login instead.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;NITT: I won’t talk about language specific ways how the approaches can be achieved. Every mature language/platform should contain a way these approaches can be realised.&lt;/strong&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3 id=&quot;approach-four-use-open-authorisation-oauth&quot; tabindex=&quot;-1&quot;&gt;Approach Four: use open authorisation (OAuth) &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/eleventy-base-blog/posts/sign-in-outs-a-perspective-from-a-panda-part-4-open-authorisation-oauth/&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;approach-four-use-open-authorisation-oauth&quot; tabindex=&quot;-1&quot;&gt;Approach Four: use open authorisation (OAuth) &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/posts/sign-in-outs-a-perspective-from-a-panda-part-4-open-authorisation-oauth/&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;TL,DR: probably the best we could hope for.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;You probably have seen these already. When you want to sign up for a new service, you could either register a new account by supplying your full name, e-mail address, password (no shorter than 8 characters, with AT LEAST one letter, one number, one special character and one llamma), OR, you could sign in via Google, Facebook, Twitter … You thought to yourself, well, it saves me time, and I no longer have to go to my registered e-mail address, click on the stupid link, and I no longer have to remember an additional password. And if you were thinking of recycling password, shame on you.&lt;/p&gt;
 &lt;p&gt;What you probably do not know, is that developers love this option, too. Developers do not need to worry about your passwords getting hacked, and they do not need to worry about hashing and salting anything. The developers will still need to keep track of the user data, but the information that are kept in their databases are no longer sensitive. The attacker, should they obtain access to the database, will see something akin to the following:&lt;/p&gt;
@@ -1454,14 +1454,14 @@ When you replace a .png file in res/drawable folder, gradle will fail to sync, w
 	
 	<entry>
 		<title>sign in &amp;amp; outs - a perspective from a panda (part 3: salt + hash)</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/sign-in-outs-a-perspective-from-a-panda-part-3/"/>
+		<link href="https://pandamakes.me/posts/sign-in-outs-a-perspective-from-a-panda-part-3/"/>
 		<updated>2016-12-05T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/sign-in-outs-a-perspective-from-a-panda-part-3/</id>
+		<id>https://pandamakes.me/posts/sign-in-outs-a-perspective-from-a-panda-part-3/</id>
 		<content type="html">&lt;p&gt;I have developed webapps for quite sometime now, and I have worked on three major projects that require the user to authenticate in one way or another.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;ITT: I will talk about the approaches I use to handle local signups and why I prefer clients use third party login instead.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;NITT: I won’t talk about language specific ways how the approaches can be achieved. Every mature language/platform should contain a way these approaches can be realised.&lt;/strong&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3 id=&quot;approach-three-using-a-salt-and-hashing-algorithm-to-store-the-password&quot; tabindex=&quot;-1&quot;&gt;Approach Three: Using a salt and hashing algorithm to store the password &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/eleventy-base-blog/posts/sign-in-outs-a-perspective-from-a-panda-part-3/&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;approach-three-using-a-salt-and-hashing-algorithm-to-store-the-password&quot; tabindex=&quot;-1&quot;&gt;Approach Three: Using a salt and hashing algorithm to store the password &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/posts/sign-in-outs-a-perspective-from-a-panda-part-3/&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;TL,DR: probably the best we could hope for.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;In the past two weeks, we have seen how storing usernames and passwords as plain-text is a very bad idea. Storing usernames and hashed passwords is a better approach, but still lacks in security. We will talk about salt + hash, which is yet more secure than just hashing the password&lt;/p&gt;
 &lt;p&gt;Salt and hash is a method that specifically tries to counter two shortcomings of just hashing the password. Namely, social engineering and rainbow tables. The workflow of salt and hash is the following:&lt;/p&gt;
@@ -1497,14 +1497,14 @@ When you replace a .png file in res/drawable folder, gradle will fail to sync, w
 	
 	<entry>
 		<title>sign in &amp;amp; outs - a perspective from a panda (part 2: hash)</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/sign-in-outs-a-perspective-from-a-panda-part-2/"/>
+		<link href="https://pandamakes.me/posts/sign-in-outs-a-perspective-from-a-panda-part-2/"/>
 		<updated>2016-11-28T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/sign-in-outs-a-perspective-from-a-panda-part-2/</id>
+		<id>https://pandamakes.me/posts/sign-in-outs-a-perspective-from-a-panda-part-2/</id>
 		<content type="html">&lt;p&gt;I have developed webapps for quite sometime now, and I have worked on three major projects that require the user to authenticate in one way or another.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;ITT: I will talk about the approaches I use to handle local signups and why I prefer clients use third party login instead.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;NITT: I won’t talk about language specific ways how the approaches can be achieved. Every mature language/platform should contain a way these approaches can be realised.&lt;/strong&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3 id=&quot;approach-two-using-a-hashing-algorithm-to-store-the-password&quot; tabindex=&quot;-1&quot;&gt;Approach Two: Using a hashing algorithm to store the password &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/eleventy-base-blog/posts/sign-in-outs-a-perspective-from-a-panda-part-2/&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;approach-two-using-a-hashing-algorithm-to-store-the-password&quot; tabindex=&quot;-1&quot;&gt;Approach Two: Using a hashing algorithm to store the password &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/posts/sign-in-outs-a-perspective-from-a-panda-part-2/&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;TL,DR: better, but still, do &lt;em&gt;not&lt;/em&gt; do this!&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Hashing algorithms is a method of scrambling a string of data. The beauty of hashing algorithms is that, given the same input, using the same hashing algorithm, one will always get the same output. For example:&lt;/p&gt;
 &lt;p&gt;md5(&#39;coffee is delicious&#39;) = acbb7ff2245639a5fb74b7e4896f1c50&lt;/p&gt;
@@ -1541,14 +1541,14 @@ When you replace a .png file in res/drawable folder, gradle will fail to sync, w
 	
 	<entry>
 		<title>sign in &amp;amp; outs - a perspective from a panda (part 1: plain text)</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/web-developers-would-rather-you-sign-in-with-third-party-google-fb-etc/"/>
+		<link href="https://pandamakes.me/posts/web-developers-would-rather-you-sign-in-with-third-party-google-fb-etc/"/>
 		<updated>2016-11-21T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/web-developers-would-rather-you-sign-in-with-third-party-google-fb-etc/</id>
+		<id>https://pandamakes.me/posts/web-developers-would-rather-you-sign-in-with-third-party-google-fb-etc/</id>
 		<content type="html">&lt;p&gt;I have developed webapps for quite sometime now, and I have worked on three major projects that require the user to authenticate in one way or another.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;ITT: I will talk about the approaches I use to handle local signups and why I prefer clients use third party login instead.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;NITT: I won’t talk about language specific ways how the approaches can be achieved. Every mature language/platform should contain a way these approaches can be realised.&lt;/strong&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3 id=&quot;approach-one-store-plain-text-username-password-in-database&quot; tabindex=&quot;-1&quot;&gt;Approach One: Store plain text username/password in database &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/eleventy-base-blog/posts/web-developers-would-rather-you-sign-in-with-third-party-google-fb-etc/&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;approach-one-store-plain-text-username-password-in-database&quot; tabindex=&quot;-1&quot;&gt;Approach One: Store plain text username/password in database &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/posts/web-developers-would-rather-you-sign-in-with-third-party-google-fb-etc/&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;TL,DR: do &lt;em&gt;not&lt;/em&gt; do this!&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;The most straight forward approach to username/password problem might be:&lt;/p&gt;
 &lt;ol&gt;
@@ -1577,15 +1577,15 @@ When you replace a .png file in res/drawable folder, gradle will fail to sync, w
 	
 	<entry>
 		<title>Anatomy of a website</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/anatomy-of-a-web-presence/"/>
+		<link href="https://pandamakes.me/posts/anatomy-of-a-web-presence/"/>
 		<updated>2016-11-14T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/anatomy-of-a-web-presence/</id>
+		<id>https://pandamakes.me/posts/anatomy-of-a-web-presence/</id>
 		<content type="html">&lt;p&gt;I have had to explain to a few clients about the process of constructing a web site. And so I thought, it is probably worthwhile compiling a TL,DR version, to which I could point future clients.&lt;/p&gt;
 &lt;p&gt;Additionally, I having liberally included some existing products, which I have used in the past and could vouch for their quality. However, this is NOT a sponsored content. I simply would like my clients to know all of the alternatives as well as the various aspects of web design, and the cost they can expect.&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;&lt;img src=&quot;https://pandamakes.me/eleventy-base-blog/web/20190303113427im_/https:/pandamakes.com.au/content/images/2018/01/website-anatomy.png&quot; alt=&quot;website-anatomy&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://pandamakes.me/web/20190303113427im_/https:/pandamakes.com.au/content/images/2018/01/website-anatomy.png&quot; alt=&quot;website-anatomy&quot;&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3 id=&quot;1-domain-hosting-must&quot; tabindex=&quot;-1&quot;&gt;1. Domain + Hosting (Must) &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/eleventy-base-blog/posts/anatomy-of-a-web-presence/&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;1-domain-hosting-must&quot; tabindex=&quot;-1&quot;&gt;1. Domain + Hosting (Must) &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/posts/anatomy-of-a-web-presence/&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;This is where you buy the real estate of your online space.&lt;/p&gt;
 &lt;p&gt;I found hover (domain) and zuver (domain + hosting) to be the most user friendly, without a premium price tag. Do your research before plunging in. If in doubt, ask your designer for advice.&lt;/p&gt;
 &lt;ul&gt;
@@ -1593,28 +1593,28 @@ When you replace a .png file in res/drawable folder, gradle will fail to sync, w
 &lt;li&gt;Hosting is like the electronic plot of land, where you can build your electronic shop front&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h3 id=&quot;2-design-must&quot; tabindex=&quot;-1&quot;&gt;2. Design (Must) &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/eleventy-base-blog/posts/anatomy-of-a-web-presence/&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;2-design-must&quot; tabindex=&quot;-1&quot;&gt;2. Design (Must) &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/posts/anatomy-of-a-web-presence/&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;This is where webdesigners can build on the real estate you purchased. Which shape? Which colour? So many choices!&lt;/p&gt;
-&lt;h4 id=&quot;2-1-logo-layout-colour&quot; tabindex=&quot;-1&quot;&gt;2.1 Logo + Layout + Colour &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/eleventy-base-blog/posts/anatomy-of-a-web-presence/&quot;&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id=&quot;2-1-logo-layout-colour&quot; tabindex=&quot;-1&quot;&gt;2.1 Logo + Layout + Colour &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/posts/anatomy-of-a-web-presence/&quot;&gt;#&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;Some web designers can help you decide on a logo, if you do not already have one.&lt;/p&gt;
 &lt;p&gt;The logo will likely determine the major and minor colours of your website.&lt;/p&gt;
 &lt;p&gt;Unless you have &lt;strong&gt;very specific&lt;/strong&gt; need in terms of layout and functionality of your website, your web designers will likely use one of the CMS (Content management systems) such as wordpress, drupal or joomla to build your virtual real estate.&lt;/p&gt;
-&lt;h4 id=&quot;2-2-photos-and-graphics&quot; tabindex=&quot;-1&quot;&gt;2.2 Photos and graphics &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/eleventy-base-blog/posts/anatomy-of-a-web-presence/&quot;&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id=&quot;2-2-photos-and-graphics&quot; tabindex=&quot;-1&quot;&gt;2.2 Photos and graphics &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/posts/anatomy-of-a-web-presence/&quot;&gt;#&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;Relevant photos and graphics can make your website pop out from the rest. You can either commission a photographer or a graphic designer to shoot/custom design your ideal photographs and/or graphics, or pay for stock images/graphics.&lt;/p&gt;
-&lt;h4 id=&quot;2-3-content&quot; tabindex=&quot;-1&quot;&gt;2.3 Content &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/eleventy-base-blog/posts/anatomy-of-a-web-presence/&quot;&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id=&quot;2-3-content&quot; tabindex=&quot;-1&quot;&gt;2.3 Content &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/posts/anatomy-of-a-web-presence/&quot;&gt;#&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;There are two different types of content that are relevant to a website: static and dynamic. &lt;strong&gt;Static content&lt;/strong&gt; are the information that does not change very often. For example, your team bio, your company’s mission statement, address, contact info, etc. &lt;strong&gt;Dynamic content&lt;/strong&gt; are the information that changes frequently, such as blog posts (see below) or social media interactions.&lt;/p&gt;
 &lt;p&gt;There is little or no outsourcing of this part. In order to accurately depict your company and your value, you will need to sit down and follow your designer’s request and provide contents such as company profile and team bios. You could get an intern to do it, if you are too busy. Dynamic content, are optional (see below), but probably can be drafted by an intern and edited by middle management.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3 id=&quot;3-seo-social-media-optional-but-helpful&quot; tabindex=&quot;-1&quot;&gt;3. SEO + social media (Optional, but helpful) &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/eleventy-base-blog/posts/anatomy-of-a-web-presence/&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;3-seo-social-media-optional-but-helpful&quot; tabindex=&quot;-1&quot;&gt;3. SEO + social media (Optional, but helpful) &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/posts/anatomy-of-a-web-presence/&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Search engine optimisation (SEO) and interacting with (potential) customers on social media are the two bottomless void. One can easily sink huge sum of money and time into perfecting these two hungry beasts. I will only briefly talk about what you can expect.&lt;/p&gt;
-&lt;h4 id=&quot;3-1-social-media-presence&quot; tabindex=&quot;-1&quot;&gt;3.1 Social Media Presence &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/eleventy-base-blog/posts/anatomy-of-a-web-presence/&quot;&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id=&quot;3-1-social-media-presence&quot; tabindex=&quot;-1&quot;&gt;3.1 Social Media Presence &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/posts/anatomy-of-a-web-presence/&quot;&gt;#&lt;/a&gt;&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;Frequent posts to social media accounts.&lt;/li&gt;
 &lt;li&gt;Keep relevant posts : irrelevant posts ratio high&lt;br&gt;
 However, some filler posts can humanise your business. After all, saying hello is a human nature.&lt;/li&gt;
 &lt;li&gt;Provide timely response to customers’ enquiries&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&quot;3-2-seo-the-basics&quot; tabindex=&quot;-1&quot;&gt;3.2 SEO (the basics) &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/eleventy-base-blog/posts/anatomy-of-a-web-presence/&quot;&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id=&quot;3-2-seo-the-basics&quot; tabindex=&quot;-1&quot;&gt;3.2 SEO (the basics) &lt;a class=&quot;header-anchor&quot; href=&quot;https://pandamakes.me/posts/anatomy-of-a-web-presence/&quot;&gt;#&lt;/a&gt;&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;Submit links to search engines (such as Google, Bing, Yahoo, etc).&lt;/li&gt;
 &lt;li&gt;Mobile friendly site&lt;/li&gt;
@@ -1630,9 +1630,9 @@ Address, phone numbers etc.&lt;/li&gt;
 	
 	<entry>
 		<title>Cost effective gallery plugin, Jetpack mobile theme</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/cost-effective-gallery-plugin-jetpack-mobile-theme/"/>
+		<link href="https://pandamakes.me/posts/cost-effective-gallery-plugin-jetpack-mobile-theme/"/>
 		<updated>2016-11-07T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/cost-effective-gallery-plugin-jetpack-mobile-theme/</id>
+		<id>https://pandamakes.me/posts/cost-effective-gallery-plugin-jetpack-mobile-theme/</id>
 		<content type="html">&lt;p&gt;I was looking for a gallery plugin that would showcase my photography, as well as the webapp pages. I was hoping screenshots can be neatly presented to showcase the capabilities of each of the webapps I have developed over the last year.&lt;/p&gt;
 &lt;p&gt;I first found Robo Gallery. Robo Gallery is stunning, both in terms of the customisability as well as cleanliness of the plugin. But the free version comes with a 3 gallery limit. That was when I realised that most gallery plugins impose a limit on how many galleries you can create before nudging you in the direction of the paid plans. I was relatively happy with robo galleries, but I was not too keen on forking out 99USD to purchase the extended version. After the failed attempt (or rather, just the lack of enthusiasm) at unlocking the gallery limit at 3, I looked into the Gallery + Slideshow functionality offered by Jetpack.&lt;/p&gt;
 &lt;p&gt;Jetpack is an in house extension of wordpress developed by Automattic (the creator and maintainer of WordPress, if I am not mistaken). It extends a lot of the existing features of WordPress, by implementing additional features such as site analytics, tiled gallery, lightbox slide shows and so on. Whilst the out of the box slide show did not offer as much customisations, it satisfied my needs. More importantly, it was available at the low low cost of 0AUD.&lt;/p&gt;
@@ -1643,9 +1643,9 @@ Address, phone numbers etc.&lt;/li&gt;
 	
 	<entry>
 		<title>GoDaddy adventure (Oh fun)</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/godaddy-adventure-oh-fun/"/>
+		<link href="https://pandamakes.me/posts/godaddy-adventure-oh-fun/"/>
 		<updated>2016-10-31T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/godaddy-adventure-oh-fun/</id>
+		<id>https://pandamakes.me/posts/godaddy-adventure-oh-fun/</id>
 		<content type="html">&lt;p&gt;A client recently bought a domain and hosting from GoDaddy. I have heard some horrid stories from web go’ers. I guess I will experience first hand the pain?&lt;/p&gt;
 &lt;p&gt;First problem, the wp-admin hangs indefinitely.&lt;/p&gt;
 &lt;p&gt;Hmm… I am having trouble with cPanel at Zuver, too. Perhaps it’s the USB network share?&lt;/p&gt;
@@ -1655,9 +1655,9 @@ Address, phone numbers etc.&lt;/li&gt;
 	
 	<entry>
 		<title>Headbanging mistake(s)</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/headbanging-mistakes/"/>
+		<link href="https://pandamakes.me/posts/headbanging-mistakes/"/>
 		<updated>2016-10-24T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/headbanging-mistakes/</id>
+		<id>https://pandamakes.me/posts/headbanging-mistakes/</id>
 		<content type="html">&lt;p&gt;Recently (well, as recently as 3rd Oct… there is a bit of back log associated with the journal entries), I have been working on a multi platform app which integrates an Android app (which captures an image, and does some data extraction), and sent to the server (which takes the data, and compile it into a report).&lt;/p&gt;
 &lt;p&gt;Today, (3rd Oct), as I was putting everything together, I encountered head banging bugs plaguing the system. And all of them, turns out, are my own fault.&lt;/p&gt;
 &lt;p&gt;Let’s count them, shall we?&lt;/p&gt;
@@ -1671,9 +1671,9 @@ Address, phone numbers etc.&lt;/li&gt;
 	
 	<entry>
 		<title>Android Studio quirks / OpenCV pitfalls</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/android-studio-quirks/"/>
+		<link href="https://pandamakes.me/posts/android-studio-quirks/"/>
 		<updated>2016-10-17T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/android-studio-quirks/</id>
+		<id>https://pandamakes.me/posts/android-studio-quirks/</id>
 		<content type="html">&lt;p&gt;Recently (as recently as this backlogs go, I suppose), I was asked to make an app/webapp that automatically marks multiple choice exams. Because there is a dead line, I figured I will use tools that I am familiar with, and decided to go with:&lt;/p&gt;
 &lt;p&gt;An android app that runs openCV software, recognising exam paper template, performing warptransform and marks the exam using pixel depth. Then via http protocol, send to …&lt;/p&gt;
 &lt;p&gt;A webapp, that takes the array of answers and compare them with the actual answers.&lt;/p&gt;
@@ -1689,9 +1689,9 @@ Address, phone numbers etc.&lt;/li&gt;
 	
 	<entry>
 		<title>More AngularJS 1.x quirks + precision arithmetic</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/more-angularjs-1-x-quirks/"/>
+		<link href="https://pandamakes.me/posts/more-angularjs-1-x-quirks/"/>
 		<updated>2016-10-10T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/more-angularjs-1-x-quirks/</id>
+		<id>https://pandamakes.me/posts/more-angularjs-1-x-quirks/</id>
 		<content type="html">&lt;p&gt;So I was redoing some work on the Angular webapp I was working on. I had &lt;code&gt;ngSanitize&lt;/code&gt; component, and was using &lt;code&gt;ng-bind-html&lt;/code&gt; to dynamically bind some stylised HTML contents. However, it seems &lt;code&gt;style&lt;/code&gt; tags do not work as intended. i.e.&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;&lt;div ng-app=&quot;app&quot;&gt;
 &lt;div ng-controller=&quot;controller&quot;&gt;
@@ -1717,9 +1717,9 @@ sum - b - a == 0 //false&lt;/p&gt;
 	
 	<entry>
 		<title>OpenCV mask mat needs to be of 8UC1 or 8SC1</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/opencv-mask-mat-needs-to-be-of-8uc1-or-8sc1/"/>
+		<link href="https://pandamakes.me/posts/opencv-mask-mat-needs-to-be-of-8uc1-or-8sc1/"/>
 		<updated>2016-10-03T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/opencv-mask-mat-needs-to-be-of-8uc1-or-8sc1/</id>
+		<id>https://pandamakes.me/posts/opencv-mask-mat-needs-to-be-of-8uc1-or-8sc1/</id>
 		<content type="html">&lt;p&gt;Logic:&lt;/p&gt;
 &lt;p&gt;cameraframe -&amp;gt; mRGB mat (8UC4)&lt;br&gt;
 function(mRGB) returns mResult&lt;br&gt;
@@ -1736,14 +1736,14 @@ Imgproc.cvtColor(mMask,mMask,Imgproc.COLOR_RGBA2GRAY)&lt;/p&gt;
 	
 	<entry>
 		<title>OpenCV camera plight. Camera Calibration Matrix</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/opencv-camera-plight-camera-calibration-matrix/"/>
+		<link href="https://pandamakes.me/posts/opencv-camera-plight-camera-calibration-matrix/"/>
 		<updated>2016-09-26T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/opencv-camera-plight-camera-calibration-matrix/</id>
+		<id>https://pandamakes.me/posts/opencv-camera-plight-camera-calibration-matrix/</id>
 		<content type="html">&lt;p&gt;Secret project molens. Now that I am able to do pattern matching, uploading via http post request, having the server configured to translate the molecule to 3D coord, I need a way to project the 3D particles in to the reality.&lt;/p&gt;
 &lt;p&gt;To do that, I will need to use Calib3D.solvePnP(MatofPoint3F objPoints, Matofpoint2F imgPoints, Mat cameraMatrix, MatofDouble distortionCoef, Mat rVec, Mat tVec)&lt;/p&gt;
 &lt;p&gt;objPoints and imgPoints are easy enough. They represent the coordinates of the points in the 3D plane and 2D plane respectively. distortionCoef can be useful, but I am just going to let it be null and default to zero. The problem is cameraMatrix. The doc sugguests taking a series of checkerboard images to allow the camera to calibrate. I did not like the idea for two reasons. 1) I cannot reasonably expect an average user to be bothered with camera calibration. 2) CPU intensive. 3) Where in the world are they going to print the pattern?&lt;/p&gt;
 &lt;p&gt;I think I will find an average cameraMatrix, and use it that way. To find out more about the camera calibration matrix, I stumbled across this video:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://pandamakes.me/eleventy-base-blog/web/20190303113215im_/https:/pandamakes.com.au/content/images/2018/01/Capture.PNG&quot; alt=&quot;Capture&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://pandamakes.me/web/20190303113215im_/https:/pandamakes.com.au/content/images/2018/01/Capture.PNG&quot; alt=&quot;Capture&quot;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://youtu.be/4-thTdR7Blg&quot;&gt;youtube link&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;More shenanigans. The method:&lt;/p&gt;
@@ -1758,9 +1758,9 @@ Imgproc.cvtColor(mMask,mMask,Imgproc.COLOR_RGBA2GRAY)&lt;/p&gt;
 	
 	<entry>
 		<title>Android Studio/Java JSON from string exception</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/android-studiojava-json-from-string-exception/"/>
+		<link href="https://pandamakes.me/posts/android-studiojava-json-from-string-exception/"/>
 		<updated>2016-09-19T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/android-studiojava-json-from-string-exception/</id>
+		<id>https://pandamakes.me/posts/android-studiojava-json-from-string-exception/</id>
 		<content type="html">&lt;p&gt;While working on the secret project, molens, I made a webapp that receive a PNG image, translates to a 2D mol file using &lt;em&gt;imago&lt;/em&gt;, and then using &lt;em&gt;openbabel&lt;/em&gt; to translate it to a 3D mol file.&lt;/p&gt;
 &lt;p&gt;The file will then be sent back either as a stringified JSON object or a file. I figured that if I return the mol file as a file, I will need to setup an inputstream and write it to a file, I might as well return the mol file as a stringified JSON.&lt;/p&gt;
 &lt;p&gt;This is where I noticed I encountered the error on runtime:&lt;/p&gt;
@@ -1784,9 +1784,9 @@ Log.i(&amp;quot;log&amp;quot;,ss[0]) //prints out : ello,&lt;/p&gt;
 	
 	<entry>
 		<title>Optimise OpenCV for mobile</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/optimise-opencv-for-mobile/"/>
+		<link href="https://pandamakes.me/posts/optimise-opencv-for-mobile/"/>
 		<updated>2016-09-12T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/optimise-opencv-for-mobile/</id>
+		<id>https://pandamakes.me/posts/optimise-opencv-for-mobile/</id>
 		<content type="html">&lt;p&gt;Playing with OpenCV for a bit more again. I start to appreciate the amount of calculation one needs to do on matrices.&lt;/p&gt;
 &lt;p&gt;One trick, make the mat obj as small as possible. For example, when matchtemplate, the template image(thus mat obj) should be kept as small as possible.&lt;/p&gt;
 &lt;p&gt;Even with minmaxloc, a 301×1 Mat obj takes too long.&lt;/p&gt;
@@ -1796,9 +1796,9 @@ Log.i(&amp;quot;log&amp;quot;,ss[0]) //prints out : ello,&lt;/p&gt;
 	
 	<entry>
 		<title>HTML form hack</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/html-form-hack/"/>
+		<link href="https://pandamakes.me/posts/html-form-hack/"/>
 		<updated>2016-09-05T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/html-form-hack/</id>
+		<id>https://pandamakes.me/posts/html-form-hack/</id>
 		<content type="html">&lt;p&gt;Should have known this for a long time now. If either&lt;/p&gt;
 &lt;p&gt;&lt;button type=&quot;submit&quot;&gt;button&lt;/button&gt;&lt;/p&gt;
 &lt;p&gt;or&lt;/p&gt;
@@ -1816,9 +1816,9 @@ Log.i(&amp;quot;log&amp;quot;,ss[0]) //prints out : ello,&lt;/p&gt;
 	
 	<entry>
 		<title>AngularJS 1.5.8 Uncaught Error: [$injector:modulerr] + Mongoose quirks</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/angularjs-1-5-8-uncaught-error-injectormodulerr/"/>
+		<link href="https://pandamakes.me/posts/angularjs-1-5-8-uncaught-error-injectormodulerr/"/>
 		<updated>2016-08-29T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/angularjs-1-5-8-uncaught-error-injectormodulerr/</id>
+		<id>https://pandamakes.me/posts/angularjs-1-5-8-uncaught-error-injectormodulerr/</id>
 		<content type="html">&lt;p&gt;Long story short.&lt;/p&gt;
 &lt;p&gt;Doing some AngularJS. Keep on getting this error. First thought ngRoute needs to be included. Then ngResource.&lt;/p&gt;
 &lt;p&gt;Turns out, just need to include angular component outside the&lt;/p&gt;
@@ -1908,9 +1908,9 @@ status : String
 	
 	<entry>
 		<title>dabbling into wordpress woocommerce + woocommerce color (or not)</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/dabbling-into-wordpress-woocommerce-woocommerce-color-or-not/"/>
+		<link href="https://pandamakes.me/posts/dabbling-into-wordpress-woocommerce-woocommerce-color-or-not/"/>
 		<updated>2016-08-22T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/dabbling-into-wordpress-woocommerce-woocommerce-color-or-not/</id>
+		<id>https://pandamakes.me/posts/dabbling-into-wordpress-woocommerce-woocommerce-color-or-not/</id>
 		<content type="html">&lt;p&gt;Recently, I have been asked to renovate an old project.&lt;/p&gt;
 &lt;p&gt;I made the previous website with &lt;em&gt;Joomla&lt;/em&gt;, using &lt;em&gt;virtuemart&lt;/em&gt; as the e-commerce solution. Turns out, the implementation is much easier with &lt;em&gt;woocommerce&lt;/em&gt; on &lt;em&gt;wordpress&lt;/em&gt;. Whilst sacrificing some customisability, it looks great out of the box. CSS is generated from SCSS, so it’s minified, and admittedly, difficult to search through.&lt;/p&gt;
 &lt;p&gt;Gimmick: &lt;em&gt;woocommerce&lt;/em&gt; discontinued native support for colour and styling (at least as of ver 2.6.4). Plugins such as &lt;em&gt;woocommerce color&lt;/em&gt; allows for very limited colour customisation, but overwrites CSS. Lesson learnt the hard way indeed.&lt;/p&gt;
@@ -1919,9 +1919,9 @@ status : String
 	
 	<entry>
 		<title>restarting molens, secret project</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/restarting-molens-secret-project/"/>
+		<link href="https://pandamakes.me/posts/restarting-molens-secret-project/"/>
 		<updated>2016-08-15T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/restarting-molens-secret-project/</id>
+		<id>https://pandamakes.me/posts/restarting-molens-secret-project/</id>
 		<content type="html">&lt;p&gt;ok, enough time has been spent skirting around the problem. Time to tackle it again.&lt;/p&gt;
 &lt;p&gt;This time, I think I will make the optical structure recognition on a server, and make the app make api calls to the server, allowing the server to respond with .mol info.&lt;/p&gt;
 &lt;p&gt;I am already aware that the two options I have are &lt;a href=&quot;https://cactus.nci.nih.gov/osra/&quot;&gt;OSRA&lt;/a&gt;, originally hosted on NIH, now has its primary home over at sourceforge, whose maintainer is Igor Filippov, and &lt;a href=&quot;http://lifescience.opensource.epam.com/imago/index.html&quot;&gt;Imago&lt;/a&gt; from EPAM (formally known as GGA Software), most of the maintainers (and the company itself) seems to be situated in Russia. (What is with Russians and its monopoly on optical structure recognition?)&lt;/p&gt;
@@ -1938,9 +1938,9 @@ status : String
 	
 	<entry>
 		<title>Configuring Notepad++ for EJS</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/configuring-notepad-for-ejs/"/>
+		<link href="https://pandamakes.me/posts/configuring-notepad-for-ejs/"/>
 		<updated>2016-08-08T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/configuring-notepad-for-ejs/</id>
+		<id>https://pandamakes.me/posts/configuring-notepad-for-ejs/</id>
 		<content type="html">&lt;p&gt;I use &lt;a href=&quot;http://www.embeddedjs.com/&quot;&gt;EJS&lt;/a&gt; as a templating tool in NodeJS applications. The syntax and usage reminds me much of php. Of course, EJS is a very different beast. One down side, however, is that there are no recognisable plugin in Notepad++ that recognises EJS. For a while, I endured and used javascript formatting, but life is getting harder without the ability to see nesting hierarchy. So I configured something that works (for the most part).&lt;/p&gt;
 &lt;p&gt;This is by no means perfect. For example, it only tries to nest &lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt; elements. But for my purpose, this is enough. My livelihood does not depend on writing notepad++ plugins after all.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://db.tt/OGx31HoM&quot;&gt;notepad++ ejs parser&lt;/a&gt;&lt;/p&gt;
@@ -1949,9 +1949,9 @@ status : String
 	
 	<entry>
 		<title>twitter plight</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/twitter-plight/"/>
+		<link href="https://pandamakes.me/posts/twitter-plight/"/>
 		<updated>2016-08-01T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/twitter-plight/</id>
+		<id>https://pandamakes.me/posts/twitter-plight/</id>
 		<content type="html">&lt;p&gt;Not app development related this week. My twitter account has been behaving strangely lately. It suddenly started to follow a lot of strangers whom I don’t recognise. A lot of accounts in Arabic and Japanese. Going to see if I can single out the point of vulnerability:&lt;/p&gt;
 &lt;p&gt;– password compromise : not unlikely, given so many different hacks happened in the last decade or so. But this does not seem to be the case. I changed password, and enabled two factor authentication, but the problem remains.&lt;br&gt;
 – tweetdeck : I recently started using tweet deck to manage multiple accounts. This does not seem to be the problem either. I revoked tweetdeck access to my account, but the problem is persisting.&lt;br&gt;
@@ -1966,9 +1966,9 @@ status : String
 	
 	<entry>
 		<title>Bizarre behaviours of EJS + JS + git</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/bizarre-behaviours-of-ejs/"/>
+		<link href="https://pandamakes.me/posts/bizarre-behaviours-of-ejs/"/>
 		<updated>2016-07-25T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/bizarre-behaviours-of-ejs/</id>
+		<id>https://pandamakes.me/posts/bizarre-behaviours-of-ejs/</id>
 		<content type="html">&lt;p&gt;Playing with EJS recently. One of the most bizarre behaviours I noticed is with the switch case statements:&lt;/p&gt;
 &lt;p&gt;&amp;lt;% switch(foo){case &#39;bar&#39;: %&amp;gt;
 &amp;lt;% break; %&amp;gt;
@@ -1993,9 +1993,9 @@ But when you think about it, it makes total sense.&lt;/p&gt;
 	
 	<entry>
 		<title>How I solved PassportJS not fetching facebook email address(es)</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/how-i-solved-passportjs-not-fetching-facebook-email-addresses/"/>
+		<link href="https://pandamakes.me/posts/how-i-solved-passportjs-not-fetching-facebook-email-addresses/"/>
 		<updated>2016-07-18T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/how-i-solved-passportjs-not-fetching-facebook-email-addresses/</id>
+		<id>https://pandamakes.me/posts/how-i-solved-passportjs-not-fetching-facebook-email-addresses/</id>
 		<content type="html">&lt;p&gt;Using the &lt;a href=&quot;http://passportjs.org/docs/facebook&quot;&gt;official doc&lt;/a&gt; or the &lt;a href=&quot;https://scotch.io/tutorials/easy-node-authentication-facebook&quot;&gt;guide from scotch.io&lt;/a&gt;, I could not fetch the e-mail address from facebook login. From &lt;a href=&quot;http://stackoverflow.com/a/32370813/6059235&quot;&gt;this response on SO&lt;/a&gt;, I made the following changes:&lt;/p&gt;
 &lt;p&gt;/* does not work */
 passport.use(&#39;facebookAuth&#39;,new facebookStrategy({
@@ -2026,9 +2026,9 @@ return done(null,user);
 	
 	<entry>
 		<title>How I solved </title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/how-i-solved-internaloautherror-failed-to-obtain-request-token-for-passportjs-google-authentication/"/>
+		<link href="https://pandamakes.me/posts/how-i-solved-internaloautherror-failed-to-obtain-request-token-for-passportjs-google-authentication/"/>
 		<updated>2016-07-11T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/how-i-solved-internaloautherror-failed-to-obtain-request-token-for-passportjs-google-authentication/</id>
+		<id>https://pandamakes.me/posts/how-i-solved-internaloautherror-failed-to-obtain-request-token-for-passportjs-google-authentication/</id>
 		<content type="html">&lt;p&gt;I wanted to implement third party signin option for my webapp.&lt;/p&gt;
 &lt;p&gt;Since my app runs on NodeJS, PassportJS was the obvious choice. I have already made local signin work, and I thought configuring third party signin options should not be too hard. But I was stumped for two hours, trying to figure out how to solve &lt;code&gt;InternalOAuthError: Failed to obtain request token&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Even if I followed &lt;a href=&quot;http://passportjs.org/docs/google&quot;&gt;PassportJS Doc&lt;/a&gt; or &lt;a href=&quot;https://scotch.io/tutorials/easy-node-authentication-google&quot;&gt;guide from Scotch.io&lt;/a&gt;, I kept on getting the error. I had initially thought it was &lt;code&gt;express-session&lt;/code&gt; not configured correctly. But &lt;a href=&quot;https://support.google.com/googleapi/answer/6158857?hl=en-GB&quot;&gt;Google’s official API console help&lt;/a&gt; stated: OAuth 2.0 client IDs.&lt;/p&gt;
@@ -2038,9 +2038,9 @@ return done(null,user);
 	
 	<entry>
 		<title>Amazon Inspire... vs examcopedia (?)</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/amazon-inspire-vs-examcopedia/"/>
+		<link href="https://pandamakes.me/posts/amazon-inspire-vs-examcopedia/"/>
 		<updated>2016-07-04T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/amazon-inspire-vs-examcopedia/</id>
+		<id>https://pandamakes.me/posts/amazon-inspire-vs-examcopedia/</id>
 		<content type="html">&lt;p&gt;I read the news on Amazon Inspire last night (27/06/16, 1300 AEST), in bed &lt;a href=&quot;https://techcrunch.com/2016/06/27/amazon-jumps-into-online-learning-with-inspire-a-platform-for-free-crowdsourced-and-premium-materials/&quot;&gt;from tech crunch&lt;/a&gt;. My heart sank. On the one hand, I am over joyed that I have the vision to target the still under competed education market. On the other hand, I feel an unease, a sense of doom. There is no way I can compete against a tech giant like amazon. Yet, I feel a sense of excitement. I have worked in the front line. I know exactly what kind of software would work with me.&lt;/p&gt;
 &lt;p&gt;One thing is for sure. Either seize the bull by its horn now, or give it up and cut my losses.&lt;/p&gt;
 &lt;p&gt;The irony is, examcopedia is currently hosted on openshift, which uses aws as the infrastructure.&lt;/p&gt;
@@ -2049,9 +2049,9 @@ return done(null,user);
 	
 	<entry>
 		<title>examcopedia - basic functionality: done. time to market + secure more funding</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/examcopedia-basic-functionality-done-time-to-market-secure-more-funding/"/>
+		<link href="https://pandamakes.me/posts/examcopedia-basic-functionality-done-time-to-market-secure-more-funding/"/>
 		<updated>2016-06-27T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/examcopedia-basic-functionality-done-time-to-market-secure-more-funding/</id>
+		<id>https://pandamakes.me/posts/examcopedia-basic-functionality-done-time-to-market-secure-more-funding/</id>
 		<content type="html">&lt;p&gt;The basic functionality of examcopedia has been refined in the past few weeks. Now, it is at a presentable state. Next step is to promote the site and/or secure some funding to further develop it.&lt;/p&gt;
 &lt;p&gt;I am thinking of writing to some parties which may have direct or indirect interest in seeing examcopedia grow. In the local scope, ATA, teacher’s health fund, in the global scope, google edu, microsoft.&lt;/p&gt;
 &lt;p&gt;I have doubts. I am scared. Of the possibilities of failure. I am scared that I might not be good enough. I am scared that examcopedia might not be good enough. Even though I truly believe its potential. We should write in.&lt;/p&gt;
@@ -2064,9 +2064,9 @@ return done(null,user);
 	
 	<entry>
 		<title>Public appeal for Examcopedia</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/public-appeal-for-examcopedia/"/>
+		<link href="https://pandamakes.me/posts/public-appeal-for-examcopedia/"/>
 		<updated>2016-06-20T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/public-appeal-for-examcopedia/</id>
+		<id>https://pandamakes.me/posts/public-appeal-for-examcopedia/</id>
 		<content type="html">&lt;p&gt;I am currently doing rounds on finding support for my exam questions repository webapp, Examcopedia. Here is the spiel:&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;The short version:&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;The problem:&lt;/strong&gt; For educators, finding the right questions for exams and homework takes too long.&lt;br&gt;
@@ -2093,9 +2093,9 @@ return done(null,user);
 	
 	<entry>
 		<title>How I dealt with persistent file storage on OpenShift PaaS</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/how-i-dealt-with-persistent-file-storage-on-openshift-paas/"/>
+		<link href="https://pandamakes.me/posts/how-i-dealt-with-persistent-file-storage-on-openshift-paas/"/>
 		<updated>2016-06-13T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/how-i-dealt-with-persistent-file-storage-on-openshift-paas/</id>
+		<id>https://pandamakes.me/posts/how-i-dealt-with-persistent-file-storage-on-openshift-paas/</id>
 		<content type="html">&lt;p&gt;&lt;strong&gt;Problem:&lt;/strong&gt; every time I push my local repository to OpenShift, files inside &lt;code&gt;public/img/&lt;/code&gt; gets overwritten/deleted. This is a problem, as the webapp allows users to upload images, which would not be uploaded on my local repository.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Cause:&lt;/strong&gt; apparently, this is the result of OpenShift clearing out the repo folder and rebuilding everything from scratch.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Futile attempts to rectify:&lt;/strong&gt; I have attempted to use &lt;code&gt;.gitignore&lt;/code&gt; as well as &lt;code&gt;.git/info/exclude&lt;/code&gt;, neither helped.&lt;/p&gt;
@@ -2111,9 +2111,9 @@ fs.writeFile(app.get(&#39;presistentDir&#39;)+FILENAME);&lt;/p&gt;
 	
 	<entry>
 		<title>more of examcopedia</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/173/"/>
+		<link href="https://pandamakes.me/posts/173/"/>
 		<updated>2016-06-06T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/173/</id>
+		<id>https://pandamakes.me/posts/173/</id>
 		<content type="html">&lt;p&gt;As I was working on node.js application over the past weeks or so, I came across &lt;a href=&quot;http://blog.ragingflame.co.za/2015/2/6/resizing-images-in-nodejs-applications#comment-1862989718&quot;&gt;this post&lt;/a&gt;. In it, a commentor described how customised user inputs can potentially inject harmful codes. As a part of my current project utilises base64 encoded image blobs, I wonder if code injection can occur?&lt;/p&gt;
 &lt;p&gt;It seems openshift has imagemagick installed by default. A simple &lt;code&gt;convert --version&lt;/code&gt; executed from ssh showed me. I have installed gm and imagemagick on my localmachine. The aim is to resize, rotate, and using high contrast to modify the images (particular the mobile uploaded one’s).&lt;/p&gt;
 </content>
@@ -2121,9 +2121,9 @@ fs.writeFile(app.get(&#39;presistentDir&#39;)+FILENAME);&lt;/p&gt;
 	
 	<entry>
 		<title>examcopedia (aka procrastination tool) phase 1 complete</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/examcopedia-aka-procrastination-tool-phase-1-complete/"/>
+		<link href="https://pandamakes.me/posts/examcopedia-aka-procrastination-tool-phase-1-complete/"/>
 		<updated>2016-05-30T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/examcopedia-aka-procrastination-tool-phase-1-complete/</id>
+		<id>https://pandamakes.me/posts/examcopedia-aka-procrastination-tool-phase-1-complete/</id>
 		<content type="html">&lt;p&gt;Today, 24th May 2016, marks an important day. I have completed the first phase of examcopedia. I agree, I am pretty bad at naming things. I have finished the submission and viewing interface. All that’s to do is just fleshing things out, and the painful, painful process of entering thousands of questions.&lt;/p&gt;
 &lt;p&gt;Rather annoyingly, Openshift seems to impose &lt;a href=&quot;http://stackoverflow.com/questions/19982839/nodejs-fs-module-does-not-work-in-openshift&quot;&gt;some sort of limitations on fs module in node.js&lt;/a&gt;. I understand fs.exists() is deprecated, but fs.access() yielded me with a similar error. I will attempt fs.stat(), but I am not optimistic.&lt;/p&gt;
 &lt;p&gt;Major progress so far. I fs.stat() works. Also, in the mean time, I was able to get the mobile upload to work, too. I was able to get HTML5 &lt;code&gt;&amp;lt;input type = &amp;quot;file&amp;quot; accept = &amp;quot;image/*;capture=camera&amp;quot;&amp;gt;&lt;/code&gt; in order to allow users to upload their photos from capturing from the camera or their local device.&lt;/p&gt;
@@ -2133,9 +2133,9 @@ fs.writeFile(app.get(&#39;presistentDir&#39;)+FILENAME);&lt;/p&gt;
 	
 	<entry>
 		<title>New project. Or was that procrastination?</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/new-project-or-was-that-procrastination/"/>
+		<link href="https://pandamakes.me/posts/new-project-or-was-that-procrastination/"/>
 		<updated>2016-05-23T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/new-project-or-was-that-procrastination/</id>
+		<id>https://pandamakes.me/posts/new-project-or-was-that-procrastination/</id>
 		<content type="html">&lt;p&gt;Now that the timetable web app was complete. I am working on another project that interests me a great deal. Simply put, it’s an exam pooler. For now, I am calling it examcopedia. For now, I am only working on the UI, and will attach functionality to it in bits and pieces.&lt;/p&gt;
 &lt;p&gt;Sometimes I wonder, if what I am just trying to avoid the huge mess at Imago.&lt;/p&gt;
 &lt;p&gt;For the new project, I am calling examcopedia, I needed to allow users uploading images. Implementing fileinput and multer was a bit of trial and error. Lessons learnt are as follow:&lt;/p&gt;
@@ -2151,9 +2151,9 @@ fs.writeFile(app.get(&#39;presistentDir&#39;)+FILENAME);&lt;/p&gt;
 	
 	<entry>
 		<title>Getting back to Imago + some other fleeting thoughts</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/getting-back-to-imago/"/>
+		<link href="https://pandamakes.me/posts/getting-back-to-imago/"/>
 		<updated>2016-05-16T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/getting-back-to-imago/</id>
+		<id>https://pandamakes.me/posts/getting-back-to-imago/</id>
 		<content type="html">&lt;p&gt;After a brief but useful refocusing of 3 weeks, I have dived again, head first, into Imago and making it work. Just a recap on it’s status:&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;libimago_c.so&lt;/code&gt; provided by Epam does not work out of the box. It is compiled on Linux x86/x64, whereas android uses an ARM architecture. I needed to recompile it using ndk. Before the brief detour, I was having trouble recompiling the source files, because … well, the ndk could not find string.h. Turns out, there is a library of &lt;a href=&quot;http://developer.android.com/ndk/guides/cpp-support.html&quot;&gt;helper runtimes&lt;/a&gt;, that incorporates standard libraries. The one I needed was:&lt;/p&gt;
 &lt;p&gt;//Application.mk
@@ -2172,9 +2172,9 @@ APP_CPPFLAGS += -fexceptions&lt;/p&gt;
 	
 	<entry>
 		<title>Final touches on timetable app v2.0, modifying the Python app</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/final-touches-on-timetable-app-v2-0-modifying-the-python-app/"/>
+		<link href="https://pandamakes.me/posts/final-touches-on-timetable-app-v2-0-modifying-the-python-app/"/>
 		<updated>2016-05-09T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/final-touches-on-timetable-app-v2-0-modifying-the-python-app/</id>
+		<id>https://pandamakes.me/posts/final-touches-on-timetable-app-v2-0-modifying-the-python-app/</id>
 		<content type="html">&lt;p&gt;Did some final touch on the timetable app v2.0. I am more or less happy with its current state.&lt;/p&gt;
 &lt;p&gt;Potential for future update: responsive + add student login. Likely not going to do those in quite some time.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;http://timetable-gened.rhcloud.com/&quot;&gt;Timetable App v2.0&lt;/a&gt; – current state took approx 14 days from scratch.&lt;/p&gt;
@@ -2188,9 +2188,9 @@ APP_CPPFLAGS += -fexceptions&lt;/p&gt;
 	
 	<entry>
 		<title>Bizarre behaviour of JS + JS quirkiness.</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/bizarre-behaviour-of-js/"/>
+		<link href="https://pandamakes.me/posts/bizarre-behaviour-of-js/"/>
 		<updated>2016-05-02T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/bizarre-behaviour-of-js/</id>
+		<id>https://pandamakes.me/posts/bizarre-behaviour-of-js/</id>
 		<content type="html">&lt;p&gt;foo(x); //returns 9
 foo{y); //returns 11&lt;/p&gt;
 &lt;p&gt;foo(x)&amp;gt;foo(y); //returns true;&lt;/p&gt;
@@ -2210,9 +2210,9 @@ return b;&lt;br&gt;
 	
 	<entry>
 		<title>More detour. Some Node.js</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/more-detour-some-node-js/"/>
+		<link href="https://pandamakes.me/posts/more-detour-some-node-js/"/>
 		<updated>2016-04-25T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/more-detour-some-node-js/</id>
+		<id>https://pandamakes.me/posts/more-detour-some-node-js/</id>
 		<content type="html">&lt;p&gt;The timetable app is in shambles.&lt;/p&gt;
 &lt;p&gt;Let me talk a little about the background of the timetable app. It first started as a visual basic/excel app. Very quickly, it became obvious that the slowness was just not going to cut The lack of portability (master file needed), the lack of customisation (prettiness) and the clunkiness of the excel/VB app just does not cut it. So some time Sep ’15, I pitched to my client of a web based timetable app. I built a prototype, and started working on the actual web app. Turned out, I learnt PHP and MySQL building the webapp, which I am eternally grateful. However, the app is showing its age. the codes are ugly, the site is slow, and full of bugs. It’s time to retire the site and make a new one.&lt;/p&gt;
 &lt;p&gt;This time, I am planning to use &lt;em&gt;bootstrap&lt;/em&gt; for the layout, &lt;em&gt;node.js&lt;/em&gt; for real time update on the database and &lt;em&gt;angular js&lt;/em&gt; for binding the front end. I believe &lt;em&gt;Ruby on rails&lt;/em&gt; would do similar thing as node.js. I was just lazy, and didn’t want to learn ruby unless absolutely necessary.&lt;/p&gt;
@@ -2241,9 +2241,9 @@ $(&#39;div&#39;).remove(&#39;#&#39;+i.hashed_id); //works&lt;/p&gt;
 	
 	<entry>
 		<title>Detour, refocus</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/detour-refocus/"/>
+		<link href="https://pandamakes.me/posts/detour-refocus/"/>
 		<updated>2016-04-18T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/detour-refocus/</id>
+		<id>https://pandamakes.me/posts/detour-refocus/</id>
 		<content type="html">&lt;p&gt;Hitting a wall in Imago is really not fun, so I fancy the opportunity to revisit some of my older projects.&lt;/p&gt;
 &lt;p&gt;One in particular. I reworked a client’s website, made it more colour suitable, added a dynamic background. Just have to work the login magic in when I get a chance. Though truth be told, I would really fancy redoing the timetable app.&lt;/p&gt;
 &lt;p&gt;And this made me keenly aware of the necessity to backup before I do anything. When I was trying to migrate the site from my PC’s localhost to the live site, I was (supposed to) change the wordpress address url and site url to the corresponding one’s. Due to a typographical error, I typed the wrong info, and was not able to return to the setting page (since the setting page in wordpress is accessed via a webpage. There is a work around, namely&lt;/p&gt;
@@ -2258,9 +2258,9 @@ Turns out, just like python, using an earlier version worked like a charm. Re do
 	
 	<entry>
 		<title>Imago, hit a wall?</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/opencv-hit-a-wall/"/>
+		<link href="https://pandamakes.me/posts/opencv-hit-a-wall/"/>
 		<updated>2016-04-11T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/opencv-hit-a-wall/</id>
+		<id>https://pandamakes.me/posts/opencv-hit-a-wall/</id>
 		<content type="html">&lt;p&gt;So I am able to load the jna interface for android. Turns out, I had to put the libjnidispatch.so in app/src/main/jniLibs/(platform)/&lt;/p&gt;
 &lt;p&gt;But a new problem arises.&lt;/p&gt;
 &lt;p&gt;java.lang.UnsatisfiedLinkError: Unable to load library &#39;/lib/Linux/x86/libimago_c.so&#39;: Native library (lib/Linux/x86/libimago_c.so) not found&lt;/p&gt;
@@ -2282,9 +2282,9 @@ either way, the library is architecture specific. Ugh, headache.&lt;/p&gt;
 	
 	<entry>
 		<title>More OpenCV p3</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/more-opencv-p3/"/>
+		<link href="https://pandamakes.me/posts/more-opencv-p3/"/>
 		<updated>2016-04-04T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/more-opencv-p3/</id>
+		<id>https://pandamakes.me/posts/more-opencv-p3/</id>
 		<content type="html">&lt;p&gt;Getting error when I attempt to get transformation matrix.&lt;/p&gt;
 &lt;p&gt;Core.perspectiveTransofrm(Matofpoint input, Matofpoint output, Mat transformationMatrix).&lt;/p&gt;
 &lt;p&gt;Looks like I needed to declare &lt;code&gt;transformationMatrix&lt;/code&gt; as &lt;code&gt;3,3,CvType.CV_32F&lt;/code&gt;.&lt;/p&gt;
@@ -2303,9 +2303,9 @@ Find contour: &lt;code&gt;Imgproc.findContours(src, output, hierarchy, mode, met
 	
 	<entry>
 		<title>More OpenCV p2</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/more-opencv-p2/"/>
+		<link href="https://pandamakes.me/posts/more-opencv-p2/"/>
 		<updated>2016-03-28T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/more-opencv-p2/</id>
+		<id>https://pandamakes.me/posts/more-opencv-p2/</id>
 		<content type="html">&lt;p&gt;More struggling with OpenCV this week. I will have to remember. Computer start counting at 0, not 1.&lt;/p&gt;
 &lt;p&gt;Bizarre behaviours of hierarchy in findContours. even though &lt;code&gt;hierarchy.size()&lt;/code&gt; show 32×1, for eg, but it is really 1×32. In fact, when you access hierarchy matrix elements, you gain access to an array of doubles, even though they are suppose to be pointers to elements in the contour identifying as next sibling, previous sibling, parent or child.&lt;/p&gt;
 &lt;p&gt;After much struggle, it seems I had to use &lt;code&gt;Imgproc.RETR_TREE&lt;/code&gt; rather than &lt;code&gt;Imgproc.RETR_COMPP&lt;/code&gt;. Wasted a good two days. Well, at least now I can reliably detect the desired edges.&lt;/p&gt;
@@ -2318,9 +2318,9 @@ Ok, ok, it’s not image processing. Woe is me, I guess.&lt;/p&gt;
 	
 	<entry>
 		<title>More on OpenCV + trends in web development</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/more-on-opencv/"/>
+		<link href="https://pandamakes.me/posts/more-on-opencv/"/>
 		<updated>2016-03-21T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/more-on-opencv/</id>
+		<id>https://pandamakes.me/posts/more-on-opencv/</id>
 		<content type="html">&lt;p&gt;I have uncovered a few more new discoveries in the passing week.&lt;/p&gt;
 &lt;p&gt;Firstly, loading the app into my Android phone drastically improved the performance of the app. I suspect this had something to do with the amount of virtual RAM that I have allotted to the Virtual Machine.&lt;/p&gt;
 &lt;p&gt;Secondly, I found out the reason for the weird colouration of the rgba output of the preview frame. The problem had something to do with how the frame is encoded and decoded. In short, the problem is non-existent on actual android devices, and only becomes a problem in virtual machines.&lt;/p&gt;
@@ -2334,9 +2334,9 @@ Ok, ok, it’s not image processing. Woe is me, I guess.&lt;/p&gt;
 	
 	<entry>
 		<title>Fixing timetable.php and (a little bit) more openCV</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/fixing-timetable-php-and-a-little-bit-more-opencv/"/>
+		<link href="https://pandamakes.me/posts/fixing-timetable-php-and-a-little-bit-more-opencv/"/>
 		<updated>2016-03-14T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/fixing-timetable-php-and-a-little-bit-more-opencv/</id>
+		<id>https://pandamakes.me/posts/fixing-timetable-php-and-a-little-bit-more-opencv/</id>
 		<content type="html">&lt;p&gt;I was going to fix the web app i made awhile ago, implementing a few more features.&lt;/p&gt;
 &lt;p&gt;I wanted to better the login security of the site. Of course, I do not have access to SSL encryption or two factor authentication, but the least I could do is salting and hashing the password. This way. I also added a security token whenever users login, so that they cannot just modify the cookie and gain admin rights. I fully understand this will only protect against internal attacks, and useless against man-in-the-middle attack, but, it might be the best I can do for now. I got it done early, only to be greeted by a bug, that overwrite the last timetable. long story short, I was trolled by &lt;code&gt;if (a = b) {do something}&lt;/code&gt; amatuer mistake.&lt;/p&gt;
 &lt;p&gt;I had some time, so I also made a tutorial layer. When get a chance, I really should improve on the design aspect. The tutorial layer looks decent, but the handwriting was crap.&lt;/p&gt;
@@ -2349,17 +2349,17 @@ Ok, ok, it’s not image processing. Woe is me, I guess.&lt;/p&gt;
 	
 	<entry>
 		<title>Adventuring into Android studio, Java and OpenCV (with an unexpected detour)</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/adventuring-into-android-studio-java-and-opencv-with-an-unexpected-detour/"/>
+		<link href="https://pandamakes.me/posts/adventuring-into-android-studio-java-and-opencv-with-an-unexpected-detour/"/>
 		<updated>2016-03-07T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/adventuring-into-android-studio-java-and-opencv-with-an-unexpected-detour/</id>
+		<id>https://pandamakes.me/posts/adventuring-into-android-studio-java-and-opencv-with-an-unexpected-detour/</id>
 		<content type="html">&lt;p&gt;Following on from the previous week’s progress, this week, we are trying to make progress towards OpenCV to be used on an android platform. I have encountered problem of course.&lt;/p&gt;
 &lt;p&gt;Firstly, there was the issue of Android Studio not recognising hardware.camera, and threw me a number of errors. Turns out, I needed to update the target SDK across different build.gradle files.&lt;/p&gt;
 &lt;p&gt;More significantly, I was thrown the error that the app could not have access to the camera.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://pandamakes.me/eleventy-base-blog/web/20190303112856im_/https:/pandamakes.com.au/content/images/2018/01/notworkingss.png&quot; alt=&quot;notworkingss&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://pandamakes.me/web/20190303112856im_/https:/pandamakes.com.au/content/images/2018/01/notworkingss.png&quot; alt=&quot;notworkingss&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Digging for an answer online, they seem to suggest that I needed to declare the permission to use camera in android manifest (which I did), and check if other apps are using the camera (they are not, since the native camera app works fine). And very coincidentally, when the emulator told me that I had not enough (virtual) space, and when I am trying to uninstall some early iterations of the app, did I notice that I had to manually give the app permission to use the camera.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://pandamakes.me/eleventy-base-blog/web/20190303112856im_/https:/pandamakes.com.au/content/images/2018/01/workaround.png&quot; alt=&quot;workaround&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://pandamakes.me/web/20190303112856im_/https:/pandamakes.com.au/content/images/2018/01/workaround.png&quot; alt=&quot;workaround&quot;&gt;&lt;/p&gt;
 &lt;p&gt;And suddenly, it works!&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://pandamakes.me/eleventy-base-blog/web/20190303112856im_/https:/pandamakes.com.au/content/images/2018/01/workingss.png&quot; alt=&quot;workingss&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://pandamakes.me/web/20190303112856im_/https:/pandamakes.com.au/content/images/2018/01/workingss.png&quot; alt=&quot;workingss&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Next step, messing with the Mat variables so that it can recognise border symbol.&lt;/p&gt;
 &lt;p&gt;Next next step, free transform the image and integrate osra + openbabel and output mol file&lt;/p&gt;
 &lt;p&gt;final step, 3d rendering of the mol file in opengl.&lt;/p&gt;
@@ -2370,9 +2370,9 @@ Ok, ok, it’s not image processing. Woe is me, I guess.&lt;/p&gt;
 	
 	<entry>
 		<title>Full force on Android development and openCV</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/full-force-on-android-development-and-opencv/"/>
+		<link href="https://pandamakes.me/posts/full-force-on-android-development-and-opencv/"/>
 		<updated>2016-02-29T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/full-force-on-android-development-and-opencv/</id>
+		<id>https://pandamakes.me/posts/full-force-on-android-development-and-opencv/</id>
 		<content type="html">&lt;p&gt;Now that the other projects have came to a natural pause and/or end, I was finally able to get into the AR app for molecular visualisation. The idea is nothing new, I believe. But I don’t think anyone’s done it (yet)? Or at least I hope no one had done it yet. I wonder why?&lt;/p&gt;
 &lt;p&gt;First step is to get myself familiarised again with Android development environment. It has been a while since I touched Java Development Environment (Eclipse was the program I used in the past). Some (most) came back, at least the XML part of it. I am certainly going to hope that the Java part will come back very soon, too.&lt;/p&gt;
 &lt;p&gt;I am going to suspect when I start to get myself accustomed with openCV, is where learning curve will start to look like a vertical asymptote. I have looked at a few guides on youtube. Am I going to hell, if I said the accent on one of the video guide cracked me up a little bit? No evil intention, of course.&lt;/p&gt;
@@ -2384,9 +2384,9 @@ Turns out, I was an idiot. The aforementioned error usually will not stop the co
 	
 	<entry>
 		<title>Lessons Learnt in the past week (15th-22nd/Feburary)</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/lessons-learnt-in-the-past-week-15th-22ndfeburary/"/>
+		<link href="https://pandamakes.me/posts/lessons-learnt-in-the-past-week-15th-22ndfeburary/"/>
 		<updated>2016-02-22T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/lessons-learnt-in-the-past-week-15th-22ndfeburary/</id>
+		<id>https://pandamakes.me/posts/lessons-learnt-in-the-past-week-15th-22ndfeburary/</id>
 		<content type="html">&lt;p&gt;One of the clients wanted his site to be remade.&lt;/p&gt;
 &lt;p&gt;His existing site was wildly outdated, as it was put together hastely. At the time, I was not sure if he wanted a new site or not. But he pays me, I thought I should look out for him, so I whipped up something very simple.&lt;/p&gt;
 &lt;p&gt;But now, he has a clearer picture of how he wanted the website. He wanted it to be responsive, and probably incorporates a few more slide show images. I figured I might as well make it on wordpress for a faster turn-around. This is when I noticed, except for Zerif-Lite, the customisability of most of the themes are wildly underwhelming. Or perhaps, it’s just I have much more to learn about wordpress.&lt;/p&gt;
@@ -2404,9 +2404,9 @@ Turns out, I was an idiot. The aforementioned error usually will not stop the co
 	
 	<entry>
 		<title>New project. Short and sweet</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/new-project-short-and-sweet/"/>
+		<link href="https://pandamakes.me/posts/new-project-short-and-sweet/"/>
 		<updated>2016-02-15T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/new-project-short-and-sweet/</id>
+		<id>https://pandamakes.me/posts/new-project-short-and-sweet/</id>
 		<content type="html">&lt;p&gt;I was asked to do an shortie over the weekend. The client wanted a way to pull four random images (one from each of the four folders) into a collage.&lt;/p&gt;
 &lt;p&gt;Initially I wanted to use JS and HTML, since I am already familiar with the language. But as there are no easy way to find the number of files without resorting to server side language, and the aim was to make the process as painless as possible, I decided to look into python.&lt;/p&gt;
 &lt;p&gt;After a brief search, it seems I could use ReportLab to generate a PDF and pull images at the same time. There are some languages I might need to learn, but ultimately it was not too difficult. That was when, I hit my first road block.&lt;/p&gt;
@@ -2421,9 +2421,9 @@ Turns out, I was an idiot. The aforementioned error usually will not stop the co
 	
 	<entry>
 		<title>Catching up with the past wisdom 11th Feb &#39;16</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/catching-up-with-the-past-wisdom-11th-feb-16/"/>
+		<link href="https://pandamakes.me/posts/catching-up-with-the-past-wisdom-11th-feb-16/"/>
 		<updated>2016-02-11T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/catching-up-with-the-past-wisdom-11th-feb-16/</id>
+		<id>https://pandamakes.me/posts/catching-up-with-the-past-wisdom-11th-feb-16/</id>
 		<content type="html">&lt;p&gt;Continued from the previous part.&lt;/p&gt;
 &lt;p&gt;Just then, I learnt, &lt;code&gt;&amp;lt;code&amp;gt;&amp;lt;/code&amp;gt;&lt;/code&gt; does not escape html tags. Instead, one must use &lt;code&gt;&amp;amp;lt;div&amp;amp;gt;&lt;/code&gt;. (In fact, the exercise of typing the last line is more fun indeed.&lt;/p&gt;
 &lt;blockquote&gt;
@@ -2438,7 +2438,7 @@ Turns out, I was an idiot. The aforementioned error usually will not stop the co
 &lt;blockquote&gt;
 &lt;p&gt;Firstly, I stumbled across this thread: &lt;a href=&quot;http://forum.virtuemart.net/index.php?topic=111410.0&quot;&gt;VM Forum&lt;/a&gt;, and the solution (try a different theme) works. This narrowed the problem. So I was sure it was one of the modification I did to the PHP that ruined it. The problem is, I made so many modifications, and every one of them seems plausible. and I was not willing to undo my hours of work.Then, when I was comparing the directory and file differences between the theme that works and the one that does not work, I found this line of code:&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;a class=&quot;vmicon vm2-remove_from_cart&quot; title=&quot;&gt;?php echo JText::_ (&#39;COM_VIRTUEMART_CART_DELETE&#39;) ?&gt;&quot; align=&quot;middle&quot; href=&quot;https://pandamakes.me/eleventy-base-blog/posts/catching-up-with-the-past-wisdom-11th-feb-16/%3E&quot;&gt;
+&lt;p&gt;&lt;a class=&quot;vmicon vm2-remove_from_cart&quot; title=&quot;&gt;?php echo JText::_ (&#39;COM_VIRTUEMART_CART_DELETE&#39;) ?&gt;&quot; align=&quot;middle&quot; href=&quot;https://pandamakes.me/posts/catching-up-with-the-past-wisdom-11th-feb-16/%3E&quot;&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;which led me to &lt;code&gt;joomla/components/com_virtuemart/assets/js/dynupdate.js&lt;/code&gt;, which was included in the header. I felt at the time, on line 165 was the key, as it described a function &lt;code&gt;Virtuemart.updDynFormListener&lt;/code&gt;. I inserted a &lt;code&gt;console.log&lt;/code&gt; to try to catch the activation of the codes, and it seems for the theme that works, it is triggered twice and for one that does not work, it is triggered once.&lt;br&gt;
@@ -2456,9 +2456,9 @@ hmm… bizarre. The console.log seems to trigger on page load…&lt;/p&gt;
 	
 	<entry>
 		<title>11th Feburary, 2016, wisdom from the past week (In this case, in the past month)</title>
-		<link href="https://pandamakes.me/eleventy-base-blog/posts/11th-feburary-2016-wisdom-from-the-past-week-in-this-case-in-the-past-month/"/>
+		<link href="https://pandamakes.me/posts/11th-feburary-2016-wisdom-from-the-past-week-in-this-case-in-the-past-month/"/>
 		<updated>2016-02-11T00:00:00Z</updated>
-		<id>https://pandamakes.me/eleventy-base-blog/posts/11th-feburary-2016-wisdom-from-the-past-week-in-this-case-in-the-past-month/</id>
+		<id>https://pandamakes.me/posts/11th-feburary-2016-wisdom-from-the-past-week-in-this-case-in-the-past-month/</id>
 		<content type="html">&lt;p&gt;I am an aspiring web designer, web developer and photographer. Building up a plethora of tools is not easy. I am hoping to record down the bits and pieces of wisdom I have learnt during my journey. Hopefully, it can help someone out.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;(I really hoped I did not have to start with this one.) You cannot spell therapist without rapist.&lt;/li&gt;
@@ -2470,22 +2470,22 @@ hmm… bizarre. The console.log seems to trigger on page load…&lt;/p&gt;
 &lt;li&gt;In JS or JQuery, always quotation marks for properties. For example, use &lt;code&gt;.css(&#39;border-width&#39;,&#39;24px&#39;)&lt;/code&gt; rather than &lt;code&gt;.css(border-width,24px)&lt;/code&gt;. Again, this should have been HTML/JS 101. - One exception to this rule is if the value is a number, say &lt;code&gt;variable = 1024&lt;/code&gt;, then one need not quote the number. Otherwise, it will be considered as a string. (More rant on JS treatment of variables later)&lt;/li&gt;
 &lt;li&gt;In order to modify any of the modules, first create an override of the corresponding module (&lt;code&gt;Extension -&amp;gt;Templates&lt;/code&gt; …&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;https://pandamakes.me/eleventy-base-blog/web/20190303113003im_/https:/pandamakes.com.au/content/images/2018/01/joomla.jpg&quot; alt=&quot;joomla&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://pandamakes.me/web/20190303113003im_/https:/pandamakes.com.au/content/images/2018/01/joomla.jpg&quot; alt=&quot;joomla&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Click on the template you are using …&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://pandamakes.me/eleventy-base-blog/web/20190303113003im_/https:/pandamakes.com.au/content/images/2018/01/joomla2.jpg&quot; alt=&quot;joomla2&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://pandamakes.me/web/20190303113003im_/https:/pandamakes.com.au/content/images/2018/01/joomla2.jpg&quot; alt=&quot;joomla2&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Then click “Create Override” and find the module or component or layout you want to override…&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://pandamakes.me/eleventy-base-blog/web/20190303113003im_/https:/pandamakes.com.au/content/images/2018/01/joomla3.jpg&quot; alt=&quot;joomla3&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://pandamakes.me/web/20190303113003im_/https:/pandamakes.com.au/content/images/2018/01/joomla3.jpg&quot; alt=&quot;joomla3&quot;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;To find out which component (NOT modules… modules should be self-explanatory) you need to override, go to manage menu&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;https://pandamakes.me/eleventy-base-blog/web/20190303113003im_/https:/pandamakes.com.au/content/images/2018/01/joomla4.jpg&quot; alt=&quot;joomla4&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://pandamakes.me/web/20190303113003im_/https:/pandamakes.com.au/content/images/2018/01/joomla4.jpg&quot; alt=&quot;joomla4&quot;&gt;&lt;/p&gt;
 &lt;p&gt;and find the page you want to modify, and check the path underneath it&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://pandamakes.me/eleventy-base-blog/web/20190303113003im_/https:/pandamakes.com.au/content/images/2018/01/joomla5.jpg&quot; alt=&quot;joomla5&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://pandamakes.me/web/20190303113003im_/https:/pandamakes.com.au/content/images/2018/01/joomla5.jpg&quot; alt=&quot;joomla5&quot;&gt;&lt;/p&gt;
 &lt;p&gt;In this case, in order to customise the page after clicking “blog” button from the main menu, I will need to find the component folder called com_articles, and create an override for the item Category Blog.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Override creates a file that you can play with, and change the behaviour of the final page. To access the file, which you can tinker with, go to Extension -&amp;gt; Template -&amp;gt; select your template (as before), Then, hit Editor -&amp;gt; html -&amp;gt; find the component/module you are interested in tinkering.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;https://pandamakes.me/eleventy-base-blog/web/20190303113003im_/https:/pandamakes.com.au/content/images/2018/01/joomla6.jpg&quot; alt=&quot;joomla6&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://pandamakes.me/web/20190303113003im_/https:/pandamakes.com.au/content/images/2018/01/joomla6.jpg&quot; alt=&quot;joomla6&quot;&gt;&lt;/p&gt;
 </content>
 	</entry>
 </feed>

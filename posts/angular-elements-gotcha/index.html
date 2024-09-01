@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Angular Elements Gotcha</title>
     <meta name="Description" content="web developer, photographer, panda">
-    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/index.css">
-    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/prism-base16-monokai.dark.css">
-    <link rel="alternate" href="/eleventy-base-blog/eleventy-base-blog/feed/feed.xml" type="application/atom+xml" title="pandamakes">
-    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/materialize.css">
-    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/github-markdown.css">
-    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/coverimage.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/prism-base16-monokai.dark.css">
+    <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="pandamakes">
+    <link rel="stylesheet" href="/css/materialize.css">
+    <link rel="stylesheet" href="/css/github-markdown.css">
+    <link rel="stylesheet" href="/css/coverimage.css">
 	  <link rel="me" href="https://fosstodon.org/@pandamakes">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -22,9 +22,9 @@
       <div class="nav-wrapper col s12">
 
         <!-- logo -->
-        <a href="/eleventy-base-blog/" class="h-100 brand-logo">
+        <a href="/" class="h-100 brand-logo">
           <div class="h-100 valign-wrapper ">
-            <img class="h-100 p-1" src="/eleventy-base-blog/eleventy-base-blog/img/logo.svg">
+            <img class="h-100 p-1" src="/img/logo.svg">
             <span>
               pandamakes
             </span>
@@ -35,9 +35,9 @@
           <i class="fas fa-bars"></i>
         </a>
 
-        <ul class="right hide-on-med-and-down"><li class="nav-item"><a href="/eleventy-base-blog/">Home</a></li>
-<li class="nav-item"><a href="/eleventy-base-blog/blog/">Blog</a></li>
-<li class="nav-item"><a href="/eleventy-base-blog/about/">About</a></li></ul>
+        <ul class="right hide-on-med-and-down"><li class="nav-item"><a href="/">Home</a></li>
+<li class="nav-item"><a href="/blog/">Blog</a></li>
+<li class="nav-item"><a href="/about/">About</a></li></ul>
       </div>
     </nav>
 
@@ -46,7 +46,7 @@
   
   
     <li class="nav-item">
-      <a href="/eleventy-base-blog/">
+      <a href="/">
         Home
       </a>
     </li>
@@ -54,7 +54,7 @@
   
   
     <li class="nav-item">
-      <a href="/eleventy-base-blog/eleventy-base-blog/blog/">
+      <a href="/blog/">
         Blog
       </a>
     </li>
@@ -62,7 +62,7 @@
   
   
     <li class="nav-item">
-      <a href="/eleventy-base-blog/eleventy-base-blog/about/">
+      <a href="/about/">
         About
       </a>
     </li>
@@ -72,9 +72,9 @@
 
 </header>
 
-    <main class="flex-basis-0 flex-grow-1">
+    <main class="flex-basis-0 flex-grow-1" >
 
-      <div data-bgimgsrc="/eleventy-base-blog/img/cover.jpg" class="banner-image-wrapper w-100 h-100vh overflow-hidden d-flex align-items-center justify-content-center">
+      <div data-bgimgsrc="/img/cover.jpg" class="banner-image-wrapper w-100 h-100vh overflow-hidden d-flex align-items-center justify-content-center">
   <div>
     <h1 class="center-align">
       Angular Elements Gotcha
@@ -89,7 +89,8 @@
         
 
 <div class="row">
-	<div class="col s12" <time="" datetime="2018-07-10">10 July 2018
+	<div class="col s12"
+		<time datetime="2018-07-10">10 July 2018</time>
 	</div>
 	
   	
@@ -101,10 +102,10 @@
     
 
     
-    <span data-href="/eleventy-base-blog/tags/angular/" class="waves-effect chip m-1">angular</span>
-    <span data-href="/eleventy-base-blog/tags/angularelements/" class="waves-effect chip m-1">angularelements</span>
-    <span data-href="/eleventy-base-blog/tags/webcomponents/" class="waves-effect chip m-1">webcomponents</span>
-    <span data-href="/eleventy-base-blog/tags/frontend/" class="waves-effect chip m-1">frontend</span>
+    <span data-href="/tags/angular/" class="waves-effect chip m-1">angular</span>
+    <span data-href="/tags/angularelements/" class="waves-effect chip m-1">angularelements</span>
+    <span data-href="/tags/webcomponents/" class="waves-effect chip m-1">webcomponents</span>
+    <span data-href="/tags/frontend/" class="waves-effect chip m-1">frontend</span>
   </div>
 </div>
 
@@ -128,15 +129,15 @@ styles : []
 }</p>
 <p>in an angular application, you'd have:</p>
 <p>&lt;my-component [inputString]=&quot;'hello world'&quot;&gt;
-</p>
+</my-component></p>
 <p>in the exported element would however, look like:</p>
-<p><my-component input-string="hello world">
+<p><my-component input-string = "hello world">
 </my-component></p>
 <p>as documented <a href="https://angular.io/guide/elements#mapping">here</a></p>
 
   </div>
 </div>
-<ul class="links-nextprev"><li>Previous: <a href="/eleventy-base-blog/posts/angular-6-changedetection-lesson/">Angular 6 changeDetection lesson</a></li><li>Next: <a href="/eleventy-base-blog/posts/js-quirks/">JS Quirks</a></li>
+<ul class="links-nextprev"><li>Previous: <a href="/posts/angular-6-changedetection-lesson/">Angular 6 changeDetection lesson</a></li><li>Next: <a href="/posts/js-quirks/">JS Quirks</a></li>
 </ul>
 
       </div>
@@ -190,6 +191,6 @@ styles : []
   </script>
 
 </footer>
-    <!-- Current page: /eleventy-base-blog/posts/angular-elements-gotcha/ -->
+    <!-- Current page: /posts/angular-elements-gotcha/ -->
   </body>
 </html>
