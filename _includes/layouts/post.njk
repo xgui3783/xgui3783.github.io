@@ -1,20 +1,19 @@
 ---
 layout: layouts/base.njk
-templateClass: tmpl-post
 ---
+{# Only include the syntax highlighter CSS on blog posts #}
+{%- css %}{% include "node_modules/prismjs/themes/prism-okaidia.css" %}{% endcss %}
+{%- css %}{% include "public/css/prism-diff.css" %}{%- endcss %}
 
-{% if date or tags %}
 <div class="row">
+	<div class="col s12"
+		<time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
+	</div>
+	
+  	{% include './partial_tags.njk' %}
 
-  {% if date %}
-  <div class="col s12">
-    <time class="postlist-date" datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time>
-  </div>
-  {% endif %}
-
-  {% include './partial_tags.njk' %}
 </div>
-{% endif %}
+
 
 <div class="row">
   <div class="col s12 markdown-body">
@@ -22,3 +21,13 @@ templateClass: tmpl-post
   </div>
 </div>
 
+{%- if collections.posts %}
+{%- set previousPost = collections.posts | getPreviousCollectionItem %}
+{%- set nextPost = collections.posts | getNextCollectionItem %}
+{%- if nextPost or previousPost %}
+<ul class="links-nextprev">
+	{%- if previousPost %}<li>Previous: <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a></li>{% endif %}
+	{%- if nextPost %}<li>Next: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></li>{% endif %}
+</ul>
+{%- endif %}
+{%- endif %}
