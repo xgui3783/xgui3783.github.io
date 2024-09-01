@@ -7,7 +7,6 @@ on:
   push:
     branches:
       - master
-      - gh-pages
   pull_request:
 
 jobs:
@@ -43,7 +42,7 @@ jobs:
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
-        if: ${{ github.ref == 'refs/heads/master' || github.ref == 'refs/heads/gh-pages' }}
+        if: ${{ github.ref == 'refs/heads/master' }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_site
