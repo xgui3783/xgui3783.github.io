@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detour, refocus</title>
+    <meta name="Description" content="web developer, photographer, panda">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/index.css">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/prism-base16-monokai.dark.css">
+    <link rel="alternate" href="/eleventy-base-blog/eleventy-base-blog/feed/feed.xml" type="application/atom+xml" title="pandamakes">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/materialize.css">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/github-markdown.css">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/coverimage.css">
+	  <link rel="me" href="https://fosstodon.org/@pandamakes">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  </head>
+  <body class="d-flex flex-column">
+    <header class="flex-basis-0 flex-grow-0">
+
+    <nav>
+      <div class="nav-wrapper col s12">
+
+        <!-- logo -->
+        <a href="/eleventy-base-blog/" class="h-100 brand-logo">
+          <div class="h-100 valign-wrapper ">
+            <img class="h-100 p-1" src="/eleventy-base-blog/eleventy-base-blog/img/logo.svg">
+            <span>
+              pandamakes
+            </span>
+          </div>
+        </a>
+
+        <a href="#" data-target="mobile-menu" class="sidenav-trigger">
+          <i class="fas fa-bars"></i>
+        </a>
+
+        <ul class="right hide-on-med-and-down"><li class="nav-item"><a href="/eleventy-base-blog/">Home</a></li>
+<li class="nav-item"><a href="/eleventy-base-blog/blog/">Blog</a></li>
+<li class="nav-item"><a href="/eleventy-base-blog/about/">About</a></li></ul>
+      </div>
+    </nav>
+
+  <!-- mobile sidenav -->
+  <ul class="sidenav" id="mobile-menu">
+  
+  
+    <li class="nav-item">
+      <a href="/eleventy-base-blog/">
+        Home
+      </a>
+    </li>
+  
+  
+  
+    <li class="nav-item">
+      <a href="/eleventy-base-blog/eleventy-base-blog/blog/">
+        Blog
+      </a>
+    </li>
+  
+  
+  
+    <li class="nav-item">
+      <a href="/eleventy-base-blog/eleventy-base-blog/about/">
+        About
+      </a>
+    </li>
+  
+  
+  </ul>
+
+</header>
+
+    <main class="flex-basis-0 flex-grow-1">
+
+      <div data-bgimgsrc="/eleventy-base-blog/img/cover.jpg" class="banner-image-wrapper w-100 h-100vh overflow-hidden d-flex align-items-center justify-content-center">
+  <div>
+    <h1 class="center-align">
+      Detour, refocus
+    </h1>
+
+    
+  </div>
+</div>
+
+<div class="row"></div>
+      <div class="container">
+        
+
+<div class="row">
+	<div class="col s12" <time="" datetime="2016-04-18">18 April 2016
+	</div>
+	
+  	
+<div class="col s12">
+  <div class="d-flex flex-wrap">
+
+    
+    <span class="mt-a mb-a"> tags: </span>
+    
+
+    
+    <span data-href="/eleventy-base-blog/tags/css/" class="waves-effect chip m-1">css</span>
+    <span data-href="/eleventy-base-blog/tags/html/" class="waves-effect chip m-1">html</span>
+    <span data-href="/eleventy-base-blog/tags/javascript/" class="waves-effect chip m-1">javascript</span>
+    <span data-href="/eleventy-base-blog/tags/mysql/" class="waves-effect chip m-1">mysql</span>
+    <span data-href="/eleventy-base-blog/tags/node.js/" class="waves-effect chip m-1">node.js</span>
+    <span data-href="/eleventy-base-blog/tags/openshift/" class="waves-effect chip m-1">openshift</span>
+    <span data-href="/eleventy-base-blog/tags/php/" class="waves-effect chip m-1">php</span>
+    <span data-href="/eleventy-base-blog/tags/ruby/" class="waves-effect chip m-1">ruby</span>
+    <span data-href="/eleventy-base-blog/tags/wordpress/" class="waves-effect chip m-1">wordpress</span>
+  </div>
+</div>
+
+
+
+</div>
+
+
+<div class="row">
+  <div class="col s12 markdown-body">
+  <p>Hitting a wall in Imago is really not fun, so I fancy the opportunity to revisit some of my older projects.</p>
+<p>One in particular. I reworked a client’s website, made it more colour suitable, added a dynamic background. Just have to work the login magic in when I get a chance. Though truth be told, I would really fancy redoing the timetable app.</p>
+<p>And this made me keenly aware of the necessity to backup before I do anything. When I was trying to migrate the site from my PC’s localhost to the live site, I was (supposed to) change the wordpress address url and site url to the corresponding one’s. Due to a typographical error, I typed the wrong info, and was not able to return to the setting page (since the setting page in wordpress is accessed via a webpage. There is a work around, namely</p>
+<p>define(‘WP_HOME’,’http://YOURURL.HERE/’);<br>
+define(‘WP_SITEURL’,’http://YOURURL.HERE’);</p>
+<p>It’s not ideal, though.</p>
+<p>Trying to learn node.js. Going to use OpenShift as a playground. Upon trying to install the client tools using the instruction on <a href="https://developers.openshift.com/getting-started/windows.html#client-tools">their site</a>, I encountered the error:<br>
+<code>rhc setup gives error ‘no such file dl/import’</code><br>
+Turns out, just like python, using an earlier version worked like a charm. Re downloaded/installed ruby 2.0 rather than 2.2 solved the problem.</p>
+
+  </div>
+</div>
+<ul class="links-nextprev"><li>Previous: <a href="/eleventy-base-blog/posts/opencv-hit-a-wall/">Imago, hit a wall?</a></li><li>Next: <a href="/eleventy-base-blog/posts/more-detour-some-node-js/">More detour. Some Node.js</a></li>
+</ul>
+
+      </div>
+    </main>
+
+    <footer class="page-footer flex-basis-0 flex-grow-0">
+
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+
+        <a class="btn-flat" href="https://github.com/xgui3783">
+          <i class="fab fa-github"></i>
+          <span>
+            xgui3783
+          </span>
+        </a>
+
+        <a href="https://fosstodon.org/@pandamakes" class="btn-flat">
+          <i class="fab fa-mastodon"></i>
+          <span>
+            @pandamakes@fosstodon.org
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer-copyright">
+    <div class="container">
+    © 2024 Copyright pandamakes
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      /* required for SideBar mobile */
+      const elems = document.querySelectorAll('.sidenav')
+      const instances = M.Sidenav.init(elems)
+
+      /* required to overcome nested anchor links */
+      const divHrefs = document.querySelectorAll('[data-href]')
+      for (const divHref of divHrefs ){
+        divHref.addEventListener('click', ev => {
+          window.open(divHref.dataset.href, '_self')
+          ev.stopPropagation()
+        })
+      }
+    })
+  </script>
+
+</footer>
+    <!-- Current page: /eleventy-base-blog/posts/detour-refocus/ -->
+  </body>
+</html>

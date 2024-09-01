@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disabling (some) zonejs in Angular app</title>
+    <meta name="Description" content="web developer, photographer, panda">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/index.css">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/prism-base16-monokai.dark.css">
+    <link rel="alternate" href="/eleventy-base-blog/eleventy-base-blog/feed/feed.xml" type="application/atom+xml" title="pandamakes">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/materialize.css">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/github-markdown.css">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/coverimage.css">
+	  <link rel="me" href="https://fosstodon.org/@pandamakes">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  </head>
+  <body class="d-flex flex-column">
+    <header class="flex-basis-0 flex-grow-0">
+
+    <nav>
+      <div class="nav-wrapper col s12">
+
+        <!-- logo -->
+        <a href="/eleventy-base-blog/" class="h-100 brand-logo">
+          <div class="h-100 valign-wrapper ">
+            <img class="h-100 p-1" src="/eleventy-base-blog/eleventy-base-blog/img/logo.svg">
+            <span>
+              pandamakes
+            </span>
+          </div>
+        </a>
+
+        <a href="#" data-target="mobile-menu" class="sidenav-trigger">
+          <i class="fas fa-bars"></i>
+        </a>
+
+        <ul class="right hide-on-med-and-down"><li class="nav-item"><a href="/eleventy-base-blog/">Home</a></li>
+<li class="nav-item"><a href="/eleventy-base-blog/blog/">Blog</a></li>
+<li class="nav-item"><a href="/eleventy-base-blog/about/">About</a></li></ul>
+      </div>
+    </nav>
+
+  <!-- mobile sidenav -->
+  <ul class="sidenav" id="mobile-menu">
+  
+  
+    <li class="nav-item">
+      <a href="/eleventy-base-blog/">
+        Home
+      </a>
+    </li>
+  
+  
+  
+    <li class="nav-item">
+      <a href="/eleventy-base-blog/eleventy-base-blog/blog/">
+        Blog
+      </a>
+    </li>
+  
+  
+  
+    <li class="nav-item">
+      <a href="/eleventy-base-blog/eleventy-base-blog/about/">
+        About
+      </a>
+    </li>
+  
+  
+  </ul>
+
+</header>
+
+    <main class="flex-basis-0 flex-grow-1">
+
+      <div data-bgimgsrc="/eleventy-base-blog/img/cover.jpg" class="banner-image-wrapper w-100 h-100vh overflow-hidden d-flex align-items-center justify-content-center">
+  <div>
+    <h1 class="center-align">
+      Disabling (some) zonejs in Angular app
+    </h1>
+
+    
+  </div>
+</div>
+
+<div class="row"></div>
+      <div class="container">
+        
+
+<div class="row">
+	<div class="col s12" <time="" datetime="2021-10-26">26 October 2021
+	</div>
+	
+  	
+<div class="col s12">
+  <div class="d-flex flex-wrap">
+
+    
+    <span class="mt-a mb-a"> tags: </span>
+    
+
+    
+    <span data-href="/eleventy-base-blog/tags/angular/" class="waves-effect chip m-1">angular</span>
+    <span data-href="/eleventy-base-blog/tags/zonejs/" class="waves-effect chip m-1">zonejs</span>
+  </div>
+</div>
+
+
+
+</div>
+
+
+<div class="row">
+  <div class="col s12 markdown-body">
+  <p>Profiling is so fun.</p>
+<p>I noticed that a component is running significantly slower in angular than in vanilla JS. I had some spare time, and did some profiling.</p>
+<p>The component did have a lot of interactivity (via <code>Element.addEventListener</code> and <code>requestAnimationFrame</code>). I noticed that there were a lot of calls to <code>globalZone</code>, and alot of unnecessary <code>delegate</code> calls. (each raf call. )</p>
+<p>Normally reactivity is nice. It simplifies product development cycle and boosts productivity. In this case, however, it is unnecessarily punishing performance.</p>
+<p>Intially, I wondered if I could call the component with a special set of globals, something like</p>
+<pre class="language-js" tabindex="0"><code class="language-js">
+<span class="token comment">// before zone.js patch the hell out of native raf</span>
+
+window<span class="token punctuation">[</span><span class="token string">'originalRAF'</span><span class="token punctuation">]</span> <span class="token operator">=</span> window<span class="token punctuation">[</span><span class="token string">'requestAnimationFrame'</span><span class="token punctuation">]</span>
+
+<span class="token comment">// ...</span>
+
+<span class="token keyword">import</span> <span class="token string">'zone.js'</span>
+
+<span class="token comment">//...</span>
+
+<span class="token keyword">class</span> <span class="token class-name">MyHero</span> <span class="token keyword">implements</span> <span class="token class-name">OnInit</span><span class="token punctuation">{</span>
+  <span class="token function">ngOnInit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">const</span> proxyCreateMyComponent <span class="token operator">=</span> <span class="token function">createMyComponent</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      <span class="token operator">...</span>window<span class="token punctuation">,</span>
+      <span class="token literal-property property">requestAnimationFrame</span><span class="token operator">:</span> window<span class="token punctuation">[</span><span class="token string">'originalRAF'</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token function">proxyCreateMyComponent</span><span class="token punctuation">(</span><span class="token string">'#comp-id'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>I did some digging, and some source code divining, and it seems, for the time being, the solution is actually much simpler:</p>
+<pre class="language-js" tabindex="0"><code class="language-js">
+<span class="token comment">// disables patches to raf altogether</span>
+
+window<span class="token punctuation">[</span><span class="token string">'__Zone_disable_requestAnimationFrame'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">true</span>
+
+<span class="token comment">// ...</span>
+
+<span class="token keyword">import</span> <span class="token string">'zone.js'</span></code></pre>
+<p>Hopefully... the angular team doesn't change this, eh?</p>
+
+  </div>
+</div>
+<ul class="links-nextprev"><li>Previous: <a href="/eleventy-base-blog/posts/20211022-python-abc-wtf/">Python ABC WTF</a></li><li>Next: <a href="/eleventy-base-blog/posts/20220730-bit-shift-js-python/">Bitshift chaos in JS &amp; Python</a></li>
+</ul>
+
+      </div>
+    </main>
+
+    <footer class="page-footer flex-basis-0 flex-grow-0">
+
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+
+        <a class="btn-flat" href="https://github.com/xgui3783">
+          <i class="fab fa-github"></i>
+          <span>
+            xgui3783
+          </span>
+        </a>
+
+        <a href="https://fosstodon.org/@pandamakes" class="btn-flat">
+          <i class="fab fa-mastodon"></i>
+          <span>
+            @pandamakes@fosstodon.org
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer-copyright">
+    <div class="container">
+    © 2024 Copyright pandamakes
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      /* required for SideBar mobile */
+      const elems = document.querySelectorAll('.sidenav')
+      const instances = M.Sidenav.init(elems)
+
+      /* required to overcome nested anchor links */
+      const divHrefs = document.querySelectorAll('[data-href]')
+      for (const divHref of divHrefs ){
+        divHref.addEventListener('click', ev => {
+          window.open(divHref.dataset.href, '_self')
+          ev.stopPropagation()
+        })
+      }
+    })
+  </script>
+
+</footer>
+    <!-- Current page: /eleventy-base-blog/posts/20211026-disabling-zonejs-angular/ -->
+  </body>
+</html>

@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attempt to improve OpenCV performance on Android</title>
+    <meta name="Description" content="web developer, photographer, panda">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/index.css">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/prism-base16-monokai.dark.css">
+    <link rel="alternate" href="/eleventy-base-blog/eleventy-base-blog/feed/feed.xml" type="application/atom+xml" title="pandamakes">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/materialize.css">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/github-markdown.css">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/coverimage.css">
+	  <link rel="me" href="https://fosstodon.org/@pandamakes">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  </head>
+  <body class="d-flex flex-column">
+    <header class="flex-basis-0 flex-grow-0">
+
+    <nav>
+      <div class="nav-wrapper col s12">
+
+        <!-- logo -->
+        <a href="/eleventy-base-blog/" class="h-100 brand-logo">
+          <div class="h-100 valign-wrapper ">
+            <img class="h-100 p-1" src="/eleventy-base-blog/eleventy-base-blog/img/logo.svg">
+            <span>
+              pandamakes
+            </span>
+          </div>
+        </a>
+
+        <a href="#" data-target="mobile-menu" class="sidenav-trigger">
+          <i class="fas fa-bars"></i>
+        </a>
+
+        <ul class="right hide-on-med-and-down"><li class="nav-item"><a href="/eleventy-base-blog/">Home</a></li>
+<li class="nav-item"><a href="/eleventy-base-blog/blog/">Blog</a></li>
+<li class="nav-item"><a href="/eleventy-base-blog/about/">About</a></li></ul>
+      </div>
+    </nav>
+
+  <!-- mobile sidenav -->
+  <ul class="sidenav" id="mobile-menu">
+  
+  
+    <li class="nav-item">
+      <a href="/eleventy-base-blog/">
+        Home
+      </a>
+    </li>
+  
+  
+  
+    <li class="nav-item">
+      <a href="/eleventy-base-blog/eleventy-base-blog/blog/">
+        Blog
+      </a>
+    </li>
+  
+  
+  
+    <li class="nav-item">
+      <a href="/eleventy-base-blog/eleventy-base-blog/about/">
+        About
+      </a>
+    </li>
+  
+  
+  </ul>
+
+</header>
+
+    <main class="flex-basis-0 flex-grow-1">
+
+      <div data-bgimgsrc="/eleventy-base-blog/img/cover.jpg" class="banner-image-wrapper w-100 h-100vh overflow-hidden d-flex align-items-center justify-content-center">
+  <div>
+    <h1 class="center-align">
+      Attempt to improve OpenCV performance on Android
+    </h1>
+
+    
+  </div>
+</div>
+
+<div class="row"></div>
+      <div class="container">
+        
+
+<div class="row">
+	<div class="col s12" <time="" datetime="2017-01-09">09 January 2017
+	</div>
+	
+  	
+<div class="col s12">
+  <div class="d-flex flex-wrap">
+
+    
+    <span class="mt-a mb-a"> tags: </span>
+    
+
+    
+    <span data-href="/eleventy-base-blog/tags/Android/" class="waves-effect chip m-1">Android</span>
+    <span data-href="/eleventy-base-blog/tags/android programming/" class="waves-effect chip m-1">android programming</span>
+    <span data-href="/eleventy-base-blog/tags/java/" class="waves-effect chip m-1">java</span>
+    <span data-href="/eleventy-base-blog/tags/lesson learnt the hard way/" class="waves-effect chip m-1">lesson learnt the hard way</span>
+    <span data-href="/eleventy-base-blog/tags/lessons learnt the hard way/" class="waves-effect chip m-1">lessons learnt the hard way</span>
+    <span data-href="/eleventy-base-blog/tags/opencv/" class="waves-effect chip m-1">opencv</span>
+  </div>
+</div>
+
+
+
+</div>
+
+
+<div class="row">
+  <div class="col s12 markdown-body">
+  <p>OpenCV is an open sourced computer vision software developed for a number of popular OS such as windows, mac, linux, android and iOS. My main interest in OpenCV is application in mobile platforms such as android and iOS, where it can be used in AR applications.</p>
+<p>However, one of the most severe limitations is that mobile CPU is woefully slow comparing to desktop PCs. As a result, doing computer vision is incredibly taxing on mobile platforms.</p>
+<p>Framerate</p>
+<p>Operation</p>
+<p>Oppo F1s</p>
+<p>Native camera</p>
+<p>24+</p>
+<p>Load OpenCV only (No writing or processing)</p>
+<p>17-18</p>
+<p>Load OpenCV + writing Mat object(s) (no processing)</p>
+<p>17-18</p>
+<p>Load OpenCV + writing Mat object(s) + processing</p>
+<p>~8</p>
+<p>To improve the performance of OpenCV on mobile devices, I thought I would run processing on a non-UI thread. Turns out, according to (this thread)[http://stackoverflow.com/questions/31828704/android-opencv-app-crashes-on-ui-change] on stackoverflow, the onCameraFrame already runs on a non-UI thread.</p>
+<hr>
+<p>Also important, if Mat object is large, do <strong>not</strong> attempt to <code>mat.dump()</code>. it will cause the app to crash, and the cryptic stacktrace is no help in diagnosing the problem.</p>
+<hr>
+<p>More OpenCV quirks.</p>
+<p>Features2d.drawKeypoints(Mat input, MatofKeyPoints keypoints, Mat output)</p>
+<p>Mat input has to be <em>8UC3</em> or <em>8UC1</em>. If it was 8UC4, it will throw a cryptic exception.</p>
+<hr>
+<p>More OpenCV quirks:</p>
+<p>DescriptorMatcher mMatcher = new DescriptorMatcher.create(<em>method</em>);
+mMatcher.match(Mat descriptor1,Mat descriptor2,MatOfDMatches matches);</p>
+<p>crashes if descriptor2.cols()==0 (presumably, it also crashes if <code>descriptor1.cols == 0</code>).<br>
+To prevent the crash, do:</p>
+<p>DescriptorMatcher mMatcher = new DescriptorMatcher.create(<em>method</em>);
+if(descriptor2.cols()==0){
+return;
+}
+mMatcher.match(Mat descriptor1,Mat descriptor2,MatOfDMatches matches);</p>
+<hr>
+<p>Android Studio quirks:<br>
+When you replace a .png file in res/drawable folder, gradle will fail to sync, with the following message:</p>
+<p>Error:Execution failed for task ':app:processDebugResources'.
+&gt; com.android.ide.common.process.ProcessException: org.gradle.process.internal.ExecException: Process 'command 'C:\Users\proto\AppData\Local\Android\sdk\build-tools\23.0.2\aapt.exe'' finished with non-zero exit value 1</p>
+
+  </div>
+</div>
+<ul class="links-nextprev"><li>Previous: <a href="/eleventy-base-blog/posts/how-to-fix-parent-div-ignoring-child-div-height/">How to fix parent div ignoring child div height</a></li><li>Next: <a href="/eleventy-base-blog/posts/mongodb-occupying-excessive-space-on-openshift-or-otherwise/">MongoDB occupying excessive space (on openshift or otherwise)</a></li>
+</ul>
+
+      </div>
+    </main>
+
+    <footer class="page-footer flex-basis-0 flex-grow-0">
+
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+
+        <a class="btn-flat" href="https://github.com/xgui3783">
+          <i class="fab fa-github"></i>
+          <span>
+            xgui3783
+          </span>
+        </a>
+
+        <a href="https://fosstodon.org/@pandamakes" class="btn-flat">
+          <i class="fab fa-mastodon"></i>
+          <span>
+            @pandamakes@fosstodon.org
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer-copyright">
+    <div class="container">
+    © 2024 Copyright pandamakes
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      /* required for SideBar mobile */
+      const elems = document.querySelectorAll('.sidenav')
+      const instances = M.Sidenav.init(elems)
+
+      /* required to overcome nested anchor links */
+      const divHrefs = document.querySelectorAll('[data-href]')
+      for (const divHref of divHrefs ){
+        divHref.addEventListener('click', ev => {
+          window.open(divHref.dataset.href, '_self')
+          ev.stopPropagation()
+        })
+      }
+    })
+  </script>
+
+</footer>
+    <!-- Current page: /eleventy-base-blog/posts/attempt-to-improve-opencv-performance-on-android/ -->
+  </body>
+</html>

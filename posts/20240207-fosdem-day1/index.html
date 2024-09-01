@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOSDEM2024 day 1</title>
+    <meta name="Description" content="web developer, photographer, panda">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/index.css">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/prism-base16-monokai.dark.css">
+    <link rel="alternate" href="/eleventy-base-blog/eleventy-base-blog/feed/feed.xml" type="application/atom+xml" title="pandamakes">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/materialize.css">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/github-markdown.css">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/coverimage.css">
+	  <link rel="me" href="https://fosstodon.org/@pandamakes">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  </head>
+  <body class="d-flex flex-column">
+    <header class="flex-basis-0 flex-grow-0">
+
+    <nav>
+      <div class="nav-wrapper col s12">
+
+        <!-- logo -->
+        <a href="/eleventy-base-blog/" class="h-100 brand-logo">
+          <div class="h-100 valign-wrapper ">
+            <img class="h-100 p-1" src="/eleventy-base-blog/eleventy-base-blog/img/logo.svg">
+            <span>
+              pandamakes
+            </span>
+          </div>
+        </a>
+
+        <a href="#" data-target="mobile-menu" class="sidenav-trigger">
+          <i class="fas fa-bars"></i>
+        </a>
+
+        <ul class="right hide-on-med-and-down"><li class="nav-item"><a href="/eleventy-base-blog/">Home</a></li>
+<li class="nav-item"><a href="/eleventy-base-blog/blog/">Blog</a></li>
+<li class="nav-item"><a href="/eleventy-base-blog/about/">About</a></li></ul>
+      </div>
+    </nav>
+
+  <!-- mobile sidenav -->
+  <ul class="sidenav" id="mobile-menu">
+  
+  
+    <li class="nav-item">
+      <a href="/eleventy-base-blog/">
+        Home
+      </a>
+    </li>
+  
+  
+  
+    <li class="nav-item">
+      <a href="/eleventy-base-blog/eleventy-base-blog/blog/">
+        Blog
+      </a>
+    </li>
+  
+  
+  
+    <li class="nav-item">
+      <a href="/eleventy-base-blog/eleventy-base-blog/about/">
+        About
+      </a>
+    </li>
+  
+  
+  </ul>
+
+</header>
+
+    <main class="flex-basis-0 flex-grow-1">
+
+      <div data-bgimgsrc="/eleventy-base-blog/img/cover.jpg" class="banner-image-wrapper w-100 h-100vh overflow-hidden d-flex align-items-center justify-content-center">
+  <div>
+    <h1 class="center-align">
+      FOSDEM2024 day 1
+    </h1>
+
+    
+  </div>
+</div>
+
+<div class="row"></div>
+      <div class="container">
+        
+
+<div class="row">
+	<div class="col s12" <time="" datetime="2024-02-07">07 February 2024
+	</div>
+	
+  	
+<div class="col s12">
+  <div class="d-flex flex-wrap">
+
+    
+    <span class="mt-a mb-a"> tags: </span>
+    
+
+    
+    <span data-href="/eleventy-base-blog/tags/conference/" class="waves-effect chip m-1">conference</span>
+    <span data-href="/eleventy-base-blog/tags/foss/" class="waves-effect chip m-1">foss</span>
+    <span data-href="/eleventy-base-blog/tags/fosdem/" class="waves-effect chip m-1">fosdem</span>
+  </div>
+</div>
+
+
+
+</div>
+
+
+<div class="row">
+  <div class="col s12 markdown-body">
+  <p>On 2024, I went to <a href="https://fosdem.org/">fosdem</a> for the first time.</p>
+<p>This post and next post will be an objective recount (or as much as possible), of the sessions I visited, and my take aways from each of the sessions. I also intend to make a &quot;after thought&quot; post, discussing the meta issues.</p>
+<p>Entries are arranged in chronological order.</p>
+<h2 id="open-research-bridging-research-and-open-source-the-genesis-of-gephi-lite" tabindex="-1">Open Research: Bridging Research and Open Source: the genesis of Gephi Lite <a class="header-anchor" href="#open-research-bridging-research-and-open-source-the-genesis-of-gephi-lite">#</a></h2>
+<p><a href="https://fosdem.org/2024/schedule/event/fosdem-2024-3253-bridging-research-and-open-source-the-genesis-of-gephi-lite/">abstract</a></p>
+<p>I had initially hoped this session would discuss or push for open standards for plotting/graphing. I was disappointed to find that this was more for porting graphing functionality of <a href="https://gephi.org/">Gephi (desktop application)</a> to the web.</p>
+<h2 id="javascript-your-web-app-is-taking-up-too-much-ram-let-s-fix-it" tabindex="-1">Javascript: Your web app is taking up too much RAM. Let's fix it! <a class="header-anchor" href="#javascript-your-web-app-is-taking-up-too-much-ram-let-s-fix-it">#</a></h2>
+<p><a href="https://fosdem.org/2024/schedule/event/fosdem-2024-2722-your-web-app-is-taking-up-too-much-ram-let-s-fix-it-/">abstract</a></p>
+<p>I had moderate expectation to learn something from this session, to learn something new about profiling web applications. It did not disappoint.</p>
+<p>I was already aware of the memory profiler in chrome dev tool, which allow snapshot of heap to be captured and profiled. I was not aware that the memory profiler can be used to profile on a temporal axis (i.e., start recording, do action, stop recording, see all calls to allocate memory).</p>
+<p>I also learnt about <a href="https://github.com/facebook/memlab">facebook/memlab</a> and <a href="https://clinicjs.org/flame/">clinicjs</a>. They may be for nodejs applications only, but since chrome devtool allow exporting of the profile result, they can potentially be used to visualize and debug frontend.</p>
+<h2 id="javascript-recycle-reuse-rebuild-transformative-tactics-for-turning-your-brownfields-green" tabindex="-1">Javascript: Recycle, Reuse, Rebuild: Transformative Tactics for Turning your Brownfields Green <a class="header-anchor" href="#javascript-recycle-reuse-rebuild-transformative-tactics-for-turning-your-brownfields-green">#</a></h2>
+<p><a href="https://fosdem.org/2024/schedule/event/fosdem-2024-3289-recycle-reuse-rebuild-transformative-tactics-for-turning-your-brownfields-green/">abstract</a></p>
+<p>Frankly, I stayed because I wanted to see the next session. I had zero expectation.</p>
+<p>Convert strongly coupled to loosely coupled. But otherwise, I ... don't know if I learnt anything else?</p>
+<h2 id="javascript-unraveling-javascript-s-heart-mastering-the-event-loop-for-peak-performance" tabindex="-1">Javascript: Unraveling JavaScript's Heart: Mastering the Event Loop for Peak Performance <a class="header-anchor" href="#javascript-unraveling-javascript-s-heart-mastering-the-event-loop-for-peak-performance">#</a></h2>
+<p><a href="https://fosdem.org/2024/schedule/event/fosdem-2024-2890-unraveling-javascript-s-heart-mastering-the-event-loop-for-peak-performance/">abstract</a></p>
+<p>I thought I had learnt a lot from Jake Archibald's <a href="https://www.youtube.com/watch?v=cCOL7MC4Pl0&amp;vl=en">talk</a> on event loop, and was curious as to what else I can learn. I was pleasant surprised to find that, there is <em>always</em> more to learn.</p>
+<p>The talk focused mainly on async operations (e.g. Promise, async-await, callback), and how they could still block the main thread, if you are not careful. Since I exclusively used async ops for io-bound task (file read/write, network, etc), I was ready to believe that async tasks would not block the main thread. The speaker used bcrypt to illustrate that CPU bound tasks, even if they are delegated to async operation, could still block the main thread.</p>
+<p>Takeaway: For CPU-bound tasks, use workers.</p>
+<p>(extra: I wonder how/if this also affects EventLoop implementation in python)</p>
+<h2 id="open-research-the-french-open-science-monitor-steering-the-science-based-on-open-bibliographic-databases" tabindex="-1">Open Research: The French Open Science Monitor: steering the science based on open bibliographic databases <a class="header-anchor" href="#open-research-the-french-open-science-monitor-steering-the-science-based-on-open-bibliographic-databases">#</a></h2>
+<p><a href="https://fosdem.org/2024/schedule/event/fosdem-2024-3185-the-french-open-science-monitor-steering-the-science-based-on-open-bibliographic-databases/">abstract</a></p>
+<p>I wanted to join the next session, and I had some time to kill, so I decided to join this session, too. I did not expect to learn anything. But of course, there is <em>always</em> something to be learnt.</p>
+<ul>
+<li><a href="https://unpaywall.org">https://unpaywall.org</a></li>
+<li>Grobid <a href="https://github.com/kermitt2/grobid">github</a> <a href="https://grobid.readthedocs.io/en/latest/Introduction/">rtd</a>: use ML (?) to generate metadata from PDF</li>
+<li><a href="https://open.coki.ac">https://open.coki.ac</a> Curtin Open Knowledge Initiative</li>
+<li><a href="https://openalex.org/">https://openalex.org/</a></li>
+<li><a href="https://hal.science/">https://hal.science/</a></li>
+</ul>
+<h2 id="open-research-infra-finder-increasing-visibility-of-open-technologies-for-open-science" tabindex="-1">Open Research: Infra Finder: Increasing visibility of open technologies for open science <a class="header-anchor" href="#open-research-infra-finder-increasing-visibility-of-open-technologies-for-open-science">#</a></h2>
+<p><a href="https://fosdem.org/2024/schedule/event/fosdem-2024-3436-infra-finder-increasing-visibility-of-open-technologies-for-open-science/">abstract</a></p>
+<p>I guess a similar initiative to <a href="https://helmholtz.software/">https://helmholtz.software/</a>, but for infrastructure? I am not sure. There was nothing I could test etc.</p>
+<p>One of the takeaways from this talk, is that, people who makes the decision regarding infrastructure has different concern/technical know how. It might be necessary to have a different set of criteria when speak to such steakholders</p>
+<h2 id="open-research-best-practices-for-research-in-open-source-ecosystems" tabindex="-1">Open Research: Best practices for research in open source ecosystems <a class="header-anchor" href="#open-research-best-practices-for-research-in-open-source-ecosystems">#</a></h2>
+<p><a href="https://fosdem.org/2024/schedule/event/fosdem-2024-2405-best-practices-for-research-in-open-source-ecosystems/">abstract</a></p>
+<h2 id="open-research-phaidra-a-repository-where-research-data-goes-to-live-not-to-die" tabindex="-1">Open Research: PHAIDRA - A Repository Where Research Data Goes to Live (Not to Die). <a class="header-anchor" href="#open-research-phaidra-a-repository-where-research-data-goes-to-live-not-to-die">#</a></h2>
+<p><a href="https://fosdem.org/2024/schedule/event/fosdem-2024-3447-phaidra-a-repository-where-research-data-goes-to-live-not-to-die-/">abstract</a></p>
+<p>I have some interest in RDM. We learnt a little about the history of PHAIDRA, but little to no technical detail. The presenter also mentioned that large data (multi GB/TB) is not currently covered.</p>
+<h2 id="open-research-updating-open-data-standards" tabindex="-1">Open Research: Updating open data standards <a class="header-anchor" href="#open-research-updating-open-data-standards">#</a></h2>
+<p><a href="https://fosdem.org/2024/schedule/event/fosdem-2024-3109-updating-open-data-standards/">abstract</a></p>
+<p>The main reason why I was in open research dev room to begin with. I wanted to learn about open data standards. This talk gave me some idea on in jobby job.</p>
+
+  </div>
+</div>
+<ul class="links-nextprev"><li>Previous: <a href="/eleventy-base-blog/posts/20231225-k8s-secret-shinanigans/">k8s secret shinanigans</a></li><li>Next: <a href="/eleventy-base-blog/posts/20240407-fosdem-day2/">FOSDEM2024 day 2</a></li>
+</ul>
+
+      </div>
+    </main>
+
+    <footer class="page-footer flex-basis-0 flex-grow-0">
+
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+
+        <a class="btn-flat" href="https://github.com/xgui3783">
+          <i class="fab fa-github"></i>
+          <span>
+            xgui3783
+          </span>
+        </a>
+
+        <a href="https://fosstodon.org/@pandamakes" class="btn-flat">
+          <i class="fab fa-mastodon"></i>
+          <span>
+            @pandamakes@fosstodon.org
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer-copyright">
+    <div class="container">
+    © 2024 Copyright pandamakes
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      /* required for SideBar mobile */
+      const elems = document.querySelectorAll('.sidenav')
+      const instances = M.Sidenav.init(elems)
+
+      /* required to overcome nested anchor links */
+      const divHrefs = document.querySelectorAll('[data-href]')
+      for (const divHref of divHrefs ){
+        divHref.addEventListener('click', ev => {
+          window.open(divHref.dataset.href, '_self')
+          ev.stopPropagation()
+        })
+      }
+    })
+  </script>
+
+</footer>
+    <!-- Current page: /eleventy-base-blog/posts/20240207-fosdem-day1/ -->
+  </body>
+</html>

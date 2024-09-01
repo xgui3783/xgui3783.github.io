@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitshift chaos in JS &amp; Python</title>
+    <meta name="Description" content="web developer, photographer, panda">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/index.css">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/prism-base16-monokai.dark.css">
+    <link rel="alternate" href="/eleventy-base-blog/eleventy-base-blog/feed/feed.xml" type="application/atom+xml" title="pandamakes">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/materialize.css">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/github-markdown.css">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/coverimage.css">
+	  <link rel="me" href="https://fosstodon.org/@pandamakes">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  </head>
+  <body class="d-flex flex-column">
+    <header class="flex-basis-0 flex-grow-0">
+
+    <nav>
+      <div class="nav-wrapper col s12">
+
+        <!-- logo -->
+        <a href="/eleventy-base-blog/" class="h-100 brand-logo">
+          <div class="h-100 valign-wrapper ">
+            <img class="h-100 p-1" src="/eleventy-base-blog/eleventy-base-blog/img/logo.svg">
+            <span>
+              pandamakes
+            </span>
+          </div>
+        </a>
+
+        <a href="#" data-target="mobile-menu" class="sidenav-trigger">
+          <i class="fas fa-bars"></i>
+        </a>
+
+        <ul class="right hide-on-med-and-down"><li class="nav-item"><a href="/eleventy-base-blog/">Home</a></li>
+<li class="nav-item"><a href="/eleventy-base-blog/blog/">Blog</a></li>
+<li class="nav-item"><a href="/eleventy-base-blog/about/">About</a></li></ul>
+      </div>
+    </nav>
+
+  <!-- mobile sidenav -->
+  <ul class="sidenav" id="mobile-menu">
+  
+  
+    <li class="nav-item">
+      <a href="/eleventy-base-blog/">
+        Home
+      </a>
+    </li>
+  
+  
+  
+    <li class="nav-item">
+      <a href="/eleventy-base-blog/eleventy-base-blog/blog/">
+        Blog
+      </a>
+    </li>
+  
+  
+  
+    <li class="nav-item">
+      <a href="/eleventy-base-blog/eleventy-base-blog/about/">
+        About
+      </a>
+    </li>
+  
+  
+  </ul>
+
+</header>
+
+    <main class="flex-basis-0 flex-grow-1">
+
+      <div data-bgimgsrc="/eleventy-base-blog/img/cover.jpg" class="banner-image-wrapper w-100 h-100vh overflow-hidden d-flex align-items-center justify-content-center">
+  <div>
+    <h1 class="center-align">
+      Bitshift chaos in JS &amp; Python
+    </h1>
+
+    
+  </div>
+</div>
+
+<div class="row"></div>
+      <div class="container">
+        
+
+<div class="row">
+	<div class="col s12" <time="" datetime="2022-07-30">30 July 2022
+	</div>
+	
+  	
+<div class="col s12">
+  <div class="d-flex flex-wrap">
+
+    
+    <span class="mt-a mb-a"> tags: </span>
+    
+
+    
+    <span data-href="/eleventy-base-blog/tags/js/" class="waves-effect chip m-1">js</span>
+    <span data-href="/eleventy-base-blog/tags/python/" class="waves-effect chip m-1">python</span>
+    <span data-href="/eleventy-base-blog/tags/bitshift/" class="waves-effect chip m-1">bitshift</span>
+  </div>
+</div>
+
+
+
+</div>
+
+
+<div class="row">
+  <div class="col s12 markdown-body">
+  <p>Preface: work's been rather busy lately. Even though I constantly add blog ideas, I have not had the chance to properly materialise them into blogs proper. This post originated late last year.</p>
+<p>I needed to do do some quick hashing of string into hex characters, with the following requirements/limitations:</p>
+<ul>
+<li>input is string with length ~ 50 characters</li>
+<li>output is unique hex (given input), shorter the better (perhaps 6 length?)</li>
+<li>needs to be implemented in browser javascript, without additional libraries (md5/sha libraries are available plenty)</li>
+<li>users do <strong>not</strong> control inputs, and ...</li>
+<li>...does <strong>not</strong> matter if the hash is reversible, so security is not essential</li>
+</ul>
+<p>I considered reimplementing md5, in the application, but the complexity it introduces seems to outweight the benefit.</p>
+<p>So I came across this <a href="https://stackoverflow.com/a/7616484/6059235">SO post</a>, and implemented it, and everything seems fine... Until I needed to implement the same hash function in python.</p>
+<p>Bitwise operator in python is actually exactly the same symbol as that in JS, <code>&lt;&lt;</code> and <code>&gt;&gt;</code>. Just double checking, I did some quick REPL in JS vs python, and they seem to return the same results.</p>
+<pre class="language-js" tabindex="0"><code class="language-js"><span class="token number">1</span> <span class="token operator">&lt;&lt;</span> <span class="token number">2</span> <span class="token comment">// return 4</span>
+<span class="token number">10</span> <span class="token operator">&lt;&lt;</span> <span class="token number">10</span> <span class="token comment">// returns 10240</span></code></pre>
+<p>and in python:</p>
+<pre class="language-python" tabindex="0"><code class="language-python"><span class="token number">1</span> <span class="token operator">&lt;&lt;</span> <span class="token number">2</span> <span class="token comment"># returns 4</span>
+<span class="token number">10</span> <span class="token operator">&lt;&lt;</span> <span class="token number">10</span> <span class="token comment"># returns 10240</span></code></pre>
+<p>So I naively thought I just had to reimplement the entire function in python. I was wrong. And I had to learn this the hard way.</p>
+<p>In JS, bitwise operation are carried out in int32, but python will use however many additional bits required to represent the number. This means, bitwise operation in JS will overflow (which is fine), bitwise operation in python will not overflow, but simply consume more memory. This also means, if the number gets too large, python and JS bitwise operation will diverse, if one is not careful:</p>
+<p>In JS:</p>
+<pre class="language-js" tabindex="0"><code class="language-js"><span class="token number">1</span> <span class="token operator">&lt;&lt;</span> <span class="token number">30</span> <span class="token comment">// 1073741824</span>
+<span class="token number">1</span> <span class="token operator">&lt;&lt;</span> <span class="token number">31</span> <span class="token comment">// -2147483648</span>
+<span class="token number">1</span> <span class="token operator">&lt;&lt;</span> <span class="token number">32</span> <span class="token comment">// 1</span></code></pre>
+<p>In python:</p>
+<pre class="language-python" tabindex="0"><code class="language-python">
+<span class="token number">1</span> <span class="token operator">&lt;&lt;</span> <span class="token number">30</span> <span class="token comment"># 1073741824</span>
+<span class="token number">1</span> <span class="token operator">&lt;&lt;</span> <span class="token number">31</span> <span class="token comment"># 2147483648</span>
+<span class="token number">1</span> <span class="token operator">&lt;&lt;</span> <span class="token number">32</span> <span class="token comment"># 4294967296</span></code></pre>
+<p>The way I dealt with the problem is by casting the result to int32 (since numpy is already a dependency):</p>
+<pre class="language-python" tabindex="0"><code class="language-python"><span class="token keyword">from</span> numpy <span class="token keyword">import</span> int32
+int32<span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">&lt;&lt;</span> <span class="token number">30</span><span class="token punctuation">)</span> <span class="token comment"># 1073741824</span>
+int32<span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">&lt;&lt;</span> <span class="token number">31</span><span class="token punctuation">)</span> <span class="token comment"># -2147483648</span>
+int32<span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">&lt;&lt;</span> <span class="token number">32</span><span class="token punctuation">)</span> <span class="token comment"># 0</span></code></pre>
+<p>PS.</p>
+<p>1/ As I write this, I just noticed the edge case of <code>1 &lt;&lt; 32</code>, and it appears that it has been asked and <a href="https://stackoverflow.com/a/57660143/6059235">answered</a> before. The hashing code does not use <code>&lt;&lt; 32</code>, so perhaps I am ... still safe? Programming is weird.</p>
+<p>2/ As I am writing this, I noticed the second <a href="https://stackoverflow.com/a/52171480/6059235">highest voted answer</a> on the hashing question, make use of <code>Math.imul</code>, which is something I did not know existed. The hashing function has been in production for sometime now, and unfortunately cannot be swapped out, but I will keep what I learnt in mind.</p>
+
+  </div>
+</div>
+<ul class="links-nextprev"><li>Previous: <a href="/eleventy-base-blog/posts/20211026-disabling-zonejs-angular/">Disabling (some) zonejs in Angular app</a></li><li>Next: <a href="/eleventy-base-blog/posts/20231225-k8s-secret-shinanigans/">k8s secret shinanigans</a></li>
+</ul>
+
+      </div>
+    </main>
+
+    <footer class="page-footer flex-basis-0 flex-grow-0">
+
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+
+        <a class="btn-flat" href="https://github.com/xgui3783">
+          <i class="fab fa-github"></i>
+          <span>
+            xgui3783
+          </span>
+        </a>
+
+        <a href="https://fosstodon.org/@pandamakes" class="btn-flat">
+          <i class="fab fa-mastodon"></i>
+          <span>
+            @pandamakes@fosstodon.org
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer-copyright">
+    <div class="container">
+    © 2024 Copyright pandamakes
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      /* required for SideBar mobile */
+      const elems = document.querySelectorAll('.sidenav')
+      const instances = M.Sidenav.init(elems)
+
+      /* required to overcome nested anchor links */
+      const divHrefs = document.querySelectorAll('[data-href]')
+      for (const divHref of divHrefs ){
+        divHref.addEventListener('click', ev => {
+          window.open(divHref.dataset.href, '_self')
+          ev.stopPropagation()
+        })
+      }
+    })
+  </script>
+
+</footer>
+    <!-- Current page: /eleventy-base-blog/posts/20220730-bit-shift-js-python/ -->
+  </body>
+</html>

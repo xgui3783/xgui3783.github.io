@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nginx, proxy pass, cors and preflight</title>
+    <meta name="Description" content="web developer, photographer, panda">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/index.css">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/prism-base16-monokai.dark.css">
+    <link rel="alternate" href="/eleventy-base-blog/eleventy-base-blog/feed/feed.xml" type="application/atom+xml" title="pandamakes">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/materialize.css">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/github-markdown.css">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/coverimage.css">
+	  <link rel="me" href="https://fosstodon.org/@pandamakes">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  </head>
+  <body class="d-flex flex-column">
+    <header class="flex-basis-0 flex-grow-0">
+
+    <nav>
+      <div class="nav-wrapper col s12">
+
+        <!-- logo -->
+        <a href="/eleventy-base-blog/" class="h-100 brand-logo">
+          <div class="h-100 valign-wrapper ">
+            <img class="h-100 p-1" src="/eleventy-base-blog/eleventy-base-blog/img/logo.svg">
+            <span>
+              pandamakes
+            </span>
+          </div>
+        </a>
+
+        <a href="#" data-target="mobile-menu" class="sidenav-trigger">
+          <i class="fas fa-bars"></i>
+        </a>
+
+        <ul class="right hide-on-med-and-down"><li class="nav-item"><a href="/eleventy-base-blog/">Home</a></li>
+<li class="nav-item"><a href="/eleventy-base-blog/blog/">Blog</a></li>
+<li class="nav-item"><a href="/eleventy-base-blog/about/">About</a></li></ul>
+      </div>
+    </nav>
+
+  <!-- mobile sidenav -->
+  <ul class="sidenav" id="mobile-menu">
+  
+  
+    <li class="nav-item">
+      <a href="/eleventy-base-blog/">
+        Home
+      </a>
+    </li>
+  
+  
+  
+    <li class="nav-item">
+      <a href="/eleventy-base-blog/eleventy-base-blog/blog/">
+        Blog
+      </a>
+    </li>
+  
+  
+  
+    <li class="nav-item">
+      <a href="/eleventy-base-blog/eleventy-base-blog/about/">
+        About
+      </a>
+    </li>
+  
+  
+  </ul>
+
+</header>
+
+    <main class="flex-basis-0 flex-grow-1">
+
+      <div data-bgimgsrc="/eleventy-base-blog/img/cover.jpg" class="banner-image-wrapper w-100 h-100vh overflow-hidden d-flex align-items-center justify-content-center">
+  <div>
+    <h1 class="center-align">
+      nginx, proxy pass, cors and preflight
+    </h1>
+
+    
+  </div>
+</div>
+
+<div class="row"></div>
+      <div class="container">
+        
+
+<div class="row">
+	<div class="col s12" <time="" datetime="2018-10-10">10 October 2018
+	</div>
+	
+  	
+<div class="col s12">
+  <div class="d-flex flex-wrap">
+
+    
+    <span class="mt-a mb-a"> tags: </span>
+    
+
+    
+  </div>
+</div>
+
+
+
+</div>
+
+
+<div class="row">
+  <div class="col s12 markdown-body">
+  <p>Lately, I wanted to setup an nginx gate way that proxy pass the requests in the following manner:</p>
+<p>http://hostname.com : 301 -&gt; https://hostname.com
+https://hostname.com/{CONTAINER_NAME}/{PORT_NUMBER}/ -&gt; add CORS header, proxy pass to http://{CONTAINER_NAME}:{PORT_NUMBER}/</p>
+<p>This would be especially useful in a <code>docker-compose.yml</code> script, where, in the same <code>docker network</code> containers can communicate with each other via docker network dns. TLDR: <a href="https://github.com/xgui3783/dockerNginxProxyPass">github repo</a></p>
+<h2 id="redirect-to-https-connection" tabindex="-1">redirect to https connection <a class="header-anchor" href="#redirect-to-https-connection">#</a></h2>
+<p>this bit is easy</p>
+<p>server {
+listen 80;
+access_log  /var/log/nginx/port80.access.log;</p>
+<p># for let's encrypt
+location /.well-known/acme-challenge/ {
+root /www/html/letsencrypt;
+}</p>
+<p>location / {
+return 301 https://$host$request_uri;
+}
+}</p>
+<p>But to configure ssl connection it is slightly tricky. Because one does not have the files necessary. I ran the test without the ssl directive. Once acquired, I then added the ssl directive and referenced the files.</p>
+<h2 id="proxy-pass-based-on-path" tabindex="-1">proxy pass based on path <a class="header-anchor" href="#proxy-pass-based-on-path">#</a></h2>
+<p>This took a while, but:</p>
+<p>location ~ ^/(.<em>)/([0-9]</em>)/ {</p>
+<p># docker dns resolver
+resolver 127.0.0.11;</p>
+<p>set $proxy_pass_full http://$1:$2;
+rewrite ^/.<em>/[0-9]</em>/(.*) /$1 break;</p>
+<p>add_header Access-Control-Allow-Origin *;
+proxy_pass $proxy_pass_full;
+}</p>
+<p>Setting the <code>resolver</code> directive is essential, as if any part of the <code>proxy_pass</code> was replaced with a variable, nginx needs the resolver to be defined.</p>
+<h2 id="double-cors-header" tabindex="-1">double cors header(?) <a class="header-anchor" href="#double-cors-header">#</a></h2>
+<p>one of the forwarded service has already been configured to add the cors header. By adding another <code>Access-Control-Allow-Origin</code> header, the browser freaks out and makes the response opaque. So easy, right, disable the CORS capability of the forwarded service. which bring us to ...</p>
+<h2 id="preflight-option" tabindex="-1">preflight (OPTION) <a class="header-anchor" href="#preflight-option">#</a></h2>
+<p>I never quite understood the preflight (OPTION) request, because I only ever see it rarely. But I now see more clearly the anatomy of a CORS request. A GET CORS request from the browser does not trigger preflight OPTION request, but a POST CORS request (and any other methods, it seems) does. (nb this could be unique to the <code>fetch</code> api, lower level <code>XMLHttpRequest</code> may be unaffected). preflight OPTION request is forwarded, but without CORS configuration, the preflight request was responded with a 405, and the POST CORS request was never sent.</p>
+<h2 id="the-solution" tabindex="-1">the solution <a class="header-anchor" href="#the-solution">#</a></h2>
+<p>the nginx proxy server will respond preflight request:</p>
+<p>if ($request_method = 'OPTIONS'){
+add_header 'Access-Control-Allow-Origin' '*';
+add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS';
+#
+# Custom headers and headers various browsers <em>should</em> be OK with but aren't
+#
+add_header 'Access-Control-Allow-Headers' 'DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range';
+#
+# Tell client that this pre-flight info is valid for 20 days
+#
+add_header 'Access-Control-Max-Age' 1728000;
+add_header 'Content-Type' 'text/plain; charset=utf-8';
+add_header 'Content-Length' 0;
+return 204;
+}</p>
+<p>courtesy of <a href="https://enable-cors.org/server_nginx.html">this post</a></p>
+
+  </div>
+</div>
+<ul class="links-nextprev"><li>Previous: <a href="/eleventy-base-blog/posts/rendering-a-very-very-large-nested-tree-in-angular/">Rendering a very, very large nested tree in Angular</a></li><li>Next: <a href="/eleventy-base-blog/posts/drag-and-drop-adventures/">drag and drop adventures</a></li>
+</ul>
+
+      </div>
+    </main>
+
+    <footer class="page-footer flex-basis-0 flex-grow-0">
+
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+
+        <a class="btn-flat" href="https://github.com/xgui3783">
+          <i class="fab fa-github"></i>
+          <span>
+            xgui3783
+          </span>
+        </a>
+
+        <a href="https://fosstodon.org/@pandamakes" class="btn-flat">
+          <i class="fab fa-mastodon"></i>
+          <span>
+            @pandamakes@fosstodon.org
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer-copyright">
+    <div class="container">
+    © 2024 Copyright pandamakes
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      /* required for SideBar mobile */
+      const elems = document.querySelectorAll('.sidenav')
+      const instances = M.Sidenav.init(elems)
+
+      /* required to overcome nested anchor links */
+      const divHrefs = document.querySelectorAll('[data-href]')
+      for (const divHref of divHrefs ){
+        divHref.addEventListener('click', ev => {
+          window.open(divHref.dataset.href, '_self')
+          ev.stopPropagation()
+        })
+      }
+    })
+  </script>
+
+</footer>
+    <!-- Current page: /eleventy-base-blog/posts/nginx-proxy-pass-cors-and-preflight/ -->
+  </body>
+</html>

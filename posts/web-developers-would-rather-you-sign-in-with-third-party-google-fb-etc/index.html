@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign in &amp;amp; outs - a perspective from a panda (part 1: plain text)</title>
+    <meta name="Description" content="web developer, photographer, panda">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/index.css">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/prism-base16-monokai.dark.css">
+    <link rel="alternate" href="/eleventy-base-blog/eleventy-base-blog/feed/feed.xml" type="application/atom+xml" title="pandamakes">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/materialize.css">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/github-markdown.css">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/coverimage.css">
+	  <link rel="me" href="https://fosstodon.org/@pandamakes">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  </head>
+  <body class="d-flex flex-column">
+    <header class="flex-basis-0 flex-grow-0">
+
+    <nav>
+      <div class="nav-wrapper col s12">
+
+        <!-- logo -->
+        <a href="/eleventy-base-blog/" class="h-100 brand-logo">
+          <div class="h-100 valign-wrapper ">
+            <img class="h-100 p-1" src="/eleventy-base-blog/eleventy-base-blog/img/logo.svg">
+            <span>
+              pandamakes
+            </span>
+          </div>
+        </a>
+
+        <a href="#" data-target="mobile-menu" class="sidenav-trigger">
+          <i class="fas fa-bars"></i>
+        </a>
+
+        <ul class="right hide-on-med-and-down"><li class="nav-item"><a href="/eleventy-base-blog/">Home</a></li>
+<li class="nav-item"><a href="/eleventy-base-blog/blog/">Blog</a></li>
+<li class="nav-item"><a href="/eleventy-base-blog/about/">About</a></li></ul>
+      </div>
+    </nav>
+
+  <!-- mobile sidenav -->
+  <ul class="sidenav" id="mobile-menu">
+  
+  
+    <li class="nav-item">
+      <a href="/eleventy-base-blog/">
+        Home
+      </a>
+    </li>
+  
+  
+  
+    <li class="nav-item">
+      <a href="/eleventy-base-blog/eleventy-base-blog/blog/">
+        Blog
+      </a>
+    </li>
+  
+  
+  
+    <li class="nav-item">
+      <a href="/eleventy-base-blog/eleventy-base-blog/about/">
+        About
+      </a>
+    </li>
+  
+  
+  </ul>
+
+</header>
+
+    <main class="flex-basis-0 flex-grow-1">
+
+      <div data-bgimgsrc="/eleventy-base-blog/img/cover.jpg" class="banner-image-wrapper w-100 h-100vh overflow-hidden d-flex align-items-center justify-content-center">
+  <div>
+    <h1 class="center-align">
+      sign in &amp;amp; outs - a perspective from a panda (part 1: plain text)
+    </h1>
+
+    
+  </div>
+</div>
+
+<div class="row"></div>
+      <div class="container">
+        
+
+<div class="row">
+	<div class="col s12" <time="" datetime="2016-11-21">21 November 2016
+	</div>
+	
+  	
+<div class="col s12">
+  <div class="d-flex flex-wrap">
+
+    
+    <span class="mt-a mb-a"> tags: </span>
+    
+
+    
+    <span data-href="/eleventy-base-blog/tags/Security/" class="waves-effect chip m-1">Security</span>
+    <span data-href="/eleventy-base-blog/tags/third party authentication/" class="waves-effect chip m-1">third party authentication</span>
+    <span data-href="/eleventy-base-blog/tags/third party signin/" class="waves-effect chip m-1">third party signin</span>
+  </div>
+</div>
+
+
+
+</div>
+
+
+<div class="row">
+  <div class="col s12 markdown-body">
+  <p>I have developed webapps for quite sometime now, and I have worked on three major projects that require the user to authenticate in one way or another.</p>
+<p><strong>ITT: I will talk about the approaches I use to handle local signups and why I prefer clients use third party login instead.</strong></p>
+<p><strong>NITT: I won’t talk about language specific ways how the approaches can be achieved. Every mature language/platform should contain a way these approaches can be realised.</strong></p>
+<hr>
+<h3 id="approach-one-store-plain-text-username-password-in-database" tabindex="-1">Approach One: Store plain text username/password in database <a class="header-anchor" href="#approach-one-store-plain-text-username-password-in-database">#</a></h3>
+<p><strong>TL,DR: do <em>not</em> do this!</strong></p>
+<p>The most straight forward approach to username/password problem might be:</p>
+<ol>
+<li>retrieve the username/password combination from signup page</li>
+<li>store the username and password as two strings in a database</li>
+<li>when the user signs in, find the record in the database that matches the username input with username in the database</li>
+<li>compare the value of the password input and the password stored in the database</li>
+</ol>
+<p>There are several reasons why this is a very very bad idea. For one, should the database access become compromised, the intruder will see the following table, aptly named user (probably):</p>
+<p>username</p>
+<p>password</p>
+<p>hint</p>
+<p>panda</p>
+<p>bamboo</p>
+<p>favourite food</p>
+<p>squirrel</p>
+<p>michaeljackson</p>
+<p>thrill</p>
+<p>koala</p>
+<p>michaeljackson</p>
+<p>is\’t my kid</p>
+<p>The intruder now has access to the users registered with your site. More importantly, since most users recycle their password, you have just put all of their accounts (google, facebook etc) in peril.</p>
+<p>Incidentally, if your system admin can tell you exactly what your forgotten password is, chances are, your password is being stored as a plain text password. Either approach your system admin to see it changed or change it to something harmless.</p>
+
+  </div>
+</div>
+<ul class="links-nextprev"><li>Previous: <a href="/eleventy-base-blog/posts/anatomy-of-a-web-presence/">Anatomy of a website</a></li><li>Next: <a href="/eleventy-base-blog/posts/sign-in-outs-a-perspective-from-a-panda-part-2/">sign in &amp;amp; outs - a perspective from a panda (part 2: hash)</a></li>
+</ul>
+
+      </div>
+    </main>
+
+    <footer class="page-footer flex-basis-0 flex-grow-0">
+
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+
+        <a class="btn-flat" href="https://github.com/xgui3783">
+          <i class="fab fa-github"></i>
+          <span>
+            xgui3783
+          </span>
+        </a>
+
+        <a href="https://fosstodon.org/@pandamakes" class="btn-flat">
+          <i class="fab fa-mastodon"></i>
+          <span>
+            @pandamakes@fosstodon.org
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer-copyright">
+    <div class="container">
+    © 2024 Copyright pandamakes
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      /* required for SideBar mobile */
+      const elems = document.querySelectorAll('.sidenav')
+      const instances = M.Sidenav.init(elems)
+
+      /* required to overcome nested anchor links */
+      const divHrefs = document.querySelectorAll('[data-href]')
+      for (const divHref of divHrefs ){
+        divHref.addEventListener('click', ev => {
+          window.open(divHref.dataset.href, '_self')
+          ev.stopPropagation()
+        })
+      }
+    })
+  </script>
+
+</footer>
+    <!-- Current page: /eleventy-base-blog/posts/web-developers-would-rather-you-sign-in-with-third-party-google-fb-etc/ -->
+  </body>
+</html>

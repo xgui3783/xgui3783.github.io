@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixing timetable.php and (a little bit) more openCV</title>
+    <meta name="Description" content="web developer, photographer, panda">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/index.css">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/prism-base16-monokai.dark.css">
+    <link rel="alternate" href="/eleventy-base-blog/eleventy-base-blog/feed/feed.xml" type="application/atom+xml" title="pandamakes">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/materialize.css">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/github-markdown.css">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/coverimage.css">
+	  <link rel="me" href="https://fosstodon.org/@pandamakes">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  </head>
+  <body class="d-flex flex-column">
+    <header class="flex-basis-0 flex-grow-0">
+
+    <nav>
+      <div class="nav-wrapper col s12">
+
+        <!-- logo -->
+        <a href="/eleventy-base-blog/" class="h-100 brand-logo">
+          <div class="h-100 valign-wrapper ">
+            <img class="h-100 p-1" src="/eleventy-base-blog/eleventy-base-blog/img/logo.svg">
+            <span>
+              pandamakes
+            </span>
+          </div>
+        </a>
+
+        <a href="#" data-target="mobile-menu" class="sidenav-trigger">
+          <i class="fas fa-bars"></i>
+        </a>
+
+        <ul class="right hide-on-med-and-down"><li class="nav-item"><a href="/eleventy-base-blog/">Home</a></li>
+<li class="nav-item"><a href="/eleventy-base-blog/blog/">Blog</a></li>
+<li class="nav-item"><a href="/eleventy-base-blog/about/">About</a></li></ul>
+      </div>
+    </nav>
+
+  <!-- mobile sidenav -->
+  <ul class="sidenav" id="mobile-menu">
+  
+  
+    <li class="nav-item">
+      <a href="/eleventy-base-blog/">
+        Home
+      </a>
+    </li>
+  
+  
+  
+    <li class="nav-item">
+      <a href="/eleventy-base-blog/eleventy-base-blog/blog/">
+        Blog
+      </a>
+    </li>
+  
+  
+  
+    <li class="nav-item">
+      <a href="/eleventy-base-blog/eleventy-base-blog/about/">
+        About
+      </a>
+    </li>
+  
+  
+  </ul>
+
+</header>
+
+    <main class="flex-basis-0 flex-grow-1">
+
+      <div data-bgimgsrc="/eleventy-base-blog/img/cover.jpg" class="banner-image-wrapper w-100 h-100vh overflow-hidden d-flex align-items-center justify-content-center">
+  <div>
+    <h1 class="center-align">
+      Fixing timetable.php and (a little bit) more openCV
+    </h1>
+
+    
+  </div>
+</div>
+
+<div class="row"></div>
+      <div class="container">
+        
+
+<div class="row">
+	<div class="col s12" <time="" datetime="2016-03-14">14 March 2016
+	</div>
+	
+  	
+<div class="col s12">
+  <div class="d-flex flex-wrap">
+
+    
+    <span class="mt-a mb-a"> tags: </span>
+    
+
+    
+    <span data-href="/eleventy-base-blog/tags/android programming/" class="waves-effect chip m-1">android programming</span>
+    <span data-href="/eleventy-base-blog/tags/css/" class="waves-effect chip m-1">css</span>
+    <span data-href="/eleventy-base-blog/tags/html/" class="waves-effect chip m-1">html</span>
+    <span data-href="/eleventy-base-blog/tags/java/" class="waves-effect chip m-1">java</span>
+    <span data-href="/eleventy-base-blog/tags/jquery/" class="waves-effect chip m-1">jquery</span>
+    <span data-href="/eleventy-base-blog/tags/js/" class="waves-effect chip m-1">js</span>
+    <span data-href="/eleventy-base-blog/tags/lessons learnt the hard way/" class="waves-effect chip m-1">lessons learnt the hard way</span>
+    <span data-href="/eleventy-base-blog/tags/mysql/" class="waves-effect chip m-1">mysql</span>
+    <span data-href="/eleventy-base-blog/tags/opencv/" class="waves-effect chip m-1">opencv</span>
+    <span data-href="/eleventy-base-blog/tags/php/" class="waves-effect chip m-1">php</span>
+  </div>
+</div>
+
+
+
+</div>
+
+
+<div class="row">
+  <div class="col s12 markdown-body">
+  <p>I was going to fix the web app i made awhile ago, implementing a few more features.</p>
+<p>I wanted to better the login security of the site. Of course, I do not have access to SSL encryption or two factor authentication, but the least I could do is salting and hashing the password. This way. I also added a security token whenever users login, so that they cannot just modify the cookie and gain admin rights. I fully understand this will only protect against internal attacks, and useless against man-in-the-middle attack, but, it might be the best I can do for now. I got it done early, only to be greeted by a bug, that overwrite the last timetable. long story short, I was trolled by <code>if (a = b) {do something}</code> amatuer mistake.</p>
+<p>I had some time, so I also made a tutorial layer. When get a chance, I really should improve on the design aspect. The tutorial layer looks decent, but the handwriting was crap.</p>
+<p>Regardless, the app is behind me now. Refocusing on opencv project. First order of business: figuring out what to do with the mat object in opencv.</p>
+<p>So it seems <code>Core.line</code> has been deprecated. Imgproc.line is to be used. Which certainly means it helps to read which documentation I should be reading.</p>
+<p>Also, in opencv, it seems Houghlines gives lines in terms of rho and theta, whereas HoughlinesP gives results in terms of x1,y1, x2, y2. The latter is what I need.</p>
+<p>It seems processing every frame is too cpu intensive. To lessen the load, I added a line which would only process cpu when it has been two seconds since the last process.</p>
+
+  </div>
+</div>
+<ul class="links-nextprev"><li>Previous: <a href="/eleventy-base-blog/posts/adventuring-into-android-studio-java-and-opencv-with-an-unexpected-detour/">Adventuring into Android studio, Java and OpenCV (with an unexpected detour)</a></li><li>Next: <a href="/eleventy-base-blog/posts/more-on-opencv/">More on OpenCV + trends in web development</a></li>
+</ul>
+
+      </div>
+    </main>
+
+    <footer class="page-footer flex-basis-0 flex-grow-0">
+
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+
+        <a class="btn-flat" href="https://github.com/xgui3783">
+          <i class="fab fa-github"></i>
+          <span>
+            xgui3783
+          </span>
+        </a>
+
+        <a href="https://fosstodon.org/@pandamakes" class="btn-flat">
+          <i class="fab fa-mastodon"></i>
+          <span>
+            @pandamakes@fosstodon.org
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer-copyright">
+    <div class="container">
+    © 2024 Copyright pandamakes
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      /* required for SideBar mobile */
+      const elems = document.querySelectorAll('.sidenav')
+      const instances = M.Sidenav.init(elems)
+
+      /* required to overcome nested anchor links */
+      const divHrefs = document.querySelectorAll('[data-href]')
+      for (const divHref of divHrefs ){
+        divHref.addEventListener('click', ev => {
+          window.open(divHref.dataset.href, '_self')
+          ev.stopPropagation()
+        })
+      }
+    })
+  </script>
+
+</footer>
+    <!-- Current page: /eleventy-base-blog/posts/fixing-timetable-php-and-a-little-bit-more-opencv/ -->
+  </body>
+</html>

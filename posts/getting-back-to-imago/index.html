@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting back to Imago + some other fleeting thoughts</title>
+    <meta name="Description" content="web developer, photographer, panda">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/index.css">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/prism-base16-monokai.dark.css">
+    <link rel="alternate" href="/eleventy-base-blog/eleventy-base-blog/feed/feed.xml" type="application/atom+xml" title="pandamakes">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/materialize.css">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/github-markdown.css">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/coverimage.css">
+	  <link rel="me" href="https://fosstodon.org/@pandamakes">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  </head>
+  <body class="d-flex flex-column">
+    <header class="flex-basis-0 flex-grow-0">
+
+    <nav>
+      <div class="nav-wrapper col s12">
+
+        <!-- logo -->
+        <a href="/eleventy-base-blog/" class="h-100 brand-logo">
+          <div class="h-100 valign-wrapper ">
+            <img class="h-100 p-1" src="/eleventy-base-blog/eleventy-base-blog/img/logo.svg">
+            <span>
+              pandamakes
+            </span>
+          </div>
+        </a>
+
+        <a href="#" data-target="mobile-menu" class="sidenav-trigger">
+          <i class="fas fa-bars"></i>
+        </a>
+
+        <ul class="right hide-on-med-and-down"><li class="nav-item"><a href="/eleventy-base-blog/">Home</a></li>
+<li class="nav-item"><a href="/eleventy-base-blog/blog/">Blog</a></li>
+<li class="nav-item"><a href="/eleventy-base-blog/about/">About</a></li></ul>
+      </div>
+    </nav>
+
+  <!-- mobile sidenav -->
+  <ul class="sidenav" id="mobile-menu">
+  
+  
+    <li class="nav-item">
+      <a href="/eleventy-base-blog/">
+        Home
+      </a>
+    </li>
+  
+  
+  
+    <li class="nav-item">
+      <a href="/eleventy-base-blog/eleventy-base-blog/blog/">
+        Blog
+      </a>
+    </li>
+  
+  
+  
+    <li class="nav-item">
+      <a href="/eleventy-base-blog/eleventy-base-blog/about/">
+        About
+      </a>
+    </li>
+  
+  
+  </ul>
+
+</header>
+
+    <main class="flex-basis-0 flex-grow-1">
+
+      <div data-bgimgsrc="/eleventy-base-blog/img/cover.jpg" class="banner-image-wrapper w-100 h-100vh overflow-hidden d-flex align-items-center justify-content-center">
+  <div>
+    <h1 class="center-align">
+      Getting back to Imago + some other fleeting thoughts
+    </h1>
+
+    
+  </div>
+</div>
+
+<div class="row"></div>
+      <div class="container">
+        
+
+<div class="row">
+	<div class="col s12" <time="" datetime="2016-05-16">16 May 2016
+	</div>
+	
+  	
+<div class="col s12">
+  <div class="d-flex flex-wrap">
+
+    
+    <span class="mt-a mb-a"> tags: </span>
+    
+
+    
+    <span data-href="/eleventy-base-blog/tags/android programming/" class="waves-effect chip m-1">android programming</span>
+    <span data-href="/eleventy-base-blog/tags/Imago/" class="waves-effect chip m-1">Imago</span>
+    <span data-href="/eleventy-base-blog/tags/java/" class="waves-effect chip m-1">java</span>
+    <span data-href="/eleventy-base-blog/tags/opencv/" class="waves-effect chip m-1">opencv</span>
+  </div>
+</div>
+
+
+
+</div>
+
+
+<div class="row">
+  <div class="col s12 markdown-body">
+  <p>After a brief but useful refocusing of 3 weeks, I have dived again, head first, into Imago and making it work. Just a recap on it’s status:</p>
+<p><code>libimago_c.so</code> provided by Epam does not work out of the box. It is compiled on Linux x86/x64, whereas android uses an ARM architecture. I needed to recompile it using ndk. Before the brief detour, I was having trouble recompiling the source files, because … well, the ndk could not find string.h. Turns out, there is a library of <a href="http://developer.android.com/ndk/guides/cpp-support.html">helper runtimes</a>, that incorporates standard libraries. The one I needed was:</p>
+<p>//Application.mk
+APP_STL := gnustl_static
+APP_CPPFLAGS += -fexceptions</p>
+<p>There was a “wha??” moment a little bit later on, relating to opencv. While compiling, one of the module required <code>opencv2/opencv_module.hpp</code>. I ended up finding it in the android sdk of opencv. Let’s hope it works just fine.</p>
+<p><code>dirent.h</code> -&gt; the one that came with imago required <code>windows.h</code>. I am not compiling for a windows machine, and turns out, if I just removed dirent.h from the compiling folder, android ndk can find the suitable dirent.h. How fitting.</p>
+<p>Now, I remember I had to deal with problems associated with <code>windows.h</code> before. I think perhaps it was only strictly needed on a windows compiler? So I guess I can safely take the file out? The issues we are dealing with here is Imago1.0 <code>lock_win.cpp</code>.</p>
+<p>Just my luck. I thought I had hit a wall yesterday, with the superatom_expansion.cpp requiring indigo, and indigo requiring <em>SYSV IPC</em>, I had tweaked the said cpp file, so that it will always return the input without doing anything, thereby bypassing the requirement of indigo. This allowed me to compile imago2.0 with no issue so far. except for mips64, where there was a <code>variable tracking size limit exceeded</code> error. Also, <code>log_ext.cpp $lu expected long unsigned int, but instead had unsigned int as input</code>. Just warnings though. So far, nothing had failed to compile.</p>
+<p>Had some problems with java.awt. Android does not support awt natively. But lucky for me, the part of Imago that uses awt reads buffered image, which I did not need. I only needed png reader.</p>
+<hr>
+<p>As I was waiting for boost-for-android to be setup, link-hopping led me down a strange rabbit hole. Python webapp (newly created on openshift and cloned via git) &gt; what is wsgi (webserver gateway interface) &gt; google app engine uses wsgi. Oh, I wonder if google provide similar services to AWS &gt; google translate api (wow proprietary softwares are really expensive) &gt; I wonder if there are any opensource solutions out there? &gt;<a href="http://stackoverflow.com/questions/15108313/in-need-of-an-open-source-text-language-translation-api">this thread on SO</a> &gt; what is phonegap &gt; excitement</p>
+<p>The ability to translate HTML/CSS/JS into x platform apps is a nerd’s dream come true. Ever since Node.js + jqm, I have wondered if such a thing was possible.</p>
+
+  </div>
+</div>
+<ul class="links-nextprev"><li>Previous: <a href="/eleventy-base-blog/posts/final-touches-on-timetable-app-v2-0-modifying-the-python-app/">Final touches on timetable app v2.0, modifying the Python app</a></li><li>Next: <a href="/eleventy-base-blog/posts/new-project-or-was-that-procrastination/">New project. Or was that procrastination?</a></li>
+</ul>
+
+      </div>
+    </main>
+
+    <footer class="page-footer flex-basis-0 flex-grow-0">
+
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+
+        <a class="btn-flat" href="https://github.com/xgui3783">
+          <i class="fab fa-github"></i>
+          <span>
+            xgui3783
+          </span>
+        </a>
+
+        <a href="https://fosstodon.org/@pandamakes" class="btn-flat">
+          <i class="fab fa-mastodon"></i>
+          <span>
+            @pandamakes@fosstodon.org
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer-copyright">
+    <div class="container">
+    © 2024 Copyright pandamakes
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      /* required for SideBar mobile */
+      const elems = document.querySelectorAll('.sidenav')
+      const instances = M.Sidenav.init(elems)
+
+      /* required to overcome nested anchor links */
+      const divHrefs = document.querySelectorAll('[data-href]')
+      for (const divHref of divHrefs ){
+        divHref.addEventListener('click', ev => {
+          window.open(divHref.dataset.href, '_self')
+          ev.stopPropagation()
+        })
+      }
+    })
+  </script>
+
+</footer>
+    <!-- Current page: /eleventy-base-blog/posts/getting-back-to-imago/ -->
+  </body>
+</html>

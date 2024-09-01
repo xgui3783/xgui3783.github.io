@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cost effective gallery plugin, Jetpack mobile theme</title>
+    <meta name="Description" content="web developer, photographer, panda">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/index.css">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/prism-base16-monokai.dark.css">
+    <link rel="alternate" href="/eleventy-base-blog/eleventy-base-blog/feed/feed.xml" type="application/atom+xml" title="pandamakes">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/materialize.css">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/github-markdown.css">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/coverimage.css">
+	  <link rel="me" href="https://fosstodon.org/@pandamakes">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  </head>
+  <body class="d-flex flex-column">
+    <header class="flex-basis-0 flex-grow-0">
+
+    <nav>
+      <div class="nav-wrapper col s12">
+
+        <!-- logo -->
+        <a href="/eleventy-base-blog/" class="h-100 brand-logo">
+          <div class="h-100 valign-wrapper ">
+            <img class="h-100 p-1" src="/eleventy-base-blog/eleventy-base-blog/img/logo.svg">
+            <span>
+              pandamakes
+            </span>
+          </div>
+        </a>
+
+        <a href="#" data-target="mobile-menu" class="sidenav-trigger">
+          <i class="fas fa-bars"></i>
+        </a>
+
+        <ul class="right hide-on-med-and-down"><li class="nav-item"><a href="/eleventy-base-blog/">Home</a></li>
+<li class="nav-item"><a href="/eleventy-base-blog/blog/">Blog</a></li>
+<li class="nav-item"><a href="/eleventy-base-blog/about/">About</a></li></ul>
+      </div>
+    </nav>
+
+  <!-- mobile sidenav -->
+  <ul class="sidenav" id="mobile-menu">
+  
+  
+    <li class="nav-item">
+      <a href="/eleventy-base-blog/">
+        Home
+      </a>
+    </li>
+  
+  
+  
+    <li class="nav-item">
+      <a href="/eleventy-base-blog/eleventy-base-blog/blog/">
+        Blog
+      </a>
+    </li>
+  
+  
+  
+    <li class="nav-item">
+      <a href="/eleventy-base-blog/eleventy-base-blog/about/">
+        About
+      </a>
+    </li>
+  
+  
+  </ul>
+
+</header>
+
+    <main class="flex-basis-0 flex-grow-1">
+
+      <div data-bgimgsrc="/eleventy-base-blog/img/cover.jpg" class="banner-image-wrapper w-100 h-100vh overflow-hidden d-flex align-items-center justify-content-center">
+  <div>
+    <h1 class="center-align">
+      Cost effective gallery plugin, Jetpack mobile theme
+    </h1>
+
+    
+  </div>
+</div>
+
+<div class="row"></div>
+      <div class="container">
+        
+
+<div class="row">
+	<div class="col s12" <time="" datetime="2016-11-07">07 November 2016
+	</div>
+	
+  	
+<div class="col s12">
+  <div class="d-flex flex-wrap">
+
+    
+    <span class="mt-a mb-a"> tags: </span>
+    
+
+    
+    <span data-href="/eleventy-base-blog/tags/jetpack/" class="waves-effect chip m-1">jetpack</span>
+    <span data-href="/eleventy-base-blog/tags/lessons learnt the hard way/" class="waves-effect chip m-1">lessons learnt the hard way</span>
+    <span data-href="/eleventy-base-blog/tags/php/" class="waves-effect chip m-1">php</span>
+    <span data-href="/eleventy-base-blog/tags/wordpress/" class="waves-effect chip m-1">wordpress</span>
+  </div>
+</div>
+
+
+
+</div>
+
+
+<div class="row">
+  <div class="col s12 markdown-body">
+  <p>I was looking for a gallery plugin that would showcase my photography, as well as the webapp pages. I was hoping screenshots can be neatly presented to showcase the capabilities of each of the webapps I have developed over the last year.</p>
+<p>I first found Robo Gallery. Robo Gallery is stunning, both in terms of the customisability as well as cleanliness of the plugin. But the free version comes with a 3 gallery limit. That was when I realised that most gallery plugins impose a limit on how many galleries you can create before nudging you in the direction of the paid plans. I was relatively happy with robo galleries, but I was not too keen on forking out 99USD to purchase the extended version. After the failed attempt (or rather, just the lack of enthusiasm) at unlocking the gallery limit at 3, I looked into the Gallery + Slideshow functionality offered by Jetpack.</p>
+<p>Jetpack is an in house extension of wordpress developed by Automattic (the creator and maintainer of WordPress, if I am not mistaken). It extends a lot of the existing features of WordPress, by implementing additional features such as site analytics, tiled gallery, lightbox slide shows and so on. Whilst the out of the box slide show did not offer as much customisations, it satisfied my needs. More importantly, it was available at the low low cost of 0AUD.</p>
+<hr>
+<p>Now, remember the whole host of extensible functions offered by jetpack? Well, unbeknown to me, one of them was the mobile theme. Jetpack will automatically try to optimise your webpage on a mobile device. This takes place before the responsive themes. I guess this could be a god send for sites that do not use themes that are responsive, it led a panic attack on my part. I had done some PHP hack to remove certain design elements that I was not too fond of. I had thought that it is because the PHP codes were altered, the mobile theme was messed up intentionally by the developers of the theme. After an hour of frantic search and test, the culprit was found. Jetpack. Thou giveth, and thou taketh away.</p>
+
+  </div>
+</div>
+<ul class="links-nextprev"><li>Previous: <a href="/eleventy-base-blog/posts/godaddy-adventure-oh-fun/">GoDaddy adventure (Oh fun)</a></li><li>Next: <a href="/eleventy-base-blog/posts/anatomy-of-a-web-presence/">Anatomy of a website</a></li>
+</ul>
+
+      </div>
+    </main>
+
+    <footer class="page-footer flex-basis-0 flex-grow-0">
+
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+
+        <a class="btn-flat" href="https://github.com/xgui3783">
+          <i class="fab fa-github"></i>
+          <span>
+            xgui3783
+          </span>
+        </a>
+
+        <a href="https://fosstodon.org/@pandamakes" class="btn-flat">
+          <i class="fab fa-mastodon"></i>
+          <span>
+            @pandamakes@fosstodon.org
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer-copyright">
+    <div class="container">
+    © 2024 Copyright pandamakes
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      /* required for SideBar mobile */
+      const elems = document.querySelectorAll('.sidenav')
+      const instances = M.Sidenav.init(elems)
+
+      /* required to overcome nested anchor links */
+      const divHrefs = document.querySelectorAll('[data-href]')
+      for (const divHref of divHrefs ){
+        divHref.addEventListener('click', ev => {
+          window.open(divHref.dataset.href, '_self')
+          ev.stopPropagation()
+        })
+      }
+    })
+  </script>
+
+</footer>
+    <!-- Current page: /eleventy-base-blog/posts/cost-effective-gallery-plugin-jetpack-mobile-theme/ -->
+  </body>
+</html>

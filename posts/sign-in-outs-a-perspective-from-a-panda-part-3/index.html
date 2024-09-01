@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign in &amp;amp; outs - a perspective from a panda (part 3: salt + hash)</title>
+    <meta name="Description" content="web developer, photographer, panda">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/index.css">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/prism-base16-monokai.dark.css">
+    <link rel="alternate" href="/eleventy-base-blog/eleventy-base-blog/feed/feed.xml" type="application/atom+xml" title="pandamakes">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/materialize.css">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/github-markdown.css">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/coverimage.css">
+	  <link rel="me" href="https://fosstodon.org/@pandamakes">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  </head>
+  <body class="d-flex flex-column">
+    <header class="flex-basis-0 flex-grow-0">
+
+    <nav>
+      <div class="nav-wrapper col s12">
+
+        <!-- logo -->
+        <a href="/eleventy-base-blog/" class="h-100 brand-logo">
+          <div class="h-100 valign-wrapper ">
+            <img class="h-100 p-1" src="/eleventy-base-blog/eleventy-base-blog/img/logo.svg">
+            <span>
+              pandamakes
+            </span>
+          </div>
+        </a>
+
+        <a href="#" data-target="mobile-menu" class="sidenav-trigger">
+          <i class="fas fa-bars"></i>
+        </a>
+
+        <ul class="right hide-on-med-and-down"><li class="nav-item"><a href="/eleventy-base-blog/">Home</a></li>
+<li class="nav-item"><a href="/eleventy-base-blog/blog/">Blog</a></li>
+<li class="nav-item"><a href="/eleventy-base-blog/about/">About</a></li></ul>
+      </div>
+    </nav>
+
+  <!-- mobile sidenav -->
+  <ul class="sidenav" id="mobile-menu">
+  
+  
+    <li class="nav-item">
+      <a href="/eleventy-base-blog/">
+        Home
+      </a>
+    </li>
+  
+  
+  
+    <li class="nav-item">
+      <a href="/eleventy-base-blog/eleventy-base-blog/blog/">
+        Blog
+      </a>
+    </li>
+  
+  
+  
+    <li class="nav-item">
+      <a href="/eleventy-base-blog/eleventy-base-blog/about/">
+        About
+      </a>
+    </li>
+  
+  
+  </ul>
+
+</header>
+
+    <main class="flex-basis-0 flex-grow-1">
+
+      <div data-bgimgsrc="/eleventy-base-blog/img/cover.jpg" class="banner-image-wrapper w-100 h-100vh overflow-hidden d-flex align-items-center justify-content-center">
+  <div>
+    <h1 class="center-align">
+      sign in &amp;amp; outs - a perspective from a panda (part 3: salt + hash)
+    </h1>
+
+    
+  </div>
+</div>
+
+<div class="row"></div>
+      <div class="container">
+        
+
+<div class="row">
+	<div class="col s12" <time="" datetime="2016-12-05">05 December 2016
+	</div>
+	
+  	
+<div class="col s12">
+  <div class="d-flex flex-wrap">
+
+    
+    <span class="mt-a mb-a"> tags: </span>
+    
+
+    
+    <span data-href="/eleventy-base-blog/tags/Security/" class="waves-effect chip m-1">Security</span>
+    <span data-href="/eleventy-base-blog/tags/third party authentication/" class="waves-effect chip m-1">third party authentication</span>
+    <span data-href="/eleventy-base-blog/tags/third party signin/" class="waves-effect chip m-1">third party signin</span>
+  </div>
+</div>
+
+
+
+</div>
+
+
+<div class="row">
+  <div class="col s12 markdown-body">
+  <p>I have developed webapps for quite sometime now, and I have worked on three major projects that require the user to authenticate in one way or another.</p>
+<p><strong>ITT: I will talk about the approaches I use to handle local signups and why I prefer clients use third party login instead.</strong></p>
+<p><strong>NITT: I won’t talk about language specific ways how the approaches can be achieved. Every mature language/platform should contain a way these approaches can be realised.</strong></p>
+<hr>
+<h3 id="approach-three-using-a-salt-and-hashing-algorithm-to-store-the-password" tabindex="-1">Approach Three: Using a salt and hashing algorithm to store the password <a class="header-anchor" href="#approach-three-using-a-salt-and-hashing-algorithm-to-store-the-password">#</a></h3>
+<p><strong>TL,DR: probably the best we could hope for.</strong></p>
+<p>In the past two weeks, we have seen how storing usernames and passwords as plain-text is a very bad idea. Storing usernames and hashed passwords is a better approach, but still lacks in security. We will talk about salt + hash, which is yet more secure than just hashing the password</p>
+<p>Salt and hash is a method that specifically tries to counter two shortcomings of just hashing the password. Namely, social engineering and rainbow tables. The workflow of salt and hash is the following:</p>
+<ol>
+<li>on signup, generate a <strong>unique</strong> string of characters for each new user. This random string of characters are known as a <strong>salt</strong></li>
+<li>calculate the hash of a string of characters, containing the password, followed by salt. e.g. if the password is michaeljackson and salt is ao2encm191, then the hash of michaeljacksonao2encm191 will be calculated. This hashed string is known as the <strong>salted hashed password</strong>.</li>
+<li>save the username, salted hashed password and salt into the database</li>
+<li>on signin, find user with the typed username</li>
+<li>calculate the hash of a string of characters, containing typed password followed by database stored salt</li>
+<li>compare the calculated salted hashed password with the stored salted hashed password. If the characters are the same, the authentication succeeds. Otherwise, the authentication fails.</li>
+</ol>
+<p>Now, should an attacker gain access to your database, this is what they will see:</p>
+<p>username</p>
+<p>password</p>
+<p>salt</p>
+<p>hint</p>
+<p>panda</p>
+<p>7f2f1569adc6df56c79c43526184732a</p>
+<p>wa091k3</p>
+<p>favourite food</p>
+<p>squirrel</p>
+<p>9e99d88df248f42c145924189de77fdd</p>
+<p>91kacx</p>
+<p>thrill</p>
+<p>koala</p>
+<p>c655062d796cfc8c0771ce2299d88b10</p>
+<p>kk1nmo7</p>
+<p>is\’t my kid</p>
+<p>Squirrel and koala, whilst using the same passwords, have different salted hashed passwords. This can potentially make social engineering answers a lot harder. Additionally, rainbow tables will likely not work, as the tables will need to be millions if not billions if not trillion times larger. The best part is, the salt can be stored in the database in plain text.</p>
+<p>The same caveat applies to the hashing method. Always use the latest hashing algorithms. It matters not if you are using salted hashed passwords, if your system can be compromised by brute force in 5 minutes or less. Modern (2016) computers can calculate MD5 extremely quickly. Use SHA2 (2016) or whichever hashing algorithm that is the standard.</p>
+
+  </div>
+</div>
+<ul class="links-nextprev"><li>Previous: <a href="/eleventy-base-blog/posts/sign-in-outs-a-perspective-from-a-panda-part-2/">sign in &amp;amp; outs - a perspective from a panda (part 2: hash)</a></li><li>Next: <a href="/eleventy-base-blog/posts/sign-in-outs-a-perspective-from-a-panda-part-4-open-authorisation-oauth/">sign in &amp;amp; outs – a perspective from a panda (part 4: open authorisation- OAuth)</a></li>
+</ul>
+
+      </div>
+    </main>
+
+    <footer class="page-footer flex-basis-0 flex-grow-0">
+
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+
+        <a class="btn-flat" href="https://github.com/xgui3783">
+          <i class="fab fa-github"></i>
+          <span>
+            xgui3783
+          </span>
+        </a>
+
+        <a href="https://fosstodon.org/@pandamakes" class="btn-flat">
+          <i class="fab fa-mastodon"></i>
+          <span>
+            @pandamakes@fosstodon.org
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer-copyright">
+    <div class="container">
+    © 2024 Copyright pandamakes
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      /* required for SideBar mobile */
+      const elems = document.querySelectorAll('.sidenav')
+      const instances = M.Sidenav.init(elems)
+
+      /* required to overcome nested anchor links */
+      const divHrefs = document.querySelectorAll('[data-href]')
+      for (const divHref of divHrefs ){
+        divHref.addEventListener('click', ev => {
+          window.open(divHref.dataset.href, '_self')
+          ev.stopPropagation()
+        })
+      }
+    })
+  </script>
+
+</footer>
+    <!-- Current page: /eleventy-base-blog/posts/sign-in-outs-a-perspective-from-a-panda-part-3/ -->
+  </body>
+</html>

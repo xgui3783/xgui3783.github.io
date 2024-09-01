@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on OpenCV + trends in web development</title>
+    <meta name="Description" content="web developer, photographer, panda">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/index.css">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/prism-base16-monokai.dark.css">
+    <link rel="alternate" href="/eleventy-base-blog/eleventy-base-blog/feed/feed.xml" type="application/atom+xml" title="pandamakes">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/materialize.css">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/github-markdown.css">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/coverimage.css">
+	  <link rel="me" href="https://fosstodon.org/@pandamakes">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  </head>
+  <body class="d-flex flex-column">
+    <header class="flex-basis-0 flex-grow-0">
+
+    <nav>
+      <div class="nav-wrapper col s12">
+
+        <!-- logo -->
+        <a href="/eleventy-base-blog/" class="h-100 brand-logo">
+          <div class="h-100 valign-wrapper ">
+            <img class="h-100 p-1" src="/eleventy-base-blog/eleventy-base-blog/img/logo.svg">
+            <span>
+              pandamakes
+            </span>
+          </div>
+        </a>
+
+        <a href="#" data-target="mobile-menu" class="sidenav-trigger">
+          <i class="fas fa-bars"></i>
+        </a>
+
+        <ul class="right hide-on-med-and-down"><li class="nav-item"><a href="/eleventy-base-blog/">Home</a></li>
+<li class="nav-item"><a href="/eleventy-base-blog/blog/">Blog</a></li>
+<li class="nav-item"><a href="/eleventy-base-blog/about/">About</a></li></ul>
+      </div>
+    </nav>
+
+  <!-- mobile sidenav -->
+  <ul class="sidenav" id="mobile-menu">
+  
+  
+    <li class="nav-item">
+      <a href="/eleventy-base-blog/">
+        Home
+      </a>
+    </li>
+  
+  
+  
+    <li class="nav-item">
+      <a href="/eleventy-base-blog/eleventy-base-blog/blog/">
+        Blog
+      </a>
+    </li>
+  
+  
+  
+    <li class="nav-item">
+      <a href="/eleventy-base-blog/eleventy-base-blog/about/">
+        About
+      </a>
+    </li>
+  
+  
+  </ul>
+
+</header>
+
+    <main class="flex-basis-0 flex-grow-1">
+
+      <div data-bgimgsrc="/eleventy-base-blog/img/cover.jpg" class="banner-image-wrapper w-100 h-100vh overflow-hidden d-flex align-items-center justify-content-center">
+  <div>
+    <h1 class="center-align">
+      More on OpenCV + trends in web development
+    </h1>
+
+    
+  </div>
+</div>
+
+<div class="row"></div>
+      <div class="container">
+        
+
+<div class="row">
+	<div class="col s12" <time="" datetime="2016-03-21">21 March 2016
+	</div>
+	
+  	
+<div class="col s12">
+  <div class="d-flex flex-wrap">
+
+    
+    <span class="mt-a mb-a"> tags: </span>
+    
+
+    
+    <span data-href="/eleventy-base-blog/tags/android programming/" class="waves-effect chip m-1">android programming</span>
+    <span data-href="/eleventy-base-blog/tags/lessons learnt the hard way/" class="waves-effect chip m-1">lessons learnt the hard way</span>
+    <span data-href="/eleventy-base-blog/tags/opencv/" class="waves-effect chip m-1">opencv</span>
+  </div>
+</div>
+
+
+
+</div>
+
+
+<div class="row">
+  <div class="col s12 markdown-body">
+  <p>I have uncovered a few more new discoveries in the passing week.</p>
+<p>Firstly, loading the app into my Android phone drastically improved the performance of the app. I suspect this had something to do with the amount of virtual RAM that I have allotted to the Virtual Machine.</p>
+<p>Secondly, I found out the reason for the weird colouration of the rgba output of the preview frame. The problem had something to do with how the frame is encoded and decoded. In short, the problem is non-existent on actual android devices, and only becomes a problem in virtual machines.</p>
+<p>Thirdly, one thing that annoyed me a great deal was how OpenCV seems to fetch a 600×480 rectangle. More annoyingly, the onCameraFrame method has to return a Mat object with the same dimension as the one initialised at onCameraViewStarted(int width, int height). Any other dimension, the camera preview will display black, not even a cropped image. Another quirk I found was that the Imgproc.Canny operation automatically converts a Mat object to a greyscale Mat object, even if it was initialised as <code>CvType.CV_8UC4</code>.</p>
+<p>What else, so much changes between versions. I believe I have already talked about <code>Core.line</code> vs <code>Imgproc.line</code>. There is also now <code>CV_RGB2GRAY</code> vs <code>Imgproc.COLOR_RGB2GRAY</code>. I guess I have learnt to search for the right version.</p>
+<p>More things learnt along the way: when compiling a List , such as Imgproc.findContours, the return results gets appended to the old one. So unless one does a <code>List.clear();</code>, the list will grow larger and well… with devastating consequences. (For one, if one wishes to search through all of the geometric shapes that fits the bill, and at frame 1 finds it at, say pt1, pt2, p3, but at frame 2, the camera had moved, so the frame finds it at pt4, pt5, pt6, the array will remember both elements. If you are to colour the shapes, you get a trail of geometric shapes, essentially).</p>
+<p>Looking around me now, there seems to be a lot of buzzwords appearing in web development. RESTful seems to be thrown around a lot, seemingly out of nowhere. And then, there was <em>AngularJS</em>, <em>NodeJS</em>, <em>React</em> etc. It is quite scary. Am I ever going to catch up?</p>
+<p>Having just looked at SASS + Compass… I have to say, it’s really really REALLY exciting to learn.</p>
+
+  </div>
+</div>
+<ul class="links-nextprev"><li>Previous: <a href="/eleventy-base-blog/posts/fixing-timetable-php-and-a-little-bit-more-opencv/">Fixing timetable.php and (a little bit) more openCV</a></li><li>Next: <a href="/eleventy-base-blog/posts/more-opencv-p2/">More OpenCV p2</a></li>
+</ul>
+
+      </div>
+    </main>
+
+    <footer class="page-footer flex-basis-0 flex-grow-0">
+
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+
+        <a class="btn-flat" href="https://github.com/xgui3783">
+          <i class="fab fa-github"></i>
+          <span>
+            xgui3783
+          </span>
+        </a>
+
+        <a href="https://fosstodon.org/@pandamakes" class="btn-flat">
+          <i class="fab fa-mastodon"></i>
+          <span>
+            @pandamakes@fosstodon.org
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer-copyright">
+    <div class="container">
+    © 2024 Copyright pandamakes
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      /* required for SideBar mobile */
+      const elems = document.querySelectorAll('.sidenav')
+      const instances = M.Sidenav.init(elems)
+
+      /* required to overcome nested anchor links */
+      const divHrefs = document.querySelectorAll('[data-href]')
+      for (const divHref of divHrefs ){
+        divHref.addEventListener('click', ev => {
+          window.open(divHref.dataset.href, '_self')
+          ev.stopPropagation()
+        })
+      }
+    })
+  </script>
+
+</footer>
+    <!-- Current page: /eleventy-base-blog/posts/more-on-opencv/ -->
+  </body>
+</html>

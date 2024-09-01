@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cross compiling a linux executable to be run on OpenShift</title>
+    <meta name="Description" content="web developer, photographer, panda">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/index.css">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/prism-base16-monokai.dark.css">
+    <link rel="alternate" href="/eleventy-base-blog/eleventy-base-blog/feed/feed.xml" type="application/atom+xml" title="pandamakes">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/materialize.css">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/github-markdown.css">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/coverimage.css">
+	  <link rel="me" href="https://fosstodon.org/@pandamakes">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  </head>
+  <body class="d-flex flex-column">
+    <header class="flex-basis-0 flex-grow-0">
+
+    <nav>
+      <div class="nav-wrapper col s12">
+
+        <!-- logo -->
+        <a href="/eleventy-base-blog/" class="h-100 brand-logo">
+          <div class="h-100 valign-wrapper ">
+            <img class="h-100 p-1" src="/eleventy-base-blog/eleventy-base-blog/img/logo.svg">
+            <span>
+              pandamakes
+            </span>
+          </div>
+        </a>
+
+        <a href="#" data-target="mobile-menu" class="sidenav-trigger">
+          <i class="fas fa-bars"></i>
+        </a>
+
+        <ul class="right hide-on-med-and-down"><li class="nav-item"><a href="/eleventy-base-blog/">Home</a></li>
+<li class="nav-item"><a href="/eleventy-base-blog/blog/">Blog</a></li>
+<li class="nav-item"><a href="/eleventy-base-blog/about/">About</a></li></ul>
+      </div>
+    </nav>
+
+  <!-- mobile sidenav -->
+  <ul class="sidenav" id="mobile-menu">
+  
+  
+    <li class="nav-item">
+      <a href="/eleventy-base-blog/">
+        Home
+      </a>
+    </li>
+  
+  
+  
+    <li class="nav-item">
+      <a href="/eleventy-base-blog/eleventy-base-blog/blog/">
+        Blog
+      </a>
+    </li>
+  
+  
+  
+    <li class="nav-item">
+      <a href="/eleventy-base-blog/eleventy-base-blog/about/">
+        About
+      </a>
+    </li>
+  
+  
+  </ul>
+
+</header>
+
+    <main class="flex-basis-0 flex-grow-1">
+
+      <div data-bgimgsrc="/eleventy-base-blog/img/cover.jpg" class="banner-image-wrapper w-100 h-100vh overflow-hidden d-flex align-items-center justify-content-center">
+  <div>
+    <h1 class="center-align">
+      cross compiling a linux executable to be run on OpenShift
+    </h1>
+
+    
+  </div>
+</div>
+
+<div class="row"></div>
+      <div class="container">
+        
+
+<div class="row">
+	<div class="col s12" <time="" datetime="2017-01-30">30 January 2017
+	</div>
+	
+  	
+<div class="col s12">
+  <div class="d-flex flex-wrap">
+
+    
+    <span class="mt-a mb-a"> tags: </span>
+    
+
+    
+    <span data-href="/eleventy-base-blog/tags/centos/" class="waves-effect chip m-1">centos</span>
+    <span data-href="/eleventy-base-blog/tags/lesson learnt the hard way/" class="waves-effect chip m-1">lesson learnt the hard way</span>
+    <span data-href="/eleventy-base-blog/tags/lessons learnt the hard way/" class="waves-effect chip m-1">lessons learnt the hard way</span>
+    <span data-href="/eleventy-base-blog/tags/linux/" class="waves-effect chip m-1">linux</span>
+    <span data-href="/eleventy-base-blog/tags/openshift/" class="waves-effect chip m-1">openshift</span>
+    <span data-href="/eleventy-base-blog/tags/pyinstaller/" class="waves-effect chip m-1">pyinstaller</span>
+    <span data-href="/eleventy-base-blog/tags/python/" class="waves-effect chip m-1">python</span>
+    <span data-href="/eleventy-base-blog/tags/virtualbox/" class="waves-effect chip m-1">virtualbox</span>
+  </div>
+</div>
+
+
+
+</div>
+
+
+<div class="row">
+  <div class="col s12 markdown-body">
+  <p>I was asked to do something about the inefficient process of marking MCQ exam papers. This is my adventure trying to get it to work.</p>
+<p>I have written previously about a project where, multiple choice exam papers were marked by an Android app, and the result was sent to the server, where reports can be printed, and marks are tallied. I chose Android to do the bulk of heavy lifting, because I have gotten openCV to work on Android before, and there was not a lot of time to explore other options. However, after a term, the inefficiency of using an Android device is becoming apparent.</p>
+<ol>
+<li>Android devices are scarce.</li>
+<li>the app is slow and cumbersome (as it needs to process each frame of the camera)</li>
+<li>the state of the test paper in real life scenarios not only reduce the resolution, but also distorts the geometry</li>
+<li>lighting heavily affects the marking process</li>
+</ol>
+<p>So I was asked if I could do something via the scanned PDFs. Scanned PDFs can alleviate all of the above problems.</p>
+<hr>
+<p><strong>Writing the program</strong><br>
+Writing a program to run on my PC was almost too easy. I explored the possibility of detecting rectangles using <code>canny</code> followed by <code>approxdp</code>. They do not seem to work like I would like them to. Contamination from student writings will drastically affect the ability for the program to detect rectangles. At the end, I went with fixed positions given the size of the test paper. Less reliable if the scan was slanted, but, trade-offs.</p>
+<hr>
+<p><strong>Making the program run on openshift</strong><br>
+Now this is not so easy. I thought, I could just use PyInstaller, freeze the python into a single file,</p>
+<p>chmod +x executable &amp;&amp; ./executable</p>
+<p>Turns out, in order to compile a linux executable, I need to compile in an linux environment. Annoying, but no biggie, I thought. So I downloaded an Ubuntu ISO (which came with python), fired up <em>VirtualBox</em>, installed <em>openCV</em>, installed <em>pyinstaller</em>, made the executable, made sure everything works fine (input, output, etc).</p>
+<p>I noticed that upon packing into a Linux executable, the performance took quite a significant hit. But no matter, I uploaded the executable (ELF), to the server, changed the permission, and fired it up, to which, I was greeted with the error:</p>
+<p>GLibC 2.14 is needed.</p>
+<p>Of course. It was too easy. I checked my system’s glibc version via</p>
+<p>ldd –version</p>
+<p>turns out to be 2.23. SSH into openshift, its glibc version was 2.12.</p>
+<p>At this stage, I have several options:</p>
+<ol>
+<li>attempt to recompile the ELF with glibc 2.12.</li>
+<li>attempt to update glibc version of openshift/find other hosts that provide glibc version 2.14+</li>
+</ol>
+<p>I briefly entertained with the idea, that if I <a href="https://blog.openshift.com/enabling-python-27-on-a-paas-with-the-openshift-diy-app-type/">updated python from 2.6 to 2.7 on openshift</a>, it might also update the glibc version. Boy was I wrong.</p>
+<p>So I kept the possibility of finding another host at the back of my mind, whilst trying to recompile ELF with glibc 2.12 (or below).</p>
+<hr>
+<p>There are quite a few people who ran into similar problems as me. But <a href="http://stackoverflow.com/questions/847179/multiple-glibc-libraries-on-a-single-host">solutions</a> all seem rather non trivial. Possibly the most straight forward method is to find a legacy distribution of linux, which still sports glibc2.12, and compile the ELF there.</p>
+<p>I first tried the latest Fedora. glibc2.23, but supposedly with official support of RH. Didn’t work.</p>
+<p>Then, I found <em>CentOS6.x</em> glibc2.12. Bingo, I thought. But pyinstaller would not work. pyinstaller apparently only works with python2.7+. But <a href="http://nuitka.net/">nuitka</a> may work.</p>
+<p>So I installed the prereq’s, installed opencv. Hoping for the best.</p>
+<hr>
+<p>Somehow, <code>import cv2</code> could not find module named cv2. According to <a href="http://techieroop.com/install-opencv-in-centos/">this post</a>, I need to copy cv2.so to the working folder of python. But cv2.so does not exist. After much digging, I found <a href="http://answers.opencv.org/question/10651/cv2so-missing-after-opencv-installed/">this post</a>. Case sensitive, flag is accepted. Now it’s building. Hopefully, this time, it works.</p>
+<hr>
+<p>The <code>BUILD_opencv_python</code> flag worked (for opencv2.4.13). Now, nuitka it to an ELF. It sure is taking its sweet time.</p>
+<hr>
+<p>nuitka failed to compile, but pyinstaller2.1 worked like a charm… what’s more, the ELF is smaller in size. WIN!</p>
+
+  </div>
+</div>
+<ul class="links-nextprev"><li>Previous: <a href="/eleventy-base-blog/posts/android-studio-quriks-c-is-not-a-valid-resource-image-resources-failing-to-be-recognised-by-gradle/">Android Studio quriks: C is not a valid resource + image resources failing to be recognised by Gradle</a></li><li>Next: <a href="/eleventy-base-blog/posts/how-i-built-a-python-executable-and-ran-it-on-openshift-v2/">How I built a python executable and ran it on Openshift (V2)</a></li>
+</ul>
+
+      </div>
+    </main>
+
+    <footer class="page-footer flex-basis-0 flex-grow-0">
+
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+
+        <a class="btn-flat" href="https://github.com/xgui3783">
+          <i class="fab fa-github"></i>
+          <span>
+            xgui3783
+          </span>
+        </a>
+
+        <a href="https://fosstodon.org/@pandamakes" class="btn-flat">
+          <i class="fab fa-mastodon"></i>
+          <span>
+            @pandamakes@fosstodon.org
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer-copyright">
+    <div class="container">
+    © 2024 Copyright pandamakes
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      /* required for SideBar mobile */
+      const elems = document.querySelectorAll('.sidenav')
+      const instances = M.Sidenav.init(elems)
+
+      /* required to overcome nested anchor links */
+      const divHrefs = document.querySelectorAll('[data-href]')
+      for (const divHref of divHrefs ){
+        divHref.addEventListener('click', ev => {
+          window.open(divHref.dataset.href, '_self')
+          ev.stopPropagation()
+        })
+      }
+    })
+  </script>
+
+</footer>
+    <!-- Current page: /eleventy-base-blog/posts/cross-compiling-a-linux-executable-to-be-run-on-openshift/ -->
+  </body>
+</html>

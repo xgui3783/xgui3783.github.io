@@ -1,0 +1,8 @@
+.banner-image-wrapper
+{
+  background: linear-gradient(to bottom, white, grey),
+   url('/img/cover.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-blend-mode: screen, normal;
+}

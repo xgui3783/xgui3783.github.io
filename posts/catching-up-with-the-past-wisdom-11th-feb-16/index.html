@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catching up with the past wisdom 11th Feb &#39;16</title>
+    <meta name="Description" content="web developer, photographer, panda">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/index.css">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/prism-base16-monokai.dark.css">
+    <link rel="alternate" href="/eleventy-base-blog/eleventy-base-blog/feed/feed.xml" type="application/atom+xml" title="pandamakes">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/materialize.css">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/github-markdown.css">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/coverimage.css">
+	  <link rel="me" href="https://fosstodon.org/@pandamakes">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  </head>
+  <body class="d-flex flex-column">
+    <header class="flex-basis-0 flex-grow-0">
+
+    <nav>
+      <div class="nav-wrapper col s12">
+
+        <!-- logo -->
+        <a href="/eleventy-base-blog/" class="h-100 brand-logo">
+          <div class="h-100 valign-wrapper ">
+            <img class="h-100 p-1" src="/eleventy-base-blog/eleventy-base-blog/img/logo.svg">
+            <span>
+              pandamakes
+            </span>
+          </div>
+        </a>
+
+        <a href="#" data-target="mobile-menu" class="sidenav-trigger">
+          <i class="fas fa-bars"></i>
+        </a>
+
+        <ul class="right hide-on-med-and-down"><li class="nav-item"><a href="/eleventy-base-blog/">Home</a></li>
+<li class="nav-item"><a href="/eleventy-base-blog/blog/">Blog</a></li>
+<li class="nav-item"><a href="/eleventy-base-blog/about/">About</a></li></ul>
+      </div>
+    </nav>
+
+  <!-- mobile sidenav -->
+  <ul class="sidenav" id="mobile-menu">
+  
+  
+    <li class="nav-item">
+      <a href="/eleventy-base-blog/">
+        Home
+      </a>
+    </li>
+  
+  
+  
+    <li class="nav-item">
+      <a href="/eleventy-base-blog/eleventy-base-blog/blog/">
+        Blog
+      </a>
+    </li>
+  
+  
+  
+    <li class="nav-item">
+      <a href="/eleventy-base-blog/eleventy-base-blog/about/">
+        About
+      </a>
+    </li>
+  
+  
+  </ul>
+
+</header>
+
+    <main class="flex-basis-0 flex-grow-1">
+
+      <div data-bgimgsrc="/eleventy-base-blog/img/cover.jpg" class="banner-image-wrapper w-100 h-100vh overflow-hidden d-flex align-items-center justify-content-center">
+  <div>
+    <h1 class="center-align">
+      Catching up with the past wisdom 11th Feb &#39;16
+    </h1>
+
+    
+  </div>
+</div>
+
+<div class="row"></div>
+      <div class="container">
+        
+
+<div class="row">
+	<div class="col s12" <time="" datetime="2016-02-11">11 February 2016
+	</div>
+	
+  	
+<div class="col s12">
+  <div class="d-flex flex-wrap">
+
+    
+    <span class="mt-a mb-a"> tags: </span>
+    
+
+    
+    <span data-href="/eleventy-base-blog/tags/javascript/" class="waves-effect chip m-1">javascript</span>
+    <span data-href="/eleventy-base-blog/tags/joomla/" class="waves-effect chip m-1">joomla</span>
+    <span data-href="/eleventy-base-blog/tags/js/" class="waves-effect chip m-1">js</span>
+    <span data-href="/eleventy-base-blog/tags/lessons learnt the hard way/" class="waves-effect chip m-1">lessons learnt the hard way</span>
+    <span data-href="/eleventy-base-blog/tags/mysql/" class="waves-effect chip m-1">mysql</span>
+    <span data-href="/eleventy-base-blog/tags/php/" class="waves-effect chip m-1">php</span>
+    <span data-href="/eleventy-base-blog/tags/virtuemart/" class="waves-effect chip m-1">virtuemart</span>
+  </div>
+</div>
+
+
+
+</div>
+
+
+<div class="row">
+  <div class="col s12 markdown-body">
+  <p>Continued from the previous part.</p>
+<p>Just then, I learnt, <code>&lt;code&gt;&lt;/code&gt;</code> does not escape html tags. Instead, one must use <code>&amp;lt;div&amp;gt;</code>. (In fact, the exercise of typing the last line is more fun indeed.</p>
+<blockquote>
+<p>edit 2018-1-7: now that I have migrated to <em>ghost</em>, backticks escapes special characters.</p>
+</blockquote>
+<p>But I digress. Continuing on from the last part.</p>
+<p>29thJan16, Here’s what I wrote:</p>
+<ul>
+<li>Problems as soon as I loaded xampp and loaded the font page. Flex box is broken. After much trouble shooting, it seems <code>flex-basis</code> is not exactly the same as <code>width</code>. The problem is that without setting <code>width</code> (or perhaps <code>max-width</code>), the browser automatically sets the width to be 2000px, thus stretching out the entire div. (original design had 3 child-divs in a parent div).</li>
+<li>Second problem: I changed the PHP file, and now, the update and delete button in virtuemart cart no longer works.</li>
+</ul>
+<blockquote>
+<p>Firstly, I stumbled across this thread: <a href="http://forum.virtuemart.net/index.php?topic=111410.0">VM Forum</a>, and the solution (try a different theme) works. This narrowed the problem. So I was sure it was one of the modification I did to the PHP that ruined it. The problem is, I made so many modifications, and every one of them seems plausible. and I was not willing to undo my hours of work.Then, when I was comparing the directory and file differences between the theme that works and the one that does not work, I found this line of code:</p>
+</blockquote>
+<p><a class="vmicon vm2-remove_from_cart" title=">?php echo JText::_ ('COM_VIRTUEMART_CART_DELETE') ?>" align="middle" href=">?php echo JRoute::_ ('index.php?
+    option=com_virtuemart&view=cart&task=delete&cart_virtuemart_product_id=' . $prow->cart_item_id) ?>">
+</a></p>
+<blockquote>
+<p>which led me to <code>joomla/components/com_virtuemart/assets/js/dynupdate.js</code>, which was included in the header. I felt at the time, on line 165 was the key, as it described a function <code>Virtuemart.updDynFormListener</code>. I inserted a <code>console.log</code> to try to catch the activation of the codes, and it seems for the theme that works, it is triggered twice and for one that does not work, it is triggered once.<br>
+And so, the mystery continues. Checked the source codes for the theme that worked and theme that does not work, they are identical.<br>
+Ok, false alarm, the <code>find('[*data-dynamic-update=&quot;1&quot;]')</code> finds only 2 items, the checkout button and the shipping/billing address button. This is why on the one that works, it triggers twice.<br>
+at long last, <code>vmsite.js</code>, let’s hope it’s not another false alarm.<br>
+hmm… bizarre. The console.log seems to trigger on page load…</p>
+</blockquote>
+<p>Ok, I am an idiot… When I was changing the PHP codes around, I moved the <code>&lt;form&gt;</code> to AFTER the update/delete button. So the update/delete buttons. I could only imagine the event listener was attached via the <code>&lt;form&gt;</code> tag. I moved it to a better place, and it is working as intended.</p>
+<ul>
+<li>1stFeb16, played around with Akeeba. Successfully moved the site from localhost to its new home online. This can allow my client to see the final product. Somehow forgot the username and password for the old MySql database. After several unsuccessful attempts, I decided to create a new one. The old db had nothing in it. I should drop it when I get a chance.</li>
+</ul>
+
+  </div>
+</div>
+<ul class="links-nextprev"><li>Previous: <a href="/eleventy-base-blog/posts/11th-feburary-2016-wisdom-from-the-past-week-in-this-case-in-the-past-month/">11th Feburary, 2016, wisdom from the past week (In this case, in the past month)</a></li><li>Next: <a href="/eleventy-base-blog/posts/new-project-short-and-sweet/">New project. Short and sweet</a></li>
+</ul>
+
+      </div>
+    </main>
+
+    <footer class="page-footer flex-basis-0 flex-grow-0">
+
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+
+        <a class="btn-flat" href="https://github.com/xgui3783">
+          <i class="fab fa-github"></i>
+          <span>
+            xgui3783
+          </span>
+        </a>
+
+        <a href="https://fosstodon.org/@pandamakes" class="btn-flat">
+          <i class="fab fa-mastodon"></i>
+          <span>
+            @pandamakes@fosstodon.org
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer-copyright">
+    <div class="container">
+    © 2024 Copyright pandamakes
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      /* required for SideBar mobile */
+      const elems = document.querySelectorAll('.sidenav')
+      const instances = M.Sidenav.init(elems)
+
+      /* required to overcome nested anchor links */
+      const divHrefs = document.querySelectorAll('[data-href]')
+      for (const divHref of divHrefs ){
+        divHref.addEventListener('click', ev => {
+          window.open(divHref.dataset.href, '_self')
+          ev.stopPropagation()
+        })
+      }
+    })
+  </script>
+
+</footer>
+    <!-- Current page: /eleventy-base-blog/posts/catching-up-with-the-past-wisdom-11th-feb-16/ -->
+  </body>
+</html>

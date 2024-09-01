@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>restarting molens, secret project</title>
+    <meta name="Description" content="web developer, photographer, panda">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/index.css">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/prism-base16-monokai.dark.css">
+    <link rel="alternate" href="/eleventy-base-blog/eleventy-base-blog/feed/feed.xml" type="application/atom+xml" title="pandamakes">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/materialize.css">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/github-markdown.css">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/coverimage.css">
+	  <link rel="me" href="https://fosstodon.org/@pandamakes">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  </head>
+  <body class="d-flex flex-column">
+    <header class="flex-basis-0 flex-grow-0">
+
+    <nav>
+      <div class="nav-wrapper col s12">
+
+        <!-- logo -->
+        <a href="/eleventy-base-blog/" class="h-100 brand-logo">
+          <div class="h-100 valign-wrapper ">
+            <img class="h-100 p-1" src="/eleventy-base-blog/eleventy-base-blog/img/logo.svg">
+            <span>
+              pandamakes
+            </span>
+          </div>
+        </a>
+
+        <a href="#" data-target="mobile-menu" class="sidenav-trigger">
+          <i class="fas fa-bars"></i>
+        </a>
+
+        <ul class="right hide-on-med-and-down"><li class="nav-item"><a href="/eleventy-base-blog/">Home</a></li>
+<li class="nav-item"><a href="/eleventy-base-blog/blog/">Blog</a></li>
+<li class="nav-item"><a href="/eleventy-base-blog/about/">About</a></li></ul>
+      </div>
+    </nav>
+
+  <!-- mobile sidenav -->
+  <ul class="sidenav" id="mobile-menu">
+  
+  
+    <li class="nav-item">
+      <a href="/eleventy-base-blog/">
+        Home
+      </a>
+    </li>
+  
+  
+  
+    <li class="nav-item">
+      <a href="/eleventy-base-blog/eleventy-base-blog/blog/">
+        Blog
+      </a>
+    </li>
+  
+  
+  
+    <li class="nav-item">
+      <a href="/eleventy-base-blog/eleventy-base-blog/about/">
+        About
+      </a>
+    </li>
+  
+  
+  </ul>
+
+</header>
+
+    <main class="flex-basis-0 flex-grow-1">
+
+      <div data-bgimgsrc="/eleventy-base-blog/img/cover.jpg" class="banner-image-wrapper w-100 h-100vh overflow-hidden d-flex align-items-center justify-content-center">
+  <div>
+    <h1 class="center-align">
+      restarting molens, secret project
+    </h1>
+
+    
+  </div>
+</div>
+
+<div class="row"></div>
+      <div class="container">
+        
+
+<div class="row">
+	<div class="col s12" <time="" datetime="2016-08-15">15 August 2016
+	</div>
+	
+  	
+<div class="col s12">
+  <div class="d-flex flex-wrap">
+
+    
+    <span class="mt-a mb-a"> tags: </span>
+    
+
+    
+    <span data-href="/eleventy-base-blog/tags/android programming/" class="waves-effect chip m-1">android programming</span>
+    <span data-href="/eleventy-base-blog/tags/java/" class="waves-effect chip m-1">java</span>
+    <span data-href="/eleventy-base-blog/tags/molens/" class="waves-effect chip m-1">molens</span>
+    <span data-href="/eleventy-base-blog/tags/opencv/" class="waves-effect chip m-1">opencv</span>
+  </div>
+</div>
+
+
+
+</div>
+
+
+<div class="row">
+  <div class="col s12 markdown-body">
+  <p>ok, enough time has been spent skirting around the problem. Time to tackle it again.</p>
+<p>This time, I think I will make the optical structure recognition on a server, and make the app make api calls to the server, allowing the server to respond with .mol info.</p>
+<p>I am already aware that the two options I have are <a href="https://cactus.nci.nih.gov/osra/">OSRA</a>, originally hosted on NIH, now has its primary home over at sourceforge, whose maintainer is Igor Filippov, and <a href="http://lifescience.opensource.epam.com/imago/index.html">Imago</a> from EPAM (formally known as GGA Software), most of the maintainers (and the company itself) seems to be situated in Russia. (What is with Russians and its monopoly on optical structure recognition?)</p>
+<p>I was originally going to go with OSRA, given it had a more reputable origin (NIH). But it has way too much dependencies. Given that most PaaS does not allow for sudo access, figuring out how to install all the dependencies is a pain. So I am opting for the webserver to work with Imago first.</p>
+<p>Now, to say that I have no experience with Imago is lying. I have had at least a couple of months of hard work trying to get Imago to work on an Android environment. I won’t repeat the pain here. If you are interested, look through the past posts containing Java as tags.</p>
+<p>I came across <a href="http://blog.scottfrees.com/getting-your-c-to-the-web-with-node-js">this post</a>. In short, the author argued that there are three methods of incorporating C++ libraries into node.js (yes, I have already given up making a tomcat webapplication, which may be able to implement the java binding that came with the box. After all, why reinvent the wheel?)<br>
+-automation<br>
+-rewrite the binding with node-ffi (which I was aware of)<br>
+-rewrite library in native js code</p>
+<p>After not so much deliberation, if epam imago offers command line interactions, perhaps, automation is the way to go?</p>
+<p>First hurdle. Whilst the automation works fine on my local host machine, on Openshift, it does not. It returns <code>EACCES error</code>. After some digging, it seems it is likely some permission related issue. I am suspecting that child process that writes a file makes the sandbox nervous.</p>
+
+  </div>
+</div>
+<ul class="links-nextprev"><li>Previous: <a href="/eleventy-base-blog/posts/configuring-notepad-for-ejs/">Configuring Notepad++ for EJS</a></li><li>Next: <a href="/eleventy-base-blog/posts/dabbling-into-wordpress-woocommerce-woocommerce-color-or-not/">dabbling into wordpress woocommerce + woocommerce color (or not)</a></li>
+</ul>
+
+      </div>
+    </main>
+
+    <footer class="page-footer flex-basis-0 flex-grow-0">
+
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+
+        <a class="btn-flat" href="https://github.com/xgui3783">
+          <i class="fab fa-github"></i>
+          <span>
+            xgui3783
+          </span>
+        </a>
+
+        <a href="https://fosstodon.org/@pandamakes" class="btn-flat">
+          <i class="fab fa-mastodon"></i>
+          <span>
+            @pandamakes@fosstodon.org
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer-copyright">
+    <div class="container">
+    © 2024 Copyright pandamakes
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      /* required for SideBar mobile */
+      const elems = document.querySelectorAll('.sidenav')
+      const instances = M.Sidenav.init(elems)
+
+      /* required to overcome nested anchor links */
+      const divHrefs = document.querySelectorAll('[data-href]')
+      for (const divHref of divHrefs ){
+        divHref.addEventListener('click', ev => {
+          window.open(divHref.dataset.href, '_self')
+          ev.stopPropagation()
+        })
+      }
+    })
+  </script>
+
+</footer>
+    <!-- Current page: /eleventy-base-blog/posts/restarting-molens-secret-project/ -->
+  </body>
+</html>

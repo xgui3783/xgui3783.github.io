@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How I built a python executable and ran it on Openshift (V2)</title>
+    <meta name="Description" content="web developer, photographer, panda">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/index.css">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/prism-base16-monokai.dark.css">
+    <link rel="alternate" href="/eleventy-base-blog/eleventy-base-blog/feed/feed.xml" type="application/atom+xml" title="pandamakes">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/materialize.css">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/github-markdown.css">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/coverimage.css">
+	  <link rel="me" href="https://fosstodon.org/@pandamakes">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  </head>
+  <body class="d-flex flex-column">
+    <header class="flex-basis-0 flex-grow-0">
+
+    <nav>
+      <div class="nav-wrapper col s12">
+
+        <!-- logo -->
+        <a href="/eleventy-base-blog/" class="h-100 brand-logo">
+          <div class="h-100 valign-wrapper ">
+            <img class="h-100 p-1" src="/eleventy-base-blog/eleventy-base-blog/img/logo.svg">
+            <span>
+              pandamakes
+            </span>
+          </div>
+        </a>
+
+        <a href="#" data-target="mobile-menu" class="sidenav-trigger">
+          <i class="fas fa-bars"></i>
+        </a>
+
+        <ul class="right hide-on-med-and-down"><li class="nav-item"><a href="/eleventy-base-blog/">Home</a></li>
+<li class="nav-item"><a href="/eleventy-base-blog/blog/">Blog</a></li>
+<li class="nav-item"><a href="/eleventy-base-blog/about/">About</a></li></ul>
+      </div>
+    </nav>
+
+  <!-- mobile sidenav -->
+  <ul class="sidenav" id="mobile-menu">
+  
+  
+    <li class="nav-item">
+      <a href="/eleventy-base-blog/">
+        Home
+      </a>
+    </li>
+  
+  
+  
+    <li class="nav-item">
+      <a href="/eleventy-base-blog/eleventy-base-blog/blog/">
+        Blog
+      </a>
+    </li>
+  
+  
+  
+    <li class="nav-item">
+      <a href="/eleventy-base-blog/eleventy-base-blog/about/">
+        About
+      </a>
+    </li>
+  
+  
+  </ul>
+
+</header>
+
+    <main class="flex-basis-0 flex-grow-1">
+
+      <div data-bgimgsrc="/eleventy-base-blog/img/cover.jpg" class="banner-image-wrapper w-100 h-100vh overflow-hidden d-flex align-items-center justify-content-center">
+  <div>
+    <h1 class="center-align">
+      How I built a python executable and ran it on Openshift (V2)
+    </h1>
+
+    
+  </div>
+</div>
+
+<div class="row"></div>
+      <div class="container">
+        
+
+<div class="row">
+	<div class="col s12" <time="" datetime="2017-02-06">06 February 2017
+	</div>
+	
+  	
+<div class="col s12">
+  <div class="d-flex flex-wrap">
+
+    
+    <span class="mt-a mb-a"> tags: </span>
+    
+
+    
+    <span data-href="/eleventy-base-blog/tags/lesson learnt the hard way/" class="waves-effect chip m-1">lesson learnt the hard way</span>
+    <span data-href="/eleventy-base-blog/tags/lessons learnt the hard way/" class="waves-effect chip m-1">lessons learnt the hard way</span>
+    <span data-href="/eleventy-base-blog/tags/linux/" class="waves-effect chip m-1">linux</span>
+    <span data-href="/eleventy-base-blog/tags/opencv/" class="waves-effect chip m-1">opencv</span>
+    <span data-href="/eleventy-base-blog/tags/openshift/" class="waves-effect chip m-1">openshift</span>
+    <span data-href="/eleventy-base-blog/tags/python/" class="waves-effect chip m-1">python</span>
+  </div>
+</div>
+
+
+
+</div>
+
+
+<div class="row">
+  <div class="col s12 markdown-body">
+  <h2 id="background" tabindex="-1">Background <a class="header-anchor" href="#background">#</a></h2>
+<p>The request was build something that can <strong>process PDFs</strong>, <strong>crunch the data</strong>, and <strong>post it</strong> to another webhook.</p>
+<hr>
+<h2 id="plan" tabindex="-1">Plan <a class="header-anchor" href="#plan">#</a></h2>
+<p><strong>Process PDF:</strong></p>
+<ul>
+<li>JQuery (visual overlay + visual feedback) on front end, check format (pdf), ajax post</li>
+<li>NodeJS backend with multer, temporarily saving the said PDF</li>
+<li>spawn child process executing <code>convert pdf.pdf png.png</code>. Openshift V2 comes with imagemagick preinstalled.</li>
+</ul>
+<p><strong>Crunching Data:</strong></p>
+<ul>
+<li>???</li>
+</ul>
+<p><strong>Posting Data:</strong></p>
+<ul>
+<li>request post to required url</li>
+</ul>
+<hr>
+<h2 id="details-re-png-processing" tabindex="-1">Details Re: PNG processing <a class="header-anchor" href="#details-re-png-processing">#</a></h2>
+<p>I have already written <a href="http://wp.me/p7Zk8t-b5">a post</a> regarding trying to compile a linux executable. The said post was more of a stream of consciousness and less organised thoughts. I will attempt to summarise what was done correctly in this post.</p>
+<ul>
+<li>Download <a href="https://www.virtualbox.org/">Virtual Box</a> and install it on your host OS</li>
+<li>Download <a href="https://wiki.centos.org/Download">CentOS ISO <strong>v6.8</strong></a> Why 6.8? From <a href="https://rpmfind.net/linux/rpm2html/search.php?query=glibc">rpmfinder</a>, I can somewhat conclude that CentOS 6.8 ships (or upgrades) to glibc 2.12. Why is this important? Check out <a href="http://www.pandamakes.com.au/cross-compiling-a-linux-executable-to-be-run-on-openshift/">this post</a></li>
+<li>Follow the instruction on VirtualBox and create a virtual desktop with CentOS 6.8 as OS. NB: dedicate <strong>at least</strong>16GB of hard disk. RAM: as much as possible. I dedicated 2GB on a 16GB machine. It ran fine.</li>
+<li>Remember to demount the ISO (or change the boot order). Failure to do so will result in CentOS been booted from the ISO over and over again.</li>
+</ul>
+<p>Now that the virtual box is setup, all of the work below will be done inside the virtualbox. This section is heavily borrowed from <a href="http://techieroop.com/install-opencv-in-centos/">this post</a> with import addition from <a href="http://answers.opencv.org/question/10651/cv2so-missing-after-opencv-installed/">this thread</a>.</p>
+<ul>
+<li>
+<p>Open Terminal, and</p>
+<p>sudo yum install cmake gcc gcc-c++ python-devel</p>
+</li>
+</ul>
+<p>I find only these packages are necessary to install opencv2.4. Of course, if you need other packages, feel free to install them, too.</p>
+<ul>
+<li>
+<p><a href="http://opencv.org/downloads.html">Download OpenCV2.4.13</a> (latest 2.4 available at the time of writing) and unpack it</p>
+</li>
+<li>
+<p>cd into opencv-2.4.13, then:</p>
+<p>mkdir release
+cd release
+cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D BUILD_opencv_python=ON ..</p>
+</li>
+</ul>
+<p>take note of the mix of cases and two full stops at the end.</p>
+<ul>
+<li>
+<p>Then:</p>
+<p>make
+make install</p>
+</li>
+<li>
+<p>To check the installation was successful:</p>
+<p>python</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>import cv2
+print cv2.<strong>version</strong></p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+</ul>
+<p>If for any reason, you got</p>
+<p>cv2 is not a valid package name</p>
+<p>do:</p>
+<p>cp /usr/local/lib/python2.?/site-packages/cv2.so /usr/lib/python2.?/site-packages</p>
+<p>(change ? accordingly)</p>
+<hr>
+<h2 id="pyinstaller-on-python2-6" tabindex="-1">PyInstaller on Python2.6 <a class="header-anchor" href="#pyinstaller-on-python2-6">#</a></h2>
+<p>Nuitka failed to freeze my python script into an ELF, so I decided to give PyInstaller another shot. The problem is</p>
+<p>pip install pyinstaller</p>
+<p>produces an error, presumably because pyinstaller (latest version) is compatible with python 2.7+. I failed to realise that I could upgrade python to 2.7 without touching the glibc, but this turns out to be a blessing in its own way, as I side stepped the problem, by downloading <a href="https://pypi.python.org/pypi/PyInstaller/2.1">v2.1</a>, which support python2.6. Unzip, and</p>
+<p>python setup.py install</p>
+<p>and pyinstaller freeze at my command.</p>
+<p>One more interesting quirk I found:</p>
+<p>pyinstaller script.py -F</p>
+<p>whilst this packages all the necessary libraries into a need binary, it needs to unpack in tmp folder, before the binary can run. This created the rather unfortunate event, where in the webhooks, I allowed <strong>five</strong> of the childprocess to spawn their individual instances of the binary. This likely flooded the tmp folder usage. Not only was I unable to get any stdout from the said child processes, I was not able to transfer files via sftp, ssh and execute the binary (‘cannot create directory’, was the error message). Restarting the app does not clear the cache, but</p>
+<p>rhc app-tidy -a appname</p>
+<p>did the trick.</p>
+<p>At the end, I compiled the binary without the <code>-F</code> flag. In a server environment, being a little unsightly is not the great sin.</p>
+<hr>
+<h2 id="p-s-another-quirk-with-pyinstaller" tabindex="-1">P.S., another quirk with PyInstaller <a class="header-anchor" href="#p-s-another-quirk-with-pyinstaller">#</a></h2>
+<p>This probably does not grant a whole post by itself.</p>
+<p>pyinstaller script.v.1.2.py</p>
+<p>crashes with a cryptic error about an AssertionError. <strong>Remove all full stops</strong> from the filename, except the one defining the extension fixes the problem.</p>
+
+  </div>
+</div>
+<ul class="links-nextprev"><li>Previous: <a href="/eleventy-base-blog/posts/cross-compiling-a-linux-executable-to-be-run-on-openshift/">cross compiling a linux executable to be run on OpenShift</a></li><li>Next: <a href="/eleventy-base-blog/posts/stream-of-consciousness-html-quirks/">Stream of consciousness - HTML quirks</a></li>
+</ul>
+
+      </div>
+    </main>
+
+    <footer class="page-footer flex-basis-0 flex-grow-0">
+
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+
+        <a class="btn-flat" href="https://github.com/xgui3783">
+          <i class="fab fa-github"></i>
+          <span>
+            xgui3783
+          </span>
+        </a>
+
+        <a href="https://fosstodon.org/@pandamakes" class="btn-flat">
+          <i class="fab fa-mastodon"></i>
+          <span>
+            @pandamakes@fosstodon.org
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer-copyright">
+    <div class="container">
+    © 2024 Copyright pandamakes
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      /* required for SideBar mobile */
+      const elems = document.querySelectorAll('.sidenav')
+      const instances = M.Sidenav.init(elems)
+
+      /* required to overcome nested anchor links */
+      const divHrefs = document.querySelectorAll('[data-href]')
+      for (const divHref of divHrefs ){
+        divHref.addEventListener('click', ev => {
+          window.open(divHref.dataset.href, '_self')
+          ev.stopPropagation()
+        })
+      }
+    })
+  </script>
+
+</footer>
+    <!-- Current page: /eleventy-base-blog/posts/how-i-built-a-python-executable-and-ran-it-on-openshift-v2/ -->
+  </body>
+</html>

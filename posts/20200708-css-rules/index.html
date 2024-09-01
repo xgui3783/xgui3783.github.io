@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS priorities</title>
+    <meta name="Description" content="web developer, photographer, panda">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/index.css">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/prism-base16-monokai.dark.css">
+    <link rel="alternate" href="/eleventy-base-blog/eleventy-base-blog/feed/feed.xml" type="application/atom+xml" title="pandamakes">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/materialize.css">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/github-markdown.css">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/coverimage.css">
+	  <link rel="me" href="https://fosstodon.org/@pandamakes">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  </head>
+  <body class="d-flex flex-column">
+    <header class="flex-basis-0 flex-grow-0">
+
+    <nav>
+      <div class="nav-wrapper col s12">
+
+        <!-- logo -->
+        <a href="/eleventy-base-blog/" class="h-100 brand-logo">
+          <div class="h-100 valign-wrapper ">
+            <img class="h-100 p-1" src="/eleventy-base-blog/eleventy-base-blog/img/logo.svg">
+            <span>
+              pandamakes
+            </span>
+          </div>
+        </a>
+
+        <a href="#" data-target="mobile-menu" class="sidenav-trigger">
+          <i class="fas fa-bars"></i>
+        </a>
+
+        <ul class="right hide-on-med-and-down"><li class="nav-item"><a href="/eleventy-base-blog/">Home</a></li>
+<li class="nav-item"><a href="/eleventy-base-blog/blog/">Blog</a></li>
+<li class="nav-item"><a href="/eleventy-base-blog/about/">About</a></li></ul>
+      </div>
+    </nav>
+
+  <!-- mobile sidenav -->
+  <ul class="sidenav" id="mobile-menu">
+  
+  
+    <li class="nav-item">
+      <a href="/eleventy-base-blog/">
+        Home
+      </a>
+    </li>
+  
+  
+  
+    <li class="nav-item">
+      <a href="/eleventy-base-blog/eleventy-base-blog/blog/">
+        Blog
+      </a>
+    </li>
+  
+  
+  
+    <li class="nav-item">
+      <a href="/eleventy-base-blog/eleventy-base-blog/about/">
+        About
+      </a>
+    </li>
+  
+  
+  </ul>
+
+</header>
+
+    <main class="flex-basis-0 flex-grow-1">
+
+      <div data-bgimgsrc="/eleventy-base-blog/img/cover.jpg" class="banner-image-wrapper w-100 h-100vh overflow-hidden d-flex align-items-center justify-content-center">
+  <div>
+    <h1 class="center-align">
+      CSS priorities
+    </h1>
+
+    
+  </div>
+</div>
+
+<div class="row"></div>
+      <div class="container">
+        
+
+<div class="row">
+	<div class="col s12" <time="" datetime="2020-07-08">08 July 2020
+	</div>
+	
+  	
+<div class="col s12">
+  <div class="d-flex flex-wrap">
+
+    
+    <span class="mt-a mb-a"> tags: </span>
+    
+
+    
+    <span data-href="/eleventy-base-blog/tags/css/" class="waves-effect chip m-1">css</span>
+    <span data-href="/eleventy-base-blog/tags/scss/" class="waves-effect chip m-1">scss</span>
+    <span data-href="/eleventy-base-blog/tags/material/" class="waves-effect chip m-1">material</span>
+  </div>
+</div>
+
+
+
+</div>
+
+
+<div class="row">
+  <div class="col s12 markdown-body">
+  <p>I had an interesting scenario today where I had to apply a local modified theme, in addition to a global theme. By scss setup looks like:</p>
+<pre class="language-scss" tabindex="0"><code class="language-scss"><span class="token keyword">@import</span> <span class="token string">'~@angular/material/theming'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">@include</span>  <span class="token function">mat-core</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">@mixin</span> <span class="token function">custom-cmp</span><span class="token punctuation">(</span><span class="token variable">$theme</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+  <span class="token property"><span class="token variable">$foreground</span></span><span class="token punctuation">:</span> <span class="token function">map-get</span><span class="token punctuation">(</span><span class="token variable">$theme</span><span class="token punctuation">,</span> foreground<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token property"><span class="token variable">$primary</span></span><span class="token punctuation">:</span> <span class="token function">map-get</span><span class="token punctuation">(</span><span class="token variable">$theme</span><span class="token punctuation">,</span> primary<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property"><span class="token variable">$accent</span></span><span class="token punctuation">:</span> <span class="token function">map-get</span><span class="token punctuation">(</span><span class="token variable">$theme</span><span class="token punctuation">,</span> accent<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property"><span class="token variable">$warn</span></span><span class="token punctuation">:</span> <span class="token function">map-get</span><span class="token punctuation">(</span><span class="token variable">$theme</span><span class="token punctuation">,</span> warn<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token selector">[my-custom-comp],
+  .my-custom-comp
+  </span><span class="token punctuation">{</span>
+    <span class="token selector"><span class="token parent important">&amp;</span>[text],
+    <span class="token parent important">&amp;</span>.text
+    </span><span class="token punctuation">{</span>
+      <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">mat-color</span><span class="token punctuation">(</span><span class="token variable">$foreground</span><span class="token punctuation">,</span> text<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token selector"><span class="token parent important">&amp;</span>[primary],
+    <span class="token parent important">&amp;</span>.primary
+    </span><span class="token punctuation">{</span>
+      <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">mat-color</span><span class="token punctuation">(</span><span class="token variable">$primary</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector"><span class="token parent important">&amp;</span>[accent],
+    <span class="token parent important">&amp;</span>.accent
+    </span><span class="token punctuation">{</span>
+      <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">mat-color</span><span class="token punctuation">(</span><span class="token variable">$accent</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector"><span class="token parent important">&amp;</span>[warn],
+    <span class="token parent important">&amp;</span>.warn
+    </span><span class="token punctuation">{</span>
+      <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">mat-color</span><span class="token punctuation">(</span><span class="token variable">$warn</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token property"><span class="token variable">$my-theme-primary</span></span><span class="token punctuation">:</span> <span class="token function">mat-palette</span><span class="token punctuation">(</span><span class="token variable">$mat-indigo</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token property"><span class="token variable">$my-theme-accent</span></span><span class="token punctuation">:</span> <span class="token function">mat-palette</span><span class="token punctuation">(</span><span class="token variable">$mat-amber</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token property"><span class="token variable">$my-theme-warn</span></span><span class="token punctuation">:</span> <span class="token function">mat-palette</span><span class="token punctuation">(</span><span class="token variable">$mat-red</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token property"><span class="token variable">$my-theme</span></span><span class="token punctuation">:</span> <span class="token function">mat-light-theme</span><span class="token punctuation">(</span><span class="token variable">$my-theme-primary</span><span class="token punctuation">,</span> <span class="token variable">$my-theme-accent</span><span class="token punctuation">,</span> <span class="token variable">$my-theme-warn</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">@include</span> <span class="token function">angular-material-theme</span><span class="token punctuation">(</span><span class="token variable">$my-theme</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">@include</span> <span class="token function">custom-cmp</span><span class="token punctuation">(</span><span class="token variable">$my-theme</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token property"><span class="token variable">$my-dark-theme-primary</span></span><span class="token punctuation">:</span> <span class="token function">mat-palette</span><span class="token punctuation">(</span><span class="token variable">$mat-blue</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token property"><span class="token variable">$my-dark-theme-accent</span></span><span class="token punctuation">:</span>  <span class="token function">mat-palette</span><span class="token punctuation">(</span><span class="token variable">$mat-amber</span><span class="token punctuation">,</span> A200<span class="token punctuation">,</span> A100<span class="token punctuation">,</span> A400<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token property"><span class="token variable">$my-dark-theme-warn</span></span><span class="token punctuation">:</span>    <span class="token function">mat-palette</span><span class="token punctuation">(</span><span class="token variable">$mat-red</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token property"><span class="token variable">$my-dark-theme</span></span><span class="token punctuation">:</span>   <span class="token function">mat-dark-theme</span><span class="token punctuation">(</span><span class="token variable">$my-dark-theme-primary</span><span class="token punctuation">,</span> <span class="token variable">$my-dark-theme-accent</span><span class="token punctuation">,</span> <span class="token variable">$my-dark-theme-warn</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token selector">[darktheme=true]
+</span><span class="token punctuation">{</span>
+  <span class="token keyword">@include</span> <span class="token function">angular-material-theme</span><span class="token punctuation">(</span><span class="token variable">$my-dark-theme</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">@include</span> <span class="token function">custom-cmp</span><span class="token punctuation">(</span><span class="token variable">$iv-dark-theme</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">[darktheme=false]
+</span><span class="token punctuation">{</span>
+  <span class="token keyword">@include</span> <span class="token function">angular-material-theme</span><span class="token punctuation">(</span><span class="token variable">$iv-theme</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">@include</span> <span class="token function">custom-cmp</span><span class="token punctuation">(</span><span class="token variable">$iv-theme</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>... and the top level <code>darktheme</code> attribute is used to control the global theming.</p>
+<h2 id="use-important" tabindex="-1">Use <code>!important</code> <a class="header-anchor" href="#use-important">#</a></h2>
+<p>I did not want to use <code>!important</code> unless absolutely necessary (also, I couldn't get the syntax to work in the 10 minutes I was trying it).</p>
+<h2 id="use-class" tabindex="-1">Use class <a class="header-anchor" href="#use-class">#</a></h2>
+<p>My next attempt was to add higher level css priority to the local component. <a href="https://stackoverflow.com/a/22214407/6059235">This SO post</a> seems to suggest that the css priority goes by:</p>
+<pre><code>ID &gt; class &gt; attribute
+</code></pre>
+<p>My attempt was to add:</p>
+<pre class="language-scss" tabindex="0"><code class="language-scss">
+[darktheme=<span class="token boolean">true</span>]<span class="token punctuation">,</span>
+.darktheme <span class="token comment">// &lt;-- added</span>
+<span class="token punctuation">{</span>
+  <span class="token keyword">@include</span> <span class="token function">angular-material-theme</span><span class="token punctuation">(</span><span class="token variable">$my-dark-theme</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">@include</span> <span class="token function">custom-cmp</span><span class="token punctuation">(</span><span class="token variable">$iv-dark-theme</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+[darktheme=<span class="token boolean">false</span>]<span class="token punctuation">,</span>
+.lighttheme <span class="token comment">// &lt;-- added</span>
+<span class="token punctuation">{</span>
+  <span class="token keyword">@include</span> <span class="token function">angular-material-theme</span><span class="token punctuation">(</span><span class="token variable">$iv-theme</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">@include</span> <span class="token function">custom-cmp</span><span class="token punctuation">(</span><span class="token variable">$iv-theme</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>It did not seem to work. Later parsed CSS attributes were taking precedent, suggesting class and attribute have the same priority (at least in Chrome Version 83.0.4103.116 (Official Build) (64-bit))</p>
+<h2 id="further-increase-css-priority" tabindex="-1">Further increase CSS priority <a class="header-anchor" href="#further-increase-css-priority">#</a></h2>
+<p>Then, I remembered a trick to artificially boost the priority</p>
+<pre class="language-scss" tabindex="0"><code class="language-scss">
+<span class="token selector">[darktheme=true],
+.darktheme.darktheme
+</span><span class="token punctuation">{</span>
+  <span class="token keyword">@include</span> <span class="token function">angular-material-theme</span><span class="token punctuation">(</span><span class="token variable">$my-dark-theme</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">@include</span> <span class="token function">custom-cmp</span><span class="token punctuation">(</span><span class="token variable">$iv-dark-theme</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">[darktheme=false],
+.lighttheme.lighttheme
+</span><span class="token punctuation">{</span>
+  <span class="token keyword">@include</span> <span class="token function">angular-material-theme</span><span class="token punctuation">(</span><span class="token variable">$iv-theme</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">@include</span> <span class="token function">custom-cmp</span><span class="token punctuation">(</span><span class="token variable">$iv-theme</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Note to self: should investigate CSS priority.</p>
+
+  </div>
+</div>
+<ul class="links-nextprev"><li>Previous: <a href="/eleventy-base-blog/posts/2020-05-27-angular-aot-build-suddenly-breaks/">Angular 9 AOT build suddenly breaks</a></li><li>Next: <a href="/eleventy-base-blog/posts/2020-10-06-persisting-node-express-process/">Persisting (nodejs) express process</a></li>
+</ul>
+
+      </div>
+    </main>
+
+    <footer class="page-footer flex-basis-0 flex-grow-0">
+
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+
+        <a class="btn-flat" href="https://github.com/xgui3783">
+          <i class="fab fa-github"></i>
+          <span>
+            xgui3783
+          </span>
+        </a>
+
+        <a href="https://fosstodon.org/@pandamakes" class="btn-flat">
+          <i class="fab fa-mastodon"></i>
+          <span>
+            @pandamakes@fosstodon.org
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer-copyright">
+    <div class="container">
+    © 2024 Copyright pandamakes
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      /* required for SideBar mobile */
+      const elems = document.querySelectorAll('.sidenav')
+      const instances = M.Sidenav.init(elems)
+
+      /* required to overcome nested anchor links */
+      const divHrefs = document.querySelectorAll('[data-href]')
+      for (const divHref of divHrefs ){
+        divHref.addEventListener('click', ev => {
+          window.open(divHref.dataset.href, '_self')
+          ev.stopPropagation()
+        })
+      }
+    })
+  </script>
+
+</footer>
+    <!-- Current page: /eleventy-base-blog/posts/20200708-css-rules/ -->
+  </body>
+</html>

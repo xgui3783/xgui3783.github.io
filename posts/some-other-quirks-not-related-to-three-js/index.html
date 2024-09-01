@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Some other quirks, not related to three.js</title>
+    <meta name="Description" content="web developer, photographer, panda">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/index.css">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/prism-base16-monokai.dark.css">
+    <link rel="alternate" href="/eleventy-base-blog/eleventy-base-blog/feed/feed.xml" type="application/atom+xml" title="pandamakes">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/materialize.css">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/github-markdown.css">
+    <link rel="stylesheet" href="/eleventy-base-blog/eleventy-base-blog/css/coverimage.css">
+	  <link rel="me" href="https://fosstodon.org/@pandamakes">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  </head>
+  <body class="d-flex flex-column">
+    <header class="flex-basis-0 flex-grow-0">
+
+    <nav>
+      <div class="nav-wrapper col s12">
+
+        <!-- logo -->
+        <a href="/eleventy-base-blog/" class="h-100 brand-logo">
+          <div class="h-100 valign-wrapper ">
+            <img class="h-100 p-1" src="/eleventy-base-blog/eleventy-base-blog/img/logo.svg">
+            <span>
+              pandamakes
+            </span>
+          </div>
+        </a>
+
+        <a href="#" data-target="mobile-menu" class="sidenav-trigger">
+          <i class="fas fa-bars"></i>
+        </a>
+
+        <ul class="right hide-on-med-and-down"><li class="nav-item"><a href="/eleventy-base-blog/">Home</a></li>
+<li class="nav-item"><a href="/eleventy-base-blog/blog/">Blog</a></li>
+<li class="nav-item"><a href="/eleventy-base-blog/about/">About</a></li></ul>
+      </div>
+    </nav>
+
+  <!-- mobile sidenav -->
+  <ul class="sidenav" id="mobile-menu">
+  
+  
+    <li class="nav-item">
+      <a href="/eleventy-base-blog/">
+        Home
+      </a>
+    </li>
+  
+  
+  
+    <li class="nav-item">
+      <a href="/eleventy-base-blog/eleventy-base-blog/blog/">
+        Blog
+      </a>
+    </li>
+  
+  
+  
+    <li class="nav-item">
+      <a href="/eleventy-base-blog/eleventy-base-blog/about/">
+        About
+      </a>
+    </li>
+  
+  
+  </ul>
+
+</header>
+
+    <main class="flex-basis-0 flex-grow-1">
+
+      <div data-bgimgsrc="/eleventy-base-blog/img/cover.jpg" class="banner-image-wrapper w-100 h-100vh overflow-hidden d-flex align-items-center justify-content-center">
+  <div>
+    <h1 class="center-align">
+      Some other quirks, not related to three.js
+    </h1>
+
+    
+  </div>
+</div>
+
+<div class="row"></div>
+      <div class="container">
+        
+
+<div class="row">
+	<div class="col s12" <time="" datetime="2017-03-28">28 March 2017
+	</div>
+	
+  	
+<div class="col s12">
+  <div class="d-flex flex-wrap">
+
+    
+    <span class="mt-a mb-a"> tags: </span>
+    
+
+    
+    <span data-href="/eleventy-base-blog/tags/bug/" class="waves-effect chip m-1">bug</span>
+    <span data-href="/eleventy-base-blog/tags/caret/" class="waves-effect chip m-1">caret</span>
+    <span data-href="/eleventy-base-blog/tags/html/" class="waves-effect chip m-1">html</span>
+    <span data-href="/eleventy-base-blog/tags/js/" class="waves-effect chip m-1">js</span>
+    <span data-href="/eleventy-base-blog/tags/logitech/" class="waves-effect chip m-1">logitech</span>
+    <span data-href="/eleventy-base-blog/tags/mx/" class="waves-effect chip m-1">mx</span>
+    <span data-href="/eleventy-base-blog/tags/notepad++/" class="waves-effect chip m-1">notepad++</span>
+    <span data-href="/eleventy-base-blog/tags/sublime/" class="waves-effect chip m-1">sublime</span>
+  </div>
+</div>
+
+
+
+</div>
+
+
+<div class="row">
+  <div class="col s12 markdown-body">
+  <p>For the previous two weeks, I have talked about the quirks I encountered while meddling with three.js. I have also encountered some issues that are not three.js specific. I would like to go through them this week.</p>
+<hr>
+<p>I got a Logitech MX Anywhere 2 recently. In the not so distant past, I had to work with my old mouse on glassy surfaces on a few occasions, often with hacks such as using a few sheets of A4 paper as a mouse pad, producing mixed results.Having a mouse that works on most glassy surface can be helpful. However, Logitech MX series does not seem to want to play ball with Notepad++. Horizontal scroll started off being really slow (approx 3 characters at a time). After numerous attempt at “fixing” the horizontal scroll issue, horizontal scroll stopped working altogether.</p>
+<p>After some digging, the problem seems to be <a href="https://github.com/notepad-plus-plus/notepad-plus-plus/issues/2096">documented</a>. (After all, not many people use Notepad ++ and Logitech mice together, I’d wager).</p>
+<p>I never could get the problem resolved. So I changed my text-editor to Caret.</p>
+<p>This reminds me. I should really try sublime.</p>
+<p>I was looking for a way to effortlessly style and present some JSON data. I did not want to import JQuery + Bootstrap, since they add to the weigh and execution time. I did not want to write and debug a bunch of JS codes just to implement a modal window. The solution I settle with came from <a href="http://stackoverflow.com/questions/27705640/display-json-in-a-readable-format-in-a-new-tab/27705690#27705690">this stackoverflow post</a>.</p>
+<p>var myjson = JSON.stringify(json, null, 2);
+console.log(myjson);
+var x = window.open();
+x.document.open();
+x.document.write('</p><pre>' + myjson + '</pre>');
+x.document.close();<p></p>
+<p>Works like a charm.</p>
+
+  </div>
+</div>
+<ul class="links-nextprev"><li>Previous: <a href="/eleventy-base-blog/posts/some-additional-quirks-associated-with-three-js/">Some additional quirks associated with three.js</a></li><li>Next: <a href="/eleventy-base-blog/posts/webgl-performance-abnormalities-chrome-vs-firefox/">WEBGL performance abnormalities (chrome vs firefox)</a></li>
+</ul>
+
+      </div>
+    </main>
+
+    <footer class="page-footer flex-basis-0 flex-grow-0">
+
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+
+        <a class="btn-flat" href="https://github.com/xgui3783">
+          <i class="fab fa-github"></i>
+          <span>
+            xgui3783
+          </span>
+        </a>
+
+        <a href="https://fosstodon.org/@pandamakes" class="btn-flat">
+          <i class="fab fa-mastodon"></i>
+          <span>
+            @pandamakes@fosstodon.org
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer-copyright">
+    <div class="container">
+    © 2024 Copyright pandamakes
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      /* required for SideBar mobile */
+      const elems = document.querySelectorAll('.sidenav')
+      const instances = M.Sidenav.init(elems)
+
+      /* required to overcome nested anchor links */
+      const divHrefs = document.querySelectorAll('[data-href]')
+      for (const divHref of divHrefs ){
+        divHref.addEventListener('click', ev => {
+          window.open(divHref.dataset.href, '_self')
+          ev.stopPropagation()
+        })
+      }
+    })
+  </script>
+
+</footer>
+    <!-- Current page: /eleventy-base-blog/posts/some-other-quirks-not-related-to-three-js/ -->
+  </body>
+</html>
