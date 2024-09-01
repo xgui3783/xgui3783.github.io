@@ -562,6 +562,16 @@
 	</url>
 	
 	<url>
+		<loc>https://pandamakes.me/tags/glmatrix/</loc>
+		<lastmod>2024-09-01</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://pandamakes.me/tags/quaternion/</loc>
+		<lastmod>2024-09-01</lastmod>
+	</url>
+	
+	<url>
 		<loc>https://pandamakes.me/tags/examcopedia/</loc>
 		<lastmod>2024-09-01</lastmod>
 	</url>
@@ -578,16 +588,6 @@
 	
 	<url>
 		<loc>https://pandamakes.me/tags/openshift/</loc>
-		<lastmod>2024-09-01</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://pandamakes.me/tags/glmatrix/</loc>
-		<lastmod>2024-09-01</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://pandamakes.me/tags/quaternion/</loc>
 		<lastmod>2024-09-01</lastmod>
 	</url>
 	
@@ -622,6 +622,16 @@
 	</url>
 	
 	<url>
+		<loc>https://pandamakes.me/tags/webpack/</loc>
+		<lastmod>2024-09-01</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://pandamakes.me/tags/cli/</loc>
+		<lastmod>2024-09-01</lastmod>
+	</url>
+	
+	<url>
 		<loc>https://pandamakes.me/tags/nodejs/</loc>
 		<lastmod>2024-09-01</lastmod>
 	</url>
@@ -642,42 +652,12 @@
 	</url>
 	
 	<url>
-		<loc>https://pandamakes.me/tags/webpack/</loc>
-		<lastmod>2024-09-01</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://pandamakes.me/tags/cli/</loc>
-		<lastmod>2024-09-01</lastmod>
-	</url>
-	
-	<url>
 		<loc>https://pandamakes.me/tags/scss/</loc>
 		<lastmod>2024-09-01</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/material/</loc>
-		<lastmod>2024-09-01</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://pandamakes.me/tags/python/</loc>
-		<lastmod>2024-09-01</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://pandamakes.me/tags/oop/</loc>
-		<lastmod>2024-09-01</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://pandamakes.me/tags/inheritence/</loc>
-		<lastmod>2024-09-01</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://pandamakes.me/tags/zonejs/</loc>
 		<lastmod>2024-09-01</lastmod>
 	</url>
 	
@@ -693,6 +673,26 @@
 	
 	<url>
 		<loc>https://pandamakes.me/tags/openssl/</loc>
+		<lastmod>2024-09-01</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://pandamakes.me/tags/zonejs/</loc>
+		<lastmod>2024-09-01</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://pandamakes.me/tags/python/</loc>
+		<lastmod>2024-09-01</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://pandamakes.me/tags/oop/</loc>
+		<lastmod>2024-09-01</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://pandamakes.me/tags/inheritence/</loc>
 		<lastmod>2024-09-01</lastmod>
 	</url>
 	
@@ -757,6 +757,21 @@
 	</url>
 	
 	<url>
+		<loc>https://pandamakes.me/tags/knowledge-post/</loc>
+		<lastmod>2024-09-01</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://pandamakes.me/tags/psa/</loc>
+		<lastmod>2024-09-01</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://pandamakes.me/tags/webdesign/</loc>
+		<lastmod>2024-09-01</lastmod>
+	</url>
+	
+	<url>
 		<loc>https://pandamakes.me/tags/android-programming/</loc>
 		<lastmod>2024-09-01</lastmod>
 	</url>
@@ -777,26 +792,6 @@
 	</url>
 	
 	<url>
-		<loc>https://pandamakes.me/tags/knowledge-post/</loc>
-		<lastmod>2024-09-01</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://pandamakes.me/tags/psa/</loc>
-		<lastmod>2024-09-01</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://pandamakes.me/tags/webdesign/</loc>
-		<lastmod>2024-09-01</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://pandamakes.me/tags/gazing/</loc>
-		<lastmod>2024-09-01</lastmod>
-	</url>
-	
-	<url>
 		<loc>https://pandamakes.me/tags/android-studio/</loc>
 		<lastmod>2024-09-01</lastmod>
 	</url>
@@ -808,6 +803,11 @@
 	
 	<url>
 		<loc>https://pandamakes.me/tags/lesson-learnt-the-hard-way/</loc>
+		<lastmod>2024-09-01</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://pandamakes.me/tags/gazing/</loc>
 		<lastmod>2024-09-01</lastmod>
 	</url>
 	
@@ -857,11 +857,6 @@
 	</url>
 	
 	<url>
-		<loc>https://pandamakes.me/tags/virtuemart/</loc>
-		<lastmod>2024-09-01</lastmod>
-	</url>
-	
-	<url>
 		<loc>https://pandamakes.me/tags/ejs/</loc>
 		<lastmod>2024-09-01</lastmod>
 	</url>
@@ -882,12 +877,22 @@
 	</url>
 	
 	<url>
+		<loc>https://pandamakes.me/tags/virtuemart/</loc>
+		<lastmod>2024-09-01</lastmod>
+	</url>
+	
+	<url>
 		<loc>https://pandamakes.me/tags/jetpack/</loc>
 		<lastmod>2024-09-01</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/wordpress/</loc>
+		<lastmod>2024-09-01</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://pandamakes.me/tags/woocommerce/</loc>
 		<lastmod>2024-09-01</lastmod>
 	</url>
 	
@@ -912,22 +917,7 @@
 	</url>
 	
 	<url>
-		<loc>https://pandamakes.me/tags/woocommerce/</loc>
-		<lastmod>2024-09-01</lastmod>
-	</url>
-	
-	<url>
 		<loc>https://pandamakes.me/tags/ruby/</loc>
-		<lastmod>2024-09-01</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://pandamakes.me/tags/jqm/</loc>
-		<lastmod>2024-09-01</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://pandamakes.me/tags/jquery-mobile/</loc>
 		<lastmod>2024-09-01</lastmod>
 	</url>
 	
@@ -938,6 +928,16 @@
 	
 	<url>
 		<loc>https://pandamakes.me/tags/nvm/</loc>
+		<lastmod>2024-09-01</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://pandamakes.me/tags/jqm/</loc>
+		<lastmod>2024-09-01</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://pandamakes.me/tags/jquery-mobile/</loc>
 		<lastmod>2024-09-01</lastmod>
 	</url>
 	
@@ -967,12 +967,12 @@
 	</url>
 	
 	<url>
-		<loc>https://pandamakes.me/tags/hosting/</loc>
+		<loc>https://pandamakes.me/tags/imago/</loc>
 		<lastmod>2024-09-01</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://pandamakes.me/tags/imago/</loc>
+		<loc>https://pandamakes.me/tags/hosting/</loc>
 		<lastmod>2024-09-01</lastmod>
 	</url>
 	
