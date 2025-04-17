@@ -11,6 +11,22 @@
 	},
 	"items": [
 		{
+			"id": "https://pandamakes.me/posts/20250417-useful-util/",
+			"url": "https://pandamakes.me/posts/20250417-useful-util/",
+			"title": "Super useful utility `/bin/time`",
+			"content_html": "<p>I recently came across <a href=\"https://www.youtube.com/@anthonywritescode\">anthony</a>'s <a href=\"https://www.youtube.com/watch?v=xEfDMjogJnw\">video</a> on debugging a OOM process.</p>\n<p>It should be noted that in ubuntu, it is <code>/bin/time</code>, and <a href=\"https://askubuntu.com/a/1459770\">not</a> the default <code>time</code> binary.</p>\n<p>This gives me a super easy way to demonstrate memory usage of a process (one off script or webserver) with:</p>\n<pre class=\"language-sh\" tabindex=\"0\"><code class=\"language-sh\">/bin/time <span class=\"token parameter variable\">-v</span> uvicorn app:app</code></pre>\n<p>vs</p>\n<pre class=\"language-sh\" tabindex=\"0\"><code class=\"language-sh\"><span class=\"token builtin class-name\">export</span> <span class=\"token assign-left variable\">FLAG</span><span class=\"token operator\">=</span>SET\n/bin/time <span class=\"token parameter variable\">-v</span> uvicorn app:app</code></pre>\n",
+			"date_published": "2025-04-17T00:00:00Z"
+		}
+		,
+		{
+			"id": "https://pandamakes.me/posts/20250417-git-log-before-after/",
+			"url": "https://pandamakes.me/posts/20250417-git-log-before-after/",
+			"title": "WTF `git log --before/--until`",
+			"content_html": "<p>In the same <a href=\"https://www.youtube.com/watch?v=xEfDMjogJnw\">video</a> by <a href=\"https://www.youtube.com/@anthonywritescode\">anthony</a>, I learnt of <code>git log --before/--until=&lt;date&gt;</code>. Man page reads:</p>\n<pre class=\"language-sh\" tabindex=\"0\"><code class=\"language-sh\">       <span class=\"token parameter variable\">--until</span><span class=\"token operator\">=</span><span class=\"token operator\">&lt;</span>date<span class=\"token operator\">></span>, <span class=\"token parameter variable\">--before</span><span class=\"token operator\">=</span><span class=\"token operator\">&lt;</span>date<span class=\"token operator\">></span>\n           Show commits older than a specific date.</code></pre>\n<p>How is it that I only learn about this just now =/.</p>\n",
+			"date_published": "2025-04-17T00:00:00Z"
+		}
+		,
+		{
 			"id": "https://pandamakes.me/posts/20240814-browser-cache/",
 			"url": "https://pandamakes.me/posts/20240814-browser-cache/",
 			"title": "Browser cache is... weird",

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Browser cache is... weird</title>
+    <title>Tagged “debug”</title>
     <meta name="Description" content="web developer, photographer, panda">
     <link rel="stylesheet" href="/css/index.css">
     <link rel="stylesheet" href="/css/prism-base16-monokai.dark.css">
@@ -77,7 +77,7 @@
       <div data-bgimgsrc="/img/cover.jpg" class="banner-image-wrapper w-100 h-100vh overflow-hidden d-flex align-items-center justify-content-center">
   <div>
     <h1 class="center-align">
-      Browser cache is... weird
+      Tagged “debug”
     </h1>
 
     
@@ -87,13 +87,26 @@
 <div class="row"></div>
       <div class="container">
         
+<h1>Tagged “debug”</h1>
 
-<div class="row">
-	<div class="col s12"
-		<time datetime="2024-08-14">14 August 2024</time>
-	</div>
-	
-  	
+
+
+<div data-href="/posts/20250417-useful-util/" class="post-card col s12 m6 l4 mb-2">
+  <div class="h-100 card postlist-item">
+
+    <div class="card-content waves-effect w-100 h-100 d-flex flex-column">
+      
+      <span class="card-title flex-grow-1">
+        Super useful utility `/bin/time`
+      </span>
+      
+
+      <time class="postlist-date flex-grow-0" datetime="2025-04-17">17 April 2025</time>
+      
+      <div class="row flex-grow-0">
+        
+        
+        
 <div class="col s12">
   <div class="d-flex flex-wrap">
 
@@ -102,28 +115,22 @@
     
 
     
-    <span data-href="/tags/http/" class="waves-effect chip m-1">http</span>
-    <span data-href="/tags/browser/" class="waves-effect chip m-1">browser</span>
-    <span data-href="/tags/cache/" class="waves-effect chip m-1">cache</span>
+    <span data-href="/tags/linux/" class="waves-effect chip m-1">linux</span>
+    <span data-href="/tags/debug/" class="waves-effect chip m-1">debug</span>
+  </div>
+</div>
+
+
+      </div>
+
+    </div>
   </div>
 </div>
 
 
 
-</div>
+<p>See <a href="/tags/">all tags</a>.</p>
 
-
-<div class="row">
-  <div class="col s12 markdown-body">
-  <p>Recently, I wanted to introduce <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/ETag">ETag</a> as an identifer if new version of a web service is deployed properly. I could use a custom header, but I thought I would be a good boy and use a standard header.</p>
-<p>But of course, in my infinite wisdom, I did not include a <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control">cache-control</a> header, and since the resource is fetched with <code>WebWorker</code>, hard refresh (<code>Shift + F5</code>) did not work, <code>Disable Cache</code> in developer tool did not work. What worked was right clicking the specific request in developer panel, and manually click &quot;clear browser cache&quot;.</p>
-<p>Chromium seems to use <code>(current_time - last_modified) / 10</code> <a href="https://chromium.googlesource.com/chromium/src/+/refs/tags/127.0.6533.101/net/http/http_response_headers.cc#1250">ref</a></p>
-<p>I will now always add <code>cache-control</code> header. =/</p>
-
-  </div>
-</div>
-<ul class="links-nextprev"><li>Previous: <a href="/posts/20240407-fosdem-day2/">FOSDEM2024 day 2</a></li><li>Next: <a href="/posts/20250417-git-log-before-after/">WTF `git log --before/--until`</a></li>
-</ul>
 
       </div>
     </main>
@@ -176,6 +183,6 @@
   </script>
 
 </footer>
-    <!-- Current page: /posts/20240814-browser-cache/ -->
+    <!-- Current page: /tags/debug/ -->
   </body>
 </html>

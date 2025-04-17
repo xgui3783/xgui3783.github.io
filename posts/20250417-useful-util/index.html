@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Browser cache is... weird</title>
+    <title>Super useful utility `/bin/time`</title>
     <meta name="Description" content="web developer, photographer, panda">
     <link rel="stylesheet" href="/css/index.css">
     <link rel="stylesheet" href="/css/prism-base16-monokai.dark.css">
@@ -77,7 +77,7 @@
       <div data-bgimgsrc="/img/cover.jpg" class="banner-image-wrapper w-100 h-100vh overflow-hidden d-flex align-items-center justify-content-center">
   <div>
     <h1 class="center-align">
-      Browser cache is... weird
+      Super useful utility `/bin/time`
     </h1>
 
     
@@ -90,7 +90,7 @@
 
 <div class="row">
 	<div class="col s12"
-		<time datetime="2024-08-14">14 August 2024</time>
+		<time datetime="2025-04-17">17 April 2025</time>
 	</div>
 	
   	
@@ -102,9 +102,8 @@
     
 
     
-    <span data-href="/tags/http/" class="waves-effect chip m-1">http</span>
-    <span data-href="/tags/browser/" class="waves-effect chip m-1">browser</span>
-    <span data-href="/tags/cache/" class="waves-effect chip m-1">cache</span>
+    <span data-href="/tags/linux/" class="waves-effect chip m-1">linux</span>
+    <span data-href="/tags/debug/" class="waves-effect chip m-1">debug</span>
   </div>
 </div>
 
@@ -115,14 +114,17 @@
 
 <div class="row">
   <div class="col s12 markdown-body">
-  <p>Recently, I wanted to introduce <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/ETag">ETag</a> as an identifer if new version of a web service is deployed properly. I could use a custom header, but I thought I would be a good boy and use a standard header.</p>
-<p>But of course, in my infinite wisdom, I did not include a <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control">cache-control</a> header, and since the resource is fetched with <code>WebWorker</code>, hard refresh (<code>Shift + F5</code>) did not work, <code>Disable Cache</code> in developer tool did not work. What worked was right clicking the specific request in developer panel, and manually click &quot;clear browser cache&quot;.</p>
-<p>Chromium seems to use <code>(current_time - last_modified) / 10</code> <a href="https://chromium.googlesource.com/chromium/src/+/refs/tags/127.0.6533.101/net/http/http_response_headers.cc#1250">ref</a></p>
-<p>I will now always add <code>cache-control</code> header. =/</p>
+  <p>I recently came across <a href="https://www.youtube.com/@anthonywritescode">anthony</a>'s <a href="https://www.youtube.com/watch?v=xEfDMjogJnw">video</a> on debugging a OOM process.</p>
+<p>It should be noted that in ubuntu, it is <code>/bin/time</code>, and <a href="https://askubuntu.com/a/1459770">not</a> the default <code>time</code> binary.</p>
+<p>This gives me a super easy way to demonstrate memory usage of a process (one off script or webserver) with:</p>
+<pre class="language-sh" tabindex="0"><code class="language-sh">/bin/time <span class="token parameter variable">-v</span> uvicorn app:app</code></pre>
+<p>vs</p>
+<pre class="language-sh" tabindex="0"><code class="language-sh"><span class="token builtin class-name">export</span> <span class="token assign-left variable">FLAG</span><span class="token operator">=</span>SET
+/bin/time <span class="token parameter variable">-v</span> uvicorn app:app</code></pre>
 
   </div>
 </div>
-<ul class="links-nextprev"><li>Previous: <a href="/posts/20240407-fosdem-day2/">FOSDEM2024 day 2</a></li><li>Next: <a href="/posts/20250417-git-log-before-after/">WTF `git log --before/--until`</a></li>
+<ul class="links-nextprev"><li>Previous: <a href="/posts/20250417-git-log-before-after/">WTF `git log --before/--until`</a></li>
 </ul>
 
       </div>
@@ -176,6 +178,6 @@
   </script>
 
 </footer>
-    <!-- Current page: /posts/20240814-browser-cache/ -->
+    <!-- Current page: /posts/20250417-useful-util/ -->
   </body>
 </html>
