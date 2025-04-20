@@ -1,0 +1,26 @@
+- name: "setup machine"
+  hosts: "linode"
+  tasks:
+    
+  - name: "(Re)start nginx"
+    become: true
+    shell: |
+      systemctl restart nginx
+    args:
+      executable: /bin/bash
+    changed_when: false
+
+  - name: "rm existing"
+    become: true
+    shell: |
+      rm -rf /var/www/html/*
+    args:
+      executable: /bin/bash
+    changed_when: false
+  
+  - name: "rsync"
+    become: true
+    ansible.posix.synchronize:
+      src: /home/xiao/dev/projects/blog/.photos/output/
+      dest: /var/www/html/
+    changed_when: false

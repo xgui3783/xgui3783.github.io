@@ -1,0 +1,13 @@
+- name: "setup machine"
+  hosts: "linode"
+  tasks:
+  - name: "Install dependencies"
+    shell: |
+      apt update
+      apt install nginx
+      snap install --classic certbot
+      ln -s /snap/bin/certbot /usr/bin/certbot
+    args:
+      executable: /bin/bash
+    changed_when: false
+  
