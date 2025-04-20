@@ -513,636 +513,641 @@
 	
 	<url>
 		<loc>https://pandamakes.me/about/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/blog/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://pandamakes.me/portfolio/</loc>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/css/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/html/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/javascript/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/joomla/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/jquery/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/js/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/lessons-learnt-the-hard-way/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/template/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/glmatrix/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/quaternion/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/examcopedia/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/mysql/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/node-js/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/openshift/</loc>
-		<lastmod>2025-04-17</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://pandamakes.me/tags/testing/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/e2e/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/protractor/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/selenium/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://pandamakes.me/tags/testing/</loc>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/angular/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/csp/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/webpack/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/cli/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/nodejs/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/express/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/memorycache/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/lru/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/scss/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/material/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/ssl/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/curl/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/openssl/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/python/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/oop/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/inheritence/</loc>
-		<lastmod>2025-04-17</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://pandamakes.me/tags/zonejs/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/bitshift/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://pandamakes.me/tags/conference/</loc>
-		<lastmod>2025-04-17</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://pandamakes.me/tags/foss/</loc>
-		<lastmod>2025-04-17</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://pandamakes.me/tags/fosdem/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<loc>https://pandamakes.me/tags/zonejs/</loc>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/http/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/browser/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/cache/</loc>
-		<lastmod>2025-04-17</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://pandamakes.me/tags/linux/</loc>
-		<lastmod>2025-04-17</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://pandamakes.me/tags/debug/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/k8s/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/yaml/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/yml/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://pandamakes.me/tags/conference/</loc>
+		<lastmod>2025-04-20</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://pandamakes.me/tags/foss/</loc>
+		<lastmod>2025-04-20</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://pandamakes.me/tags/fosdem/</loc>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/git/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/germany/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/reflection/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://pandamakes.me/tags/linux/</loc>
+		<lastmod>2025-04-20</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://pandamakes.me/tags/debug/</loc>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/android-programming/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/java/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/opencv/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/php/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/knowledge-post/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/psa/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/webdesign/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/android-studio/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/gradle/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/lesson-learnt-the-hard-way/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/gazing/</loc>
-		<lastmod>2025-04-17</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://pandamakes.me/tags/angularelements/</loc>
-		<lastmod>2025-04-17</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://pandamakes.me/tags/webcomponents/</loc>
-		<lastmod>2025-04-17</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://pandamakes.me/tags/frontend/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/angular-js/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/angularjs/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/mongo/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/mongodb/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/mongoose/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/android/</loc>
-		<lastmod>2025-04-17</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://pandamakes.me/tags/virtuemart/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/ejs/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/embeddedjs/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://pandamakes.me/tags/angularelements/</loc>
+		<lastmod>2025-04-20</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://pandamakes.me/tags/webcomponents/</loc>
+		<lastmod>2025-04-20</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://pandamakes.me/tags/frontend/</loc>
+		<lastmod>2025-04-20</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://pandamakes.me/tags/virtuemart/</loc>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/notepad/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/jetpack/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/wordpress/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/woocommerce/</loc>
-		<lastmod>2025-04-17</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://pandamakes.me/tags/ruby/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/centos/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/pyinstaller/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/virtualbox/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://pandamakes.me/tags/ruby/</loc>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/jqm/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/jquery-mobile/</loc>
-		<lastmod>2025-04-17</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://pandamakes.me/tags/npm/</loc>
-		<lastmod>2025-04-17</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://pandamakes.me/tags/nvm/</loc>
-		<lastmod>2025-04-17</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://pandamakes.me/tags/canvas/</loc>
-		<lastmod>2025-04-17</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://pandamakes.me/tags/html5/</loc>
-		<lastmod>2025-04-17</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://pandamakes.me/tags/threejs/</loc>
-		<lastmod>2025-04-17</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://pandamakes.me/tags/webgl/</loc>
-		<lastmod>2025-04-17</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://pandamakes.me/tags/imago/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/hello-world/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://pandamakes.me/tags/npm/</loc>
+		<lastmod>2025-04-20</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://pandamakes.me/tags/nvm/</loc>
+		<lastmod>2025-04-20</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://pandamakes.me/tags/canvas/</loc>
+		<lastmod>2025-04-20</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://pandamakes.me/tags/html5/</loc>
+		<lastmod>2025-04-20</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://pandamakes.me/tags/threejs/</loc>
+		<lastmod>2025-04-20</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://pandamakes.me/tags/webgl/</loc>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/hosting/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://pandamakes.me/tags/imago/</loc>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/passportjs/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/third-party-authentication/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/third-party-signin/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/multi-thread/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/non-blocking/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/web-worker/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/webworker/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/animation/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/automation/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/backwards-compatibility/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/jpg-to-pdf/</loc>
-		<lastmod>2025-04-17</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://pandamakes.me/tags/security/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/molens/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://pandamakes.me/tags/security/</loc>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/bug/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/caret/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/logitech/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/mx/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/sublime/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/imagemagick/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/pdf/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/programming/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/jokes/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/hacked/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/twitter/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/chrome/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/chrome-browser/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/firefox/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/firefox-browser/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/webgl-extensions/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/webgl-draw-buffers/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://pandamakes.me/tags/typescript/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-20</lastmod>
 	</url>
 </urlset>

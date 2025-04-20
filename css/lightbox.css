@@ -1,0 +1,96 @@
+.lightbox
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.lightbox .hidden
+{
+    display: none;
+}
+
+.lightbox .thumbnail
+{
+    width: 14em;
+    max-width: 80dvw;
+    overflow: hidden;
+}
+
+.lightbox .thumbnail:hover
+{
+    cursor: pointer;
+}
+
+img
+{
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.lightbox .thumbnail img
+{
+    opacity: 0.5;
+    transition: opacity 150ms ease-in-out;
+}
+
+.lightbox .thumbnail:hover img
+{
+    opacity: 1.0;
+}
+
+
+.lightbox .thumbnail figcaption
+{
+    width: 100%;
+    text-align: center;
+}
+
+
+body::after
+{
+    content: ' ';
+    background-color: rgb(0, 0, 0);
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    transition: opacity 150ms ease-in-out;
+    z-index: 1;
+}
+
+body.pm-modal
+{
+    overflow: hidden;
+}
+
+body.pm-modal::after
+{
+    opacity: 0.8;
+    pointer-events: all;
+}
+
+.lightbox-spotlight-container
+{
+    z-index: 2;
+    position: fixed;
+    pointer-events: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.lightbox-spotlight
+{
+    text-align: center;
+    color: white;
+    width: 80dvw;
+    height: 80dvh;
+}
