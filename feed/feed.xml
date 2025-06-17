@@ -4,12 +4,28 @@
 	<subtitle>web developer, photographer, panda</subtitle>
 	<link href="https://pandamakes.me/feed/feed.xml" rel="self"/>
 	<link href="https://pandamakes.me/"/>
-	<updated>2025-04-17T00:00:00Z</updated>
+	<updated>2025-06-17T00:00:00Z</updated>
 	<id>https://pandamakes.me/</id>
 	<author>
 		<name>panda</name>
 		<email>panda@pandamakes.me</email>
 	</author>
+	
+	<entry>
+		<title>Oh no... my HDMI port</title>
+		<link href="https://pandamakes.me/posts/20250617-hdmi-broke/"/>
+		<updated>2025-06-17T00:00:00Z</updated>
+		<id>https://pandamakes.me/posts/20250617-hdmi-broke/</id>
+		<content type="html">&lt;p&gt;I went on a work trip recently. This involved a 3 hour trip on the train. I did manage to get some work done, and probably did not need to turn on &amp;quot;eco&amp;quot; mode, as I still had well over 50% of juice by the time I got off the train.&lt;/p&gt;
+&lt;p&gt;But trouble started when I needed to give a presentation, and the HDMI cable at the conference center refuse to acknowledge it tugs snugly in the HDMI port of my laptop. Undeterred, I succeeded in screencasting via the USB-C port.&lt;/p&gt;
+&lt;p&gt;I figured it was the faulty cable (which was strange, since it worked with earlier speakers), or that there were some protocols differences.&lt;/p&gt;
+&lt;p&gt;The plot thickens, as when I returned to work the next day, my work HDMI cable also seem to fail to get a signal from my laptop&#39;s HDMI port.&lt;/p&gt;
+&lt;p&gt;&amp;quot;shit&amp;quot; I thought to myself, immediately jumps to the worst case scenario: &amp;quot;was there an over voltage in the HDMI cable at the conference center, which fried the HDMI chip?&amp;quot;&lt;/p&gt;
+&lt;p&gt;With a heavy heart, I googled &amp;quot;[my laptop model and make] HDMI no longer works&amp;quot;, top answer seems to suggest I uninstall and reinstall the video driver, which I thought was overkill. Then, I saw it...&lt;/p&gt;
+&lt;p&gt;Second highest voted answer: are you sure you turned on the dGPU? Since HDMI port is wired via dGPU, not iGPU. Like a meteor in a dark night, this comment illuminated to me: I never turned off the &amp;quot;eco&amp;quot; mode.&lt;/p&gt;
+&lt;p&gt;D&#39;OH~&lt;/p&gt;
+</content>
+	</entry>
 	
 	<entry>
 		<title>Super useful utility `/bin/time`</title>

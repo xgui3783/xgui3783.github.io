@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tagged “debug”</title>
+    <title>Oh no... my HDMI port</title>
     <meta name="Description" content="web developer, photographer, panda">
     <link rel="stylesheet" href="/css/index.css">
     <link rel="stylesheet" href="/css/prism-base16-monokai.dark.css">
@@ -86,7 +86,7 @@
       <div data-bgimgsrc="/img/cover.jpg" class="banner-image-wrapper w-100 h-100vh overflow-hidden d-flex align-items-center justify-content-center">
   <div>
     <h1 class="center-align">
-      Tagged “debug”
+      Oh no... my HDMI port
     </h1>
 
     
@@ -96,26 +96,13 @@
 <div class="row"></div>
       <div class="container">
         
-<h1>Tagged “debug”</h1>
 
-
-
-<div data-href="/posts/20250617-hdmi-broke/" class="post-card col s12 m6 l4 mb-2">
-  <div class="h-100 card postlist-item">
-
-    <div class="card-content waves-effect w-100 h-100 d-flex flex-column">
-      
-      <span class="card-title flex-grow-1">
-        Oh no... my HDMI port
-      </span>
-      
-
-      <time class="postlist-date flex-grow-0" datetime="2025-06-17">17 June 2025</time>
-      
-      <div class="row flex-grow-0">
-        
-        
-        
+<div class="row">
+	<div class="col s12"
+		<time datetime="2025-06-17">17 June 2025</time>
+	</div>
+	
+  	
 <div class="col s12">
   <div class="d-flex flex-wrap">
 
@@ -130,52 +117,25 @@
 </div>
 
 
-      </div>
 
-    </div>
-  </div>
-</div>
-
-<div data-href="/posts/20250417-useful-util/" class="post-card col s12 m6 l4 mb-2">
-  <div class="h-100 card postlist-item">
-
-    <div class="card-content waves-effect w-100 h-100 d-flex flex-column">
-      
-      <span class="card-title flex-grow-1">
-        Super useful utility `/bin/time`
-      </span>
-      
-
-      <time class="postlist-date flex-grow-0" datetime="2025-04-17">17 April 2025</time>
-      
-      <div class="row flex-grow-0">
-        
-        
-        
-<div class="col s12">
-  <div class="d-flex flex-wrap">
-
-    
-    <span class="mt-a mb-a"> tags: </span>
-    
-
-    
-    <span data-href="/tags/linux/" class="waves-effect chip m-1">linux</span>
-    <span data-href="/tags/debug/" class="waves-effect chip m-1">debug</span>
-  </div>
 </div>
 
 
-      </div>
+<div class="row">
+  <div class="col s12 markdown-body">
+  <p>I went on a work trip recently. This involved a 3 hour trip on the train. I did manage to get some work done, and probably did not need to turn on &quot;eco&quot; mode, as I still had well over 50% of juice by the time I got off the train.</p>
+<p>But trouble started when I needed to give a presentation, and the HDMI cable at the conference center refuse to acknowledge it tugs snugly in the HDMI port of my laptop. Undeterred, I succeeded in screencasting via the USB-C port.</p>
+<p>I figured it was the faulty cable (which was strange, since it worked with earlier speakers), or that there were some protocols differences.</p>
+<p>The plot thickens, as when I returned to work the next day, my work HDMI cable also seem to fail to get a signal from my laptop's HDMI port.</p>
+<p>&quot;shit&quot; I thought to myself, immediately jumps to the worst case scenario: &quot;was there an over voltage in the HDMI cable at the conference center, which fried the HDMI chip?&quot;</p>
+<p>With a heavy heart, I googled &quot;[my laptop model and make] HDMI no longer works&quot;, top answer seems to suggest I uninstall and reinstall the video driver, which I thought was overkill. Then, I saw it...</p>
+<p>Second highest voted answer: are you sure you turned on the dGPU? Since HDMI port is wired via dGPU, not iGPU. Like a meteor in a dark night, this comment illuminated to me: I never turned off the &quot;eco&quot; mode.</p>
+<p>D'OH~</p>
 
-    </div>
   </div>
 </div>
-
-
-
-<p>See <a href="/tags/">all tags</a>.</p>
-
+<ul class="links-nextprev"><li>Previous: <a href="/posts/20250417-useful-util/">Super useful utility `/bin/time`</a></li>
+</ul>
 
       </div>
     </main>
@@ -228,6 +188,6 @@
   </script>
 
 </footer>
-    <!-- Current page: /tags/debug/ -->
+    <!-- Current page: /posts/20250617-hdmi-broke/ -->
   </body>
 </html>
